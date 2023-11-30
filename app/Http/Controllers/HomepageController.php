@@ -8,6 +8,9 @@ use Illuminate\Support\Carbon;
 use App\Models\mainBanner;
 use App\Models\About;
 use App\Models\OurStoryAndMission;
+use App\Models\howGurukulNationWork;
+use App\Models\WhyGurukulNation;
+use App\Models\LearnerSupport;
 class HomepageController extends Controller
 {
     function index()
@@ -15,47 +18,47 @@ class HomepageController extends Controller
         $homepagebanners = DB::table('homepagebanner')->get();
         return view('dashboards.admins.homepage', compact('homepagebanners'));
     }
-    function packersMovers(Request $request)
-    {
+    // function packersMovers(Request $request)
+    // {
 
 
-        $request->validate([
-            'image1' => 'mimes:png,jpeg,jpg|max:2048',
-            'image2' => 'mimes:png,jpeg,jpg|max:2048',
-            'image3' => 'mimes:png,jpeg,jpg|max:2048',
-            'image4' => 'mimes:png,jpeg,jpg|max:2048',
-        ]);
+    //     $request->validate([
+    //         'image1' => 'mimes:png,jpeg,jpg|max:2048',
+    //         'image2' => 'mimes:png,jpeg,jpg|max:2048',
+    //         'image3' => 'mimes:png,jpeg,jpg|max:2048',
+    //         'image4' => 'mimes:png,jpeg,jpg|max:2048',
+    //     ]);
 
 
-        if ($request->image1) {
-            $fileName1 = '1' . time() . '.' . $request->image1->extension();
-            $request->image1->move(public_path('uploads'), $fileName1);
-            $data['image1'] = url('public/uploads') . '/' . $fileName1;
-        }
-        if ($request->image2) {
-            $fileName2 = '2' . time() . '.' . $request->image2->extension();
-            $request->image2->move(public_path('uploads'), $fileName2);
-            $data['image2'] = url('public/uploads') . '/' . $fileName2;
-        }
-        if ($request->image3) {
-            $fileName3 = '3' . time() . '.' . $request->image3->extension();
-            $request->image3->move(public_path('uploads'), $fileName3);
-            $data['image3'] = url('public/uploads') . '/' . $fileName3;
-        }
-        if ($request->image4) {
-            $fileName4 = '4' . time() . '.' . $request->image4->extension();
-            $request->image4->move(public_path('uploads'), $fileName4);
-            $data['image4'] = url('public/uploads') . '/' . $fileName4;
-        }
+    //     if ($request->image1) {
+    //         $fileName1 = '1' . time() . '.' . $request->image1->extension();
+    //         $request->image1->move(public_path('uploads'), $fileName1);
+    //         $data['image1'] = url('public/uploads') . '/' . $fileName1;
+    //     }
+    //     if ($request->image2) {
+    //         $fileName2 = '2' . time() . '.' . $request->image2->extension();
+    //         $request->image2->move(public_path('uploads'), $fileName2);
+    //         $data['image2'] = url('public/uploads') . '/' . $fileName2;
+    //     }
+    //     if ($request->image3) {
+    //         $fileName3 = '3' . time() . '.' . $request->image3->extension();
+    //         $request->image3->move(public_path('uploads'), $fileName3);
+    //         $data['image3'] = url('public/uploads') . '/' . $fileName3;
+    //     }
+    //     if ($request->image4) {
+    //         $fileName4 = '4' . time() . '.' . $request->image4->extension();
+    //         $request->image4->move(public_path('uploads'), $fileName4);
+    //         $data['image4'] = url('public/uploads') . '/' . $fileName4;
+    //     }
 
-        $id = $request->uniqueId;
-        $data['updated_at'] = Carbon::now();
-        $homepagebanners = DB::table('homepagebanner')->where('id', $id)->update($data);
+    //     $id = $request->uniqueId;
+    //     $data['updated_at'] = Carbon::now();
+    //     $homepagebanners = DB::table('homepagebanner')->where('id', $id)->update($data);
 
 
-        return back()->with('success', 'File uploaded successfully');
-        // print_r($data);die;
-    }
+    //     return back()->with('success', 'File uploaded successfully');
+    //     // print_r($data);die;
+    // }
     function banners()
     {
         return view('dashboards.admins.homebanners');
@@ -230,6 +233,42 @@ class HomepageController extends Controller
         }
 
     }
+    
+    public function learnerSupportForm(){
+        $learnerSupport = LearnerSupport::where('id',1)->first();
+        return view('dashboards.admins.learnerSupportForm', compact('learnerSupport'));
+    }
+
+    public function learnerSupportUpdate(Request $request){
+        $request->validate([
+            'image' => 'mimes:png,jpeg,jpg|max:2048',
+        ]);
+
+        if ($request->image) {
+            $fileName = 'image' . time() . '.' . $request->image->extension();
+            $request->image->move(public_path('uploads'), $fileName);
+            $data['image'] = url('public/uploads') . '/' . $fileName;
+        }
+        
+
+        $data['mobile_no'] = $request->mobile_no;
+        $data['days_n_time'] = $request->days_n_time;
+        $data['desclaimer'] = $request->desclaimer;
+        $data['updated_at'] = Carbon::now();
+        if($request->id){
+         $id = LearnerSupport::where('id', $request->id)->update($data);
+        }else{
+            $id = LearnerSupport::create($data);
+        }
+        if ($id) {
+            return back()->with('success', 'Data saved successfully');
+        } else {
+            return back()->with('error', 'Something Went Wrong');
+        }
+
+    }
+    
+    
     public function termsncondandprvcypolicyForm(){
         $trmsNCondNPrvcyPlcy = DB::table('termsandprivacies')->where('id',1)->first();
         return view('dashboards.admins.termsNPrvcyForm', compact('trmsNCondNPrvcyPlcy'));
@@ -246,6 +285,59 @@ class HomepageController extends Controller
          $id = DB::table('termsandprivacies')->where('id', $request->id)->update($data);
         }else{
             $id = DB::table('termsandprivacies')->insertGetId($data);
+        }
+        if ($id) {
+            return back()->with('success', 'Data saved successfully');
+        } else {
+            return back()->with('error', 'Something Went Wrong');
+        }
+
+    }
+
+    public function howGurukulNationWorkForm(){
+        $howGurukulNationWork = howGurukulNationWork::where('id',1)->first();
+        return view('dashboards.admins.howGurukulNationWorkForm', compact('howGurukulNationWork'));
+    }
+
+    public function howGurukulNationWorkUpdate(Request $request){       
+
+        $data['title'] = $request->title;
+        $data['sub_title'] = $request->sub_title;
+        $data['details'] = $request->details;
+        $data['updated_at'] = Carbon::now();
+        if($request->id){
+         $id = HowGurukulNationWork::where('id', $request->id)->update($data);
+        }else{
+            $id = HowGurukulNationWork::create($data);
+        }
+        if ($id) {
+            return back()->with('success', 'Data saved successfully');
+        } else {
+            return back()->with('error', 'Something Went Wrong');
+        }
+
+    }
+    
+    public function whyGurukulNationForm(){
+        $whyGurukulNation = WhyGurukulNation::where('id',1)->first();
+        return view('dashboards.admins.whyGurukulNationForm', compact('whyGurukulNation'));
+    }
+
+    public function whyGurukulNationUpdate(Request $request){       
+
+        $data['count1'] = $request->count1;
+        $data['count2'] = $request->count2;
+        $data['count3'] = $request->count3;
+        $data['count4'] = $request->count4;
+        $data['title1'] = $request->title1;
+        $data['title2'] = $request->title2;
+        $data['title3'] = $request->title3;
+        $data['title4'] = $request->title4;
+        $data['updated_at'] = Carbon::now();
+        if($request->id){
+         $id = WhyGurukulNation::where('id', $request->id)->update($data);
+        }else{
+            $id = WhyGurukulNation::create($data);
         }
         if ($id) {
             return back()->with('success', 'Data saved successfully');

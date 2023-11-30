@@ -5,17 +5,16 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\PackerMoverController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\categoryController;
-use App\Http\Controllers\itemController;
-use App\Http\Controllers\RoadSideAssistanceController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TestmonialsController;
 use App\Http\Controllers\ServiceController;
-use App\Http\Controllers\HomeServiceController;
 use App\Http\Controllers\CoursesController;
+use App\Http\Controllers\VideoController;
+use App\Http\Controllers\ReviewsController;
+use App\Http\Controllers\FaqsController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -130,11 +129,19 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth','PreventBackHis
         Route::get('about-us',[HomepageController::class,'aboutForm'])->name('admin.about');
         Route::post('about-us/update',[HomepageController::class,'aboutUpdate'])->name('admin.about_update');
 
+        // how_gurukul_nation_work
+        Route::get('how/gurukul/nation/work',[HomepageController::class,'howGurukulNationWorkForm'])->name('admin.how_gurukul_nation_work');
+        Route::post('how_gurukul_nation_work/update',[HomepageController::class,'howGurukulNationWorkUpdate'])->name('admin.how_gurukul_nation_work_update');
+        
+        // why_gurukul_nation
+        Route::get('why/gurukul/nation',[HomepageController::class,'whyGurukulNationForm'])->name('admin.why_gurukul_nation');
+        Route::post('why_gurukul_nation/update',[HomepageController::class,'whyGurukulNationUpdate'])->name('admin.why_gurukul_nation_update');
+
         // termsncondandprvcypolicy
         Route::get('termsncondandprvcypolicy',[HomepageController::class,'termsncondandprvcypolicyForm'])->name('admin.termsncondandprvcypolicy');
         Route::post('termsncondandprvcypolicy/update',[HomepageController::class,'termsncondandprvcypolicyUpdate'])->name('admin.termsncondandprvcypolicy_update');
 
-// blog category 
+// course category 
         Route::get('category',[categoryController::class,'index'])->name('admin.category');
         Route::get('addcategory',[categoryController::class,'addcategory'])->name('admin.addcategory');
         Route::post('savecategory',[categoryController::class,'savecategory'])->name('admin.savecategory');
@@ -166,6 +173,31 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth','PreventBackHis
         Route::get('edit/course/{id}',[CoursesController::class,'editCourse'])->name('admin.editCourse');
         Route::post('/update/course/{id}',[CoursesController::class,'updateCourse'])->name('admin.updateCourse');
         Route::get('delete/course/{id}',[CoursesController::class,'deleteCourse'])->name('admin.deleteCourse');
+        
+        // videos 
+        Route::get('videos',[VideoController::class,'index'])->name('admin.video');
+        Route::get('add/video/form',[VideoController::class,'addVideoForm'])->name('admin.addVideo');
+        Route::post('save/video',[VideoController::class,'saveVideo'])->name('admin.saveVideo');
+        Route::get('edit/video/{id}',[VideoController::class,'editVideo'])->name('admin.editVideo');
+        Route::get('delete/video/{id}',[VideoController::class,'deleteVideo'])->name('admin.deleteVideo');
+        
+        // Reviews 
+        Route::get('reviews',[ReviewsController::class,'index'])->name('admin.reviews');
+        Route::get('add/reviews/form',[ReviewsController::class,'addReviewsForm'])->name('admin.addReviews');
+        Route::post('save/reviews',[ReviewsController::class,'saveReviews'])->name('admin.saveReviews');
+        Route::get('edit/reviews/{id}',[ReviewsController::class,'editReviews'])->name('admin.editReviews');
+        Route::get('delete/reviews/{id}',[ReviewsController::class,'deleteReviews'])->name('admin.deleteReviews');
+        
+        // faqs 
+        Route::get('faqs',[FaqsController::class,'index'])->name('admin.faqs');
+        Route::get('add/faqs/form',[FaqsController::class,'addFaqsForm'])->name('admin.addFaqs');
+        Route::post('save/faqs',[FaqsController::class,'saveFaqs'])->name('admin.saveFaqs');
+        Route::get('edit/faqs/{id}',[FaqsController::class,'editFaqs'])->name('admin.editFaqs');
+        Route::get('delete/faqs/{id}',[FaqsController::class,'deleteFaqs'])->name('admin.deleteFaqs');
+
+        // Learner support
+        Route::get('learner-support',[HomepageController::class,'learnerSupportForm'])->name('admin.learner_support');
+        Route::post('learner-support/update',[HomepageController::class,'learnerSupportUpdate'])->name('admin.learner_support_update');
         
         // testmonials 
         Route::get('testmonials',[TestmonialsController::class,'index'])->name('admin.testmonials');

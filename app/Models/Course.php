@@ -9,4 +9,9 @@ class Course extends Model
 {
     use HasFactory;
     protected $fillable = ['category_id','brands','certificate_img','title','slug','sub_title','what_you_will_learn','course_description','thumbnail','video'];
+
+    // public function video_list()
+    // {
+    //     return $this->belongsTo(Video::class,'course_id');
+    // }
 }

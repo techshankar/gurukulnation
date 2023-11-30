@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -100,25 +101,71 @@
                 </p>
               </a>
             </li> -->
-            <li class="nav-item">
+
+            <li class="active" style="margin-left: 3em;">
+              <a href="#courseSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Course</a>
+              <ul class="collapse list-unstyled" id="courseSubmenu">
+                <li class="nav-item">
+                  <a href="{{ route('admin.category')}}" class="nav-link {{ (request()->is('admin/category*')) ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-square"></i>
+                    <p>
+                      Course Category
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ route('admin.courses')}}" class="nav-link {{ (request()->is('admin/courses*')) ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-snowflake"></i>
+                    <p>
+                      Courses
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ route('admin.video')}}" class="nav-link {{ (request()->is('admin/video*')) ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-square"></i>
+                    <p>
+                      Course Video
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <!-- <li class="nav-item">
               <a href="{{ route('admin.category')}}" class="nav-link {{ (request()->is('admin/category*')) ? 'active' : '' }}">
                 <i class="nav-icon fas fa-square"></i>
                 <p>
                   Course Category
                 </p>
               </a>
-            </li>
+            </li> -->
+
+
+
+
+
             <li class="nav-item">
-              <a href="{{ route('admin.courses')}}" class="nav-link {{ (request()->is('admin/courses*')) ? 'active' : '' }}">
-                <i class="nav-icon fas fa-snowflake"></i>
+              <a href="{{ route('admin.how_gurukul_nation_work')}}" class="nav-link {{ (request()->is('admin/how_gurukul_nation_work*')) ? 'active' : '' }}">
+                <i class="nav-icon fas fa-hdd"></i>
                 <p>
-                  Courses 
+                  How Gurkul Nation Work
                 </p>
               </a>
             </li>
-            
+
             <li class="nav-item">
-             <a href="{{ route('admin.about')}}" class="nav-link {{ (request()->is('admin/about*')) ? 'active' : '' }}">
+              <a href="{{ route('admin.why_gurukul_nation')}}" class="nav-link {{ (request()->is('admin/why_gurukul_nation*')) ? 'active' : '' }}">
+                <i class="nav-icon fas fa-hdd"></i>
+                <p>
+                  Why Gurkul Nation
+                </p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="{{ route('admin.about')}}" class="nav-link {{ (request()->is('admin/about*')) ? 'active' : '' }}">
                 <i class="nav-icon fas fa-hdd"></i>
                 <p>
                   About
@@ -151,7 +198,7 @@
                 </p>
               </a>
             </li> -->
-            
+
             <!--
              <li class="nav-item">
               <a href="{{ route('admin.main_banner')}}" class="nav-link {{ (request()->is('admin/main_banner*')) ? 'active' : '' }}">
@@ -176,8 +223,8 @@
                   Newsletters
                 </p>
               </a>
-            </li>-->              
-            
+            </li>-->
+
             <li class="nav-item">
               <a href="{{ route('admin.contact')}}" class="nav-link {{ (request()->is('admin/contact*')) ? 'active' : '' }}">
                 <i class="nav-icon fas fa-phone"></i>
@@ -185,9 +232,35 @@
                   Contact Us
                 </p>
               </a>
-            </li>               
-           
+            </li>
             
+            <li class="nav-item">
+              <a href="{{ route('admin.reviews')}}" class="nav-link {{ (request()->is('admin/reviews*')) ? 'active' : '' }}">
+                <i class="nav-icon fas fa-book"></i>
+                <p>
+                  Reviews
+                </p>
+              </a>
+            </li>
+           
+            <li class="nav-item">
+              <a href="{{ route('admin.faqs')}}" class="nav-link {{ (request()->is('admin/faqs*')) ? 'active' : '' }}">
+                <i class="nav-icon fas fa-book"></i>
+                <p>
+                  FAQs
+                </p>
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="{{ route('admin.learner_support')}}" class="nav-link {{ (request()->is('admin/learner_support*')) ? 'active' : '' }}">
+                <i class="nav-icon fas fa-hdd"></i>
+                <p>
+                  Learner Support
+                </p>
+              </a>
+            </li>
+
             <li class="nav-item">
               <a href="{{ route('admin.profile')}}" class="nav-link {{ (request()->is('admin/profile*')) ? 'active' : '' }}">
                 <i class="nav-icon fas fa-user"></i>
@@ -195,9 +268,9 @@
                   Profile
                 </p>
               </a>
-            </li> 
+            </li>
             <li class="nav-item">
-             <a href="{{ route('admin.termsncondandprvcypolicy')}}" class="nav-link {{ (request()->is('admin/termsncondandprvcypolicy*')) ? 'active' : '' }}">
+              <a href="{{ route('admin.termsncondandprvcypolicy')}}" class="nav-link {{ (request()->is('admin/termsncondandprvcypolicy*')) ? 'active' : '' }}">
                 <i class="nav-icon fas fa-hdd"></i>
                 <p>
                   Terms & Privacy Policy
@@ -212,10 +285,10 @@
                 </p>
               </a>
             </li>
-            
+
           </ul>
         </nav>
-        
+
         <!-- /.sidebar-menu -->
       </div>
       <!-- /.sidebar -->

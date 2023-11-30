@@ -8,32 +8,9 @@ use Illuminate\Support\Carbon;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        $blogs = DB::table('blog_posts')->orderBy('id','desc')->limit('2')->get();
-        $popular = DB::table('blog_posts')->offset(2)->limit(2)->orderBy('id','desc')->get();
-        $blogCatgories = DB::table('course_categories')->limit(5)->orderBy('id','desc')->get();
-        $banners = DB::table('banners')->where('status',1)->get();
-        $ourStory = DB::table('our_story_n_missions')->first();
-        $founder = DB::table('founders')->first();
-        $services = DB::table('services')->limit('3')->get();
-        $testimonials = DB::table('testimonials')->get();
-        return view('frontend.index', compact('blogs','popular','blogCatgories','banners','services','ourStory','founder','testimonials'));
+        return view('frontend.index');
     }
     
     public function blogsFrntendList(){

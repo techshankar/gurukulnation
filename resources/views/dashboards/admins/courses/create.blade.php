@@ -114,7 +114,7 @@
                                     <div class="form-group row">
                                         <div class="col-lg-6">
                                             <label for="inputName" class="col-sm-6 col-form-label">Thumbnail:</label>
-                                            <input type="file" class="form-control" id="inputName" placeholder="Enter Thumbnail" name="thumbnail" required>
+                                            <input type="file" class="form-control" id="inputName" name="thumbnail" required>
                                         </div>
                                         <div class="col-lg-6">
                                             <label for="inputName" class="col-sm-6 col-form-label">Certificate:</label>
