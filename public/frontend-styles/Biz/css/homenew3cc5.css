@@ -1,0 +1,685 @@
+﻿
+.digital_bundle .digital_bundle_heading {
+    text-align: center;
+    background: #fff;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    /* position: sticky; */
+    top: 40px;
+    z-index: 9;
+}
+section.digital_bundle {
+    background: #fff;
+    padding-bottom: 50px;
+    margin-top:20px;
+}
+
+.digital_bundle .digital_bundle_heading p {
+    color: #333;
+    font-size: 18px;
+}
+.digital_bundle_main_section {
+    padding-top: 10px;
+    /* display: flex; */
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+
+}
+
+
+
+.video_overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-image: url('../img/marketing_video.jpg');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    z-index: 1;
+    display: block;
+    transition: 0.4s;
+}
+    .video_overlay.overlay_branding {
+        background-image: url('../img/branding_video.jpg');
+    }
+    .video_overlay.overlay_traffic {
+        background-image: url('../img/traffic_video.jpg');
+    }
+    .video_overlay.overlay_influence {
+        background-image: url('../img/influence_video.jpg');
+    }
+    .video_overlay.overlay_finance {
+        background-image: url('../img/finance_video.jpg');
+    }
+
+    /*.digital_course_main:hover .video_overlay {
+        display: none;
+        transition: 0.4s;
+    }*/
+
+
+
+
+.digital_bundle_main_section .digital_bundle_left {
+    /* position: sticky; */
+    top: 235px;
+    background: #fff;
+}
+    .digital_bundle_main_section .digital_bundle_right {
+        max-width: calc(100% - 0px);
+        width: 100%;
+        padding-right:10px;
+    }
+.digital_bundle_left .digital_navigation {
+    margin:0;
+    padding:0;
+    position: relative;
+    /* z-index: 9999; */
+    padding: 0;
+    display: flex;
+    overflow: auto;
+    margin-bottom: 40px;
+}
+    .digital_bundle_left .digital_navigation li {
+        display:block;
+    }
+    .digital_bundle_left .digital_navigation a {
+        border-radius: 10px;
+        border: 1px solid transparent;
+        transition: 0.5s;
+        font-size: 20px;
+        line-height: 150%;
+        padding:20px 25px;
+        min-width: 380px;
+        display: block;
+        color: #01202b;
+        font-weight: 500;
+        border-radius:8px;
+        margin:5px 0;
+        
+    }
+        .digital_bundle_left .digital_navigation a:hover, .digital_bundle_left .digital_navigation .active a {
+            box-shadow: 5px 5px #1879c2;
+            background: #fff;
+            /*box-shadow: 0 -2px 7px 0 rgb(22 22 22 / 1%), 0 2px 10px 0 rgb(80 80 80 / 10%);*/
+            border:1px solid #1879c2;
+        }
+
+.embed-responsive-3by9 {
+    padding-bottom: 132%;
+}
+.digital_course_main {
+    padding: 25px;
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 100px;
+    margin-bottom: 40px;
+    border: 1px solid #ff783d38;
+    box-shadow: 0 -2px 7px 0 rgb(22 22 22 / 1%), 0 2px 10px 0 rgb(80 80 80 / 10%);
+    transition: 0.4s;
+}
+    /*.digital_course_main:hover {
+        box-shadow: rgb(31 31 31 / 12%) 0px 1px 6px, rgb(31 31 31 / 12%) 0px 1px 4px;
+    }*/
+    .digital_course_main .digital_course_left {
+        max-width: calc(100% - 420px);
+    }
+    .digital_course_main .digital_course_right {
+        width: 320px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+    }
+        .digital_course_main .digital_course_right img {
+            max-width:100%;
+            margin:0 auto;
+            display:block;
+        }
+        .digital_course_main .digital_course_right iframe {
+            border-radius: 8px;
+            max-width: 100%;
+            width: 100%;
+            border: 1px solid hsl(0 0% 90% / 1);
+            display:none;
+        }
+    .digital_course_main .digital_course_left h3 {
+        color: #333;
+        font-size: 26px;
+        font-weight: 600;
+        margin-top:20px;
+    }
+    .digital_course_main .digital_course_left p {
+        color: #333;
+        font-size: 18px;
+        line-height: 28px;
+    }
+        .digital_course_main .digital_course_left p span {
+            font-size: 17px;
+            color: #333;
+            font-weight: 500;
+            margin-right: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+            .digital_course_main .digital_course_left p span i {
+                margin-right: 10px;
+                color: #1879c2;
+                /* background: #BFDDF2; */
+                border-radius: 100%;
+                /* padding: 10px; */
+                font-size: 18px;
+                text-align: center;
+            }
+        .digital_course_main .digital_course_left p.bundle-info {
+            display: inline-block;
+            margin-right: 25px;
+        }
+            .digital_course_main .digital_course_left p.bundle-info i {
+                color: #1879c2;
+                font-size: 17px;
+                margin-right: 10px;
+            }
+    .digital_course_main .digital_course_left a {
+        background-color: #1879c2;
+        border: 2px solid #1879c2;
+        color: #fff;
+        font-weight: 500;
+        border-radius: 6px;
+        font-size: 16px;
+        padding: 10px 25px;
+        text-decoration: none;
+        margin-top: 10px;
+        display: block;
+        transition: 0.4s;
+        width: fit-content;
+    }
+        .digital_course_main .digital_course_left a:hover {
+            background-color: transparent;
+            color: #1879c2;
+        }
+
+.why_nw_box {
+    /*background-image: url('../img/biz_pattern.png');*/
+    padding: 40px;
+    /*background-position: center;
+    background-size: cover;
+    border-radius: 12px;*/
+}
+.test-des {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+    .test-des .test_review_left {
+        max-width: calc(100% - 690px);
+        width: 100%;
+    }
+
+    .test-des .test_review_right {
+        width:650px;
+    }
+    .test-des .test_review_right img {
+        max-width:100%;
+    }
+
+.scholars_section {
+    padding: 30px 0;
+    text-align: center;
+    padding-bottom:60px;
+}
+    .scholars_section .index-title {
+        margin-bottom:30px;
+    }
+    .scholars_section .index-title::before {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+.biz_review_section {
+    padding:40px 0;
+}
+    .biz_review_section .biz_review img {
+        max-width:100%;
+        margin:0 auto;
+    }
+        .biz_review_section .biz_review img.biz_review_mob {
+            display:none;
+        }
+    .biz_review_section .biz_review_main {
+        display: flex;
+        align-items: center;
+    }
+    .biz_review_section .biz_review .index-title:before {
+        margin: inherit;
+    }
+    .biz_review_section .biz_review.biz_review_content {
+        padding-left:40px;
+    }
+    .biz_review_section .biz_review p {
+        color: #333;
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .biz_review_section .biz_review a {
+        background-color: #1879c2;
+        border: 2px solid #1879c2;
+        color: #fff;
+        font-weight: 500;
+        border-radius: 6px;
+        font-size: 16px;
+        padding: 10px 34px;
+        text-decoration: none;
+        margin-top: 10px;
+        display: inline-block;
+        transition: 0.4s;
+    }
+        .biz_review_section .biz_review a:hover {
+            background-color: transparent;
+            color: #1879c2;
+        }
+.customer-support-box {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+    .customer-support-box img {
+        max-width:280px;
+    }
+.support_sub_box h5 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+}
+    .support_sub_box h5 i {
+        font-size: 26px;
+        margin-right: 10px;
+        color: #1879c2;
+        margin-bottom:10px;
+    }
+
+.ind_flag {
+    position:fixed;
+    top:0px;
+    left:-100px;
+    z-index:99;
+}
+.ind_flag2 {
+    position: fixed;
+    bottom: -70px;
+    z-index: 99;
+    right: -25px;
+}
+img.indian_flag1 {
+    max-width:100%;
+}
+img.indian_flag2 {
+    max-width: 100%;
+}
+.bird_fly {
+    position:absolute;
+    max-width:140px;
+    top:100px;
+    left:600px;
+}
+img.bird_fly_img {
+    position: relative;
+    transition:0.4s;
+    animation: mymove 1.5s infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes mymove {
+    from {
+        top: 0px;
+    }
+
+    to {
+        top: 30px;
+    }
+}
+
+
+.freedom_modal {
+    background-color: rgb(0 0 0 / 50%);
+    padding: 30px;
+}
+    .freedom_modal .modal-dialog {
+        display: flex;
+        margin: 0 auto;
+        padding: 10px;
+        max-width: 1000px;
+        width:auto;
+        flex-direction: column;
+        justify-content: center;
+        min-height: calc(100vh - 60px);
+    }
+
+    .freedom_modal .modal-content {
+        border-radius: 0px;
+        position:relative;
+    }
+.freedom_modal button.close {
+    right:25px;
+    top:25px;
+    z-index: 9;
+    position: absolute;
+    opacity: 1;
+}
+.freedom_modal button.close img {
+    max-width: 22px;
+}
+    .freedom_modal .modal-body {
+        padding:10px;
+    }
+        .freedom_modal .modal-body img {
+            max-width:100%;
+        }
+img.free_mob {
+    display:none;
+}
+
+
+@media(max-width:1400px) {
+    .digital_bundle_left .digital_navigation a {
+        padding: 15px 20px;
+        min-width: 300px;
+        border-radius:8px;
+    }
+    .digital_bundle_main_section .digital_bundle_right {
+        max-width: calc(100% - 340px);
+        padding-right: 0px;
+    }
+    .digital_course_main .digital_course_right {
+        max-width: 380px;
+    }
+    .digital_course_main .digital_course_left {
+        max-width: calc(100% - 420px);
+    }
+}
+
+@media(max-width:1200px){
+    
+    .digital_course_main {
+        display: flex;
+        gap:20px;
+    }
+        .digital_course_main .digital_course_left {
+            max-width: calc(100% - 260px);
+        }
+        .digital_course_main .digital_course_right {
+            width:240px;
+        }
+}
+
+@media(max-width:991px){
+    .bird_fly {
+        position: absolute;
+        max-width: 110px;
+        top: 60px;
+        left: 330px;
+    }
+    .digital_bundle_main_section {
+        display: block;
+    }
+        .digital_bundle_main_section .digital_bundle_left {
+            display:none;
+        }
+        .digital_bundle_main_section .digital_bundle_right {
+           max-width:100%;
+        }
+    .digital_bundle .digital_bundle_heading {
+        text-align: left;
+        background: #fff;
+        padding-top: 10px;
+        padding-bottom: 0;
+        position: relative;
+        top: 0;
+        z-index: 9;
+    }
+    .digital_course_main {
+        padding:15px;
+    }
+    .digital_course_main .digital_course_left {
+        max-width: calc(100% - 320px);
+    }
+    .digital_course_main .digital_course_left {
+        order: 1;
+    }
+    .digital_course_main .digital_course_right {
+        order: 2;
+    }
+    .digital_course_main .digital_course_right {
+        width: 300px;
+    }
+        .digital_course_main .digital_course_left h3 {
+            margin-top:5px;
+        }
+    section.digital_bundle {
+        padding-bottom:10px;
+    }
+    .container {
+        width:90%;
+        margin:0 auto;
+    }
+    /*.video_overlay {
+        display:none;
+    }*/
+    img.indian_flag1 {
+        max-width: 250px;
+    }
+    .ind_flag {
+        top: 10px;
+        left: -120px;
+    }
+    img.indian_flag2 {
+        max-width: 210px;
+    }
+    .ind_flag2 {
+        bottom: -50px;
+        right: -20px;
+    }
+}
+
+@media(max-width:767px){
+    .bird_fly {
+        position: absolute;
+        max-width: 110px;
+        top: 60px;
+        left: 245px;
+    }
+    .digital_bundle .digital_bundle_heading p, .digital_course_main .digital_course_left p {
+        font-size: 17px;
+        line-height: 24px;
+    }
+    .digital_course_main .digital_course_left h3 {
+        font-size: 24px;
+    }
+    .digital_course_main .digital_course_left a {
+        border-radius: 4px;
+        font-size: 17px;
+        padding: 10px 15px;
+    }
+    .digital_course_main {
+        margin-bottom:20px;
+    }
+    .digital_bundle .digital_bundle_heading {
+        padding-top:30px;
+    }
+    section.digital_bundle {
+        padding-bottom: 20px;
+        margin-top: 0;
+    }
+    .biz_review_section .biz_review p {
+        font-size: 17px;
+        line-height: 24px;
+    }
+    .biz_review_section .biz_review.biz_review_content {
+        padding-left: 10px;
+    }
+    .biz_review_section .biz_review a {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+    img.indian_flag2 {
+        max-width: 200px;
+    }
+
+    .ind_flag2 {
+        bottom: -50px;
+        right: -50px;
+    }
+}
+
+
+@media(max-width:575px){
+    img.free_mob {
+        display: block;
+    }
+    img.free_desk {
+        display: none;
+    }
+    .bird_fly {
+        position: absolute;
+        max-width: 110px;
+        top: 60px;
+        left: 181px;
+    }
+    .digital_course_main .digital_course_left, .digital_course_main .digital_course_right {
+        max-width: 100%;
+    }
+    .digital_course_main {
+        flex-wrap:wrap;
+        display:flex;
+    }
+    .digital_course_main .digital_course_left {
+        order: 2;
+    }
+
+    .digital_course_main .digital_course_right {
+        order: 1;
+    }
+    .digital_course_main .digital_course_left h3 {
+        font-size: 22px;
+    }
+        .digital_bundle .digital_bundle_heading p, .digital_course_main .digital_course_left p {
+            font-size: 15px;
+            line-height: 24px;
+        }
+
+    .biz_review_section .biz_review_main {
+        display: inherit;
+    }
+    .biz_review_section .biz_review img.biz_review_mob {
+        display: block;
+    }
+    .biz_review_section .biz_review img.biz_review_desk {
+        display: none;
+    }
+    .biz_review_section .biz_review.biz_review_content {
+        padding-left:0;
+    }
+    .biz_review_section .biz_review p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .customer-support-heading {
+        margin-top:20px;
+    }
+    .customer-support-box img {
+        max-width: 180px;
+    }
+    .disclaimerWrap__content p {
+        line-height: 24px !important;
+        font-size:16px;
+    }
+        .disclaimerWrap__content p b {
+            font-size: 18px;
+        }
+}
+
+@media(max-width:479px){
+    .freedom_modal {
+        padding:10px;
+    }
+    .bird_fly {
+        position: absolute;
+        max-width: 80px;
+        top: 40px;
+        left: 120px;
+    }
+    .digital_course_main .digital_course_left h3 {
+        font-size:20px;
+    }
+    .digital_course_main {
+        padding:15px;
+    }
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+    #faq h2 {
+        font-size: 17px;
+        line-height: 24px;
+        letter-spacing:0;
+        padding: 15px 26px 0px 20px;
+    }
+    .digital_course_main .digital_course_right {
+        width: 220px;
+    }
+    .disclaimerWrap__content p {
+        line-height: 22px !important;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .customer-support-box img {
+        max-width: 140px;
+    }
+    .customer-support-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .support_sub_box h5 {
+        font-size: 18px;
+    }
+        .support_sub_box h5 i {
+            font-size: 20px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    .customer-support-box p {
+        font-size:13px !important;
+    }
+    img.indian_flag1 {
+        max-width: 190px;
+    }
+
+    .ind_flag {
+        top: 10px;
+        left: -70px;
+    }
+
+    img.indian_flag2 {
+        max-width: 150px;
+    }
+
+    .ind_flag2 {
+        bottom: -35px;
+        right: -20px;
+    }
+}

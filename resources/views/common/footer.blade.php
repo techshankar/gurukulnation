@@ -4,7 +4,7 @@
     <!-- Modal -->
     <div id="myModal3" class="modal slider__modal fade" role="dialog" style="z-index: 9999999;">
         <button type="button" class="close" data-dismiss="modal">
-            <img src="Biz/img/cancel.png">
+            <img src="{{ asset('public/frontend-styles/Biz/img/cancel.png') }}">
         </button>
         <div class="modal-dialog">
             <!-- Modal content-->
@@ -13,7 +13,7 @@
                     <div class="row about_bizgurukul_row2">
                         <div class="col-sm-6">
                             <div class="about_bizgurukul_img2">
-                                <img src="Biz/img/contact.jpg" />
+                                <img src="{{ asset('public/frontend-styles/Biz/img/contact.jpg') }}" />
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -57,7 +57,7 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal">
-                        <img src="Biz/img/cancel2.png">
+                        <img src="{{ asset('public/frontend-styles/Biz/img/cancel2.png') }}">
                     </button>
                     <div class="row about_bizgurukul_row2">
                         <div class="col-sm-12">
@@ -106,10 +106,6 @@
                                     <p>Our team is excited to have you in our community and can't wait to help you achieve your dreams. &#x1f680;</p>
                                 </div>
                                 <div style="text-align: right;">
-
-                                    
-
-
                                     <button id="btn_checkLead" class="sub_btn" type="button" style="padding: 10px !important; width: 100%; font-size: 18px;">Next</button>
                                 </div>
                             </div>
@@ -128,7 +124,7 @@
         <div class="floating_chatbot_icon">
             <p class="tooltiptext2 animated bounceInRight"><span>Got questions? We’re here!</span></p>
             <span>
-                <img src="biz/img/information2.jpg" class="float-img2"></span>
+                <img src="{{ asset('public/frontend-styles/biz/img/information2.jpg') }}" class="float-img2"></span>
         </div>
     </div>
 <script>
@@ -342,14 +338,14 @@
 		  }
 		}
     </script>
-    <script type="text/javascript" src="../cdn.jsdelivr.net/jquery.cookie/1.3.1/jquery.cookie.js"></script>
-    <script src="Biz/js/custome_js/default_homepaged134.js?v=3.4"></script>
-    <script src="Biz/js/custome_js/sliders_effectsf9e3.js?v=1.1"></script>
-    <script src="Biz/js/custome_js/diwali-timer.js"></script>
+    <script type="text/javascript" src="{{ asset('public/frontend-styles/cdn.jsdelivr.net/jquery.cookie/1.3.1/jquery.cookie.js') }}"></script>
+    <script src="{{ asset('public/frontend-styles/Biz/js/custome_js/default_homepaged134.js?v=3.4') }}"></script>
+    <script src="{{ asset('public/frontend-styles/Biz/js/custome_js/sliders_effectsf9e3.js?v=1.1') }}"></script>
+    <script src="{{ asset('public/frontend-styles/Biz/js/custome_js/diwali-timer.js') }}"></script>
 
-    <link href="../unpkg.com/flickity%402.2.1/dist/flickity.min.css" rel="stylesheet" />
-    <script src="../unpkg.com/flickity%402.2.1/dist/flickity.pkgd.min.js"></script>
-    <script src="Biz/js/slideshow_sliderc619.js?v=1.0"></script>
+    <link href="{{ asset('public/frontend-styles/unpkg.com/flickity%402.2.1/dist/flickity.min.css') }}" rel="stylesheet" />
+    <script src="{{ asset('public/frontend-styles/unpkg.com/flickity%402.2.1/dist/flickity.pkgd.min.js') }}"></script>
+    <script src="{{ asset('public/frontend-styles/Biz/js/slideshow_sliderc619.js?v=1.0') }}"></script>
     <script type="text/javascript">
         function isNumber(evt) {
             evt = (evt) ? evt : window.event;
@@ -368,7 +364,7 @@
                                 <div class="footer_left">
                                     <div class="footer-logo">
                                         <a href="Default.html">
-                                            <img src="biz/img/myimgs/gurukul_logo.png" />
+                                            <img src="{{ asset('public/frontend-styles/biz/img/myimgs/gurukul_logo.png') }}" />
                                             
                                         </a>
                                     </div>
@@ -383,7 +379,9 @@
                                     <ul>
                                         <li><a class="footer__insta" href="https://www.instagram.com/bizgurukul/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                         <li><a class="footer__facebook" href="https://www.facebook.com/Bizgurukul-100750271589910" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-                                        <li><a class="footer__twiter" href="https://twitter.com/Bizgurukul_IND" target="_blank"><img src="Biz/img/twitter_new_icon.png" class="twitter_new_logo" /></a></li>
+
+                                        <li><a class="footer__twiter" href="https://twitter.com/Bizgurukul_IND" target="_blank"><img src="{{ asset('public/frontend-styles/Biz/img/twitter_new_icon.png') }}" class="twitter_new_logo" /></a></li>
+                                        
                                         <li><a class="footer__youtube" href="https://www.youtube.com/c/Bizgurukul" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
                                         <li><a class="footer__linked" href="https://www.linkedin.com/company/officialbizgurukul" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                     </ul>
@@ -471,20 +469,11 @@
                     </div>
                 </div>
             </div>
-
-
-            
-
-
-
-
-
-            
             <div class="floating_chatbot">
                 <div class="floating_chatbot_icon">
                     <p class="tooltiptext animated bounceInRight" style="animation-delay: 1s"><span id="botsay">Need Support!</span><i class="fa fa-times close_tooltip" aria-hidden="true"></i></p>
                     <span id="imgbot_icon"><a href="javascript:void(0)">
-                        <img src="biz/img/support-bb.png" class="float-img"></a></span>
+                        <img src="{{ asset('public/frontend-styles/biz/img/support-bb.png') }}" class="float-img"></a></span>
                 </div>
             </div>
             <script>

@@ -1,0 +1,13 @@
+﻿@media(max-width:575px) {
+    .mobile_app_hide {
+        display: none !important;
+    }
+
+    main {
+        margin-top: 0 !important;
+    }
+
+    .floating_chatbot {
+        display:none !important;
+    }
+}

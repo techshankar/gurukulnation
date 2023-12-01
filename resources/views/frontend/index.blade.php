@@ -14,12 +14,12 @@
                    
                     <div class="item active">
                         <div class="banner_item">
-                            <img class="desktop__viewB_slide" src="biz/img/myimgs/new_blue_banner.jpg" />
-                            <img class="mobile__viewB_slide" src="biz/img/myimgs/new_blue_banner.jpg" />
+                            <img class="desktop__viewB_slide" src="{{ asset('public/frontend-styles/biz/img/myimgs/new_blue_banner.jpg') }}" />
+                            <img class="mobile__viewB_slide" src="{{ asset('public/frontend-styles/biz/img/myimgs/new_blue_banner.jpg') }}" />
                             <div class="banner_video">
                                 <div class="banner_video_box">
-                                    <img class="" src="biz/img/myimgs/banner_img.jpg" />
-                                    <img class="iframe_img1" src="Biz/img/iframe_img2.png" />
+                                    <img class="" src="{{ asset('public/frontend-styles/biz/img/myimgs/banner_img.jpg') }}" />
+                                    <img class="iframe_img1" src="{{ asset('public/frontend-styles/Biz/img/iframe_img2.png') }}" />
                                 </div>
                             </div>
                         </div>
@@ -47,8 +47,8 @@
                 </div>
                 <div class="creation_box">
                     <a href="content-creation-course.html" target="_blank">
-                        <img src="Biz/IntsProg/img/ccc_banner_desk2ffaf.jpg?v=1.4" class="ccc_banner_desk" />
-                        <img src="Biz/IntsProg/img/ccc_banner_mobffaf.jpg?v=1.4" class="ccc_banner_mob" />
+                        <img src="{{ asset('public/frontend-styles/Biz/IntsProg/img/ccc_banner_desk2ffaf.jpg?v=1.4') }}" class="ccc_banner_desk" />
+                        <img src="{{ asset('public/frontend-styles/Biz/IntsProg/img/ccc_banner_mobffaf.jpg?v=1.4') }}" class="ccc_banner_mob" />
                     </a>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                                     <!--TESTIMONIAL 1 -->
                                     <div class="item">
                                         <div class="shadow-effect">
-                                            <img class="img-circle" src="Biz/img/graphic-designing-pro.jpg" alt="">
+                                            <img class="img-circle" src="{{ asset('public/frontend-styles/Biz/img/graphic-designing-pro.jpg') }}" alt="">
                                             <div class="slide-name">
                                                 <h2>Graphic Designing - Scratch To Pro</h2>
                                                 <h4>Rajeev Mehta</h4>
@@ -87,7 +87,7 @@
                                     <!--TESTIMONIAL 2 -->
                                     <div class="item">
                                         <div class="shadow-effect">
-                                            <img class="img-circle" src="Biz/img/complete-courses-on-block-crypto.jpg" alt="">
+                                            <img class="img-circle" src="{{ asset('public/frontend-styles/Biz/img/complete-courses-on-block-crypto.jpg') }}" alt="">
                                             <div class="slide-name">
                                                 <h2>Complete Course on Blockchain and Cryptocurrency</h2>
                                                 <h4>Navdeep Yadav</h4>
@@ -100,7 +100,7 @@
                                     <!--TESTIMONIAL 3 -->
                                     <div class="item">
                                         <div class="shadow-effect">
-                                            <img class="img-circle" src="Biz/img/self-confidence.jpg" alt="">
+                                            <img class="img-circle" src="{{ asset('public/frontend-styles/Biz/img/self-confidence.jpg') }}" alt="">
                                             <div class="slide-name">
                                                 <h2>How to Build Self Confidence</h2>
                                                 <h4>Divya Verma (Tegonity)</h4>
@@ -113,7 +113,7 @@
                                     <!--TESTIMONIAL 4 -->
                                     <div class="item">
                                         <div class="shadow-effect">
-                                            <img class="img-circle" src="Biz/img/canva-master.jpg" alt="">
+                                            <img class="img-circle" src="{{ asset('public/frontend-styles/Biz/img/canva-master.jpg') }}" alt="">
                                             <div class="slide-name">
                                                 <h2>Canva Master Course: Design With Canva</h2>
                                                 <h4>Mandeep Singh Madhok</h4>
@@ -126,7 +126,7 @@
                                     <!--TESTIMONIAL 5 -->
                                     <div class="item">
                                         <div class="shadow-effect">
-                                            <img class="img-circle" src="Biz/img/complete-guide-instagram.jpg" alt="">
+                                            <img class="img-circle" src="{{ asset('public/frontend-styles/Biz/img/complete-guide-instagram.jpg') }}" alt="">
                                             <div class="slide-name">
                                                 <h2>Complete Guide To Instagram Growth</h2>
                                                 <h4>Digital Dhairya</h4>
@@ -142,7 +142,7 @@
                                     <!--TESTIMONIAL 7 -->
                                     <div class="item">
                                         <div class="shadow-effect">
-                                            <img class="img-circle" src="Biz/img/Keshave-G-Small-banner.jpg" alt="">
+                                            <img class="img-circle" src="{{ asset('public/frontend-styles/Biz/img/Keshave-G-Small-banner.jpg') }}" alt="">
                                             <div class="slide-name">
                                                 <h2>Secrets of Rich</h2>
                                                 <h4>Keshave Lal</h4>
@@ -177,7 +177,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <a href="Biz/bundel/MarketingMastery-2.html" class="bnd__newCourses">
-                                    <img src="Biz/img/marketing-mastery.png">
+                                    <img src="{{ asset('public/frontend-styles/Biz/img/marketing-mastery.png') }}">
                                     <div class="bnd__newCDetail">
                                         <h2>Marketing Mastery Courses</h2>
                                         <span>1 Course</span>
@@ -186,7 +186,7 @@
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <a href="Biz/bundel/BrandingMastery-2.html" class="bnd__newCourses">
-                                    <img src="Biz/img/gold-bundle.png">
+                                    <img src="{{ asset('public/frontend-styles/Biz/img/gold-bundle.png') }}">
                                     <div class="bnd__newCDetail">
                                         <h2>Branding Mastery Courses</h2>
                                         <span>7 Course</span>
@@ -195,7 +195,7 @@
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <a href="Biz/bundel/TrafficMastery-2.html" class="bnd__newCourses">
-                                    <img src="Biz/img/sapphire.png">
+                                    <img src="{{ asset('public/frontend-styles/Biz/img/sapphire.png') }}">
                                     <div class="bnd__newCDetail">
                                         <h2>Traffic Mastery Courses</h2>
                                         <span>16 Course</span>
@@ -204,7 +204,7 @@
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <a href="Biz/bundel/InfluenceMastery-2.html" class="bnd__newCourses">
-                                    <img src="Biz/img/platinum-bundle.png">
+                                    <img src="{{ asset('public/frontend-styles/Biz/img/platinum-bundle.png') }}">
                                     <div class="bnd__newCDetail">
                                         <h2>Influence Master Courses</h2>
                                         <span>22 Course</span>
@@ -217,7 +217,7 @@
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <a href="Biz/bundel_courses/StockMarketMastery-2.html" class="bnd__newCourses ace__newCourse">
-                                    <img src="Biz/img/stock-banner.jpg">
+                                    <img src="{{ asset('public/frontend-styles/Biz/img/stock-banner.jpg') }}">
                                     <div class="bnd__newCDetail">
                                         <h2>Advance Career Education</h2>
                                         <span>21 Course</span>
@@ -236,7 +236,7 @@
                                 <div class="our__coursesContant ">
 
                                     <div class="bundle-img">
-                                        <img src="Biz/img/marketing-mastery.png">
+                                        <img src="{{ asset('public/frontend-styles/Biz/img/marketing-mastery.png') }}">
                                         <span class="course__overlay"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; 1 Course</span>
                                     </div>
                                     <div class="market__mastryText text-div">
@@ -256,7 +256,7 @@
                                 <div class="our__coursesContant ">
 
                                     <div class="bundle-img">
-                                        <img src="Biz/img/gold-bundle.png">
+                                        <img src="{{ asset('public/frontend-styles/Biz/img/gold-bundle.png') }}">
                                         <span class="course__overlay"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; 7 Courses</span>
                                     </div>
                                     <div class="branding__mastryText text-div">
@@ -276,7 +276,7 @@
                                 <div class="our__coursesContant">
 
                                     <div class="bundle-img">
-                                        <img src="Biz/img/sapphire.png">
+                                        <img src="{{ asset('public/frontend-styles/Biz/img/sapphire.png') }}">
                                         <span class="course__overlay"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; 16 Courses</span>
                                     </div>
                                     <div class="trafic__mastryText text-div">
@@ -293,7 +293,7 @@
                                 <div class="our__coursesContant">
 
                                     <div class="bundle-img">
-                                        <img src="Biz/img/platinum-bundle.png">
+                                        <img src="{{ asset('public/frontend-styles/Biz/img/platinum-bundle.png') }}">
                                         <span class="course__overlay"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; 22 Courses</span>
                                     </div>
                                     <div class="Influence__mastryText text-div">
@@ -310,7 +310,7 @@
                                 <div class="our__coursesContant">
 
                                     <div class="bundle-img">
-                                        <img src="Biz/img/stock-banner.jpg">
+                                        <img src="{{ asset('public/frontend-styles/Biz/img/stock-banner.jpg') }}">
                                         <span class="course__overlay"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; 21 Courses</span>
                                     </div>
                                     <div class="ace__course text-div">
@@ -381,7 +381,7 @@
                                     <a href="Biz/bundel/MarketingMastery-2.html">Know More</a>
                                 </div>
                                 <div class="digital_course_right">
-                                    <img src="Biz/img/marketing_videoc619.jpg?v=1.0" />
+                                    <img src="{{ asset('public/frontend-styles/Biz/img/marketing_videoc619.jpg?v=1.0') }}" />
                                     
                                     
                                 </div>
@@ -400,7 +400,7 @@
                                     <a href="Biz/bundel/BrandingMastery-2.html">Know More</a>
                                 </div>
                                 <div class="digital_course_right">
-                                    <img src="Biz/img/branding_videoc619.jpg?v=1.0" />
+                                    <img src="{{ asset('public/frontend-styles/Biz/img/branding_videoc619.jpg?v=1.0') }}" />
                                     
                                 </div>
                             </section>
@@ -418,7 +418,7 @@
                                     <a href="Biz/bundel/TrafficMastery-2.html">Know More</a>
                                 </div>
                                 <div class="digital_course_right">
-                                    <img src="Biz/img/traffic_videoc619.jpg?v=1.0" />
+                                    <img src="{{ asset('public/frontend-styles/Biz/img/traffic_videoc619.jpg?v=1.0') }}" />
                                     
                                 </div>
                             </section>
@@ -436,7 +436,7 @@
                                     <a href="Biz/bundel/InfluenceMastery-2.html">Know More</a>
                                 </div>
                                 <div class="digital_course_right">
-                                    <img src="Biz/img/influence_videoc619.jpg?v=1.0" />
+                                    <img src="{{ asset('public/frontend-styles/Biz/img/influence_videoc619.jpg?v=1.0') }}" />
                                     
                                 </div>
                             </section>
@@ -454,7 +454,7 @@
                                     <a href="Biz/bundel/FinanceMastery-2.html">Know More</a>
                                 </div>
                                 <div class="digital_course_right">
-                                    <img src="Biz/img/finance_videoc619.jpg?v=1.0" />
+                                    <img src="{{ asset('public/frontend-styles/Biz/img/finance_videoc619.jpg?v=1.0') }}" />
                                     
                                 </div>
                             </section>
@@ -482,7 +482,7 @@
                                 <div class="master_program_box">
                                     <div class="master_program_top top-red"></div>
                                     <div class="master_program_bottom">
-                                        <img src="biz/img/bb.jpg" class="master_logo_icon" />
+                                        <img src="{{ asset('public/frontend-styles/biz/img/bb.jpg') }}" class="master_logo_icon" />
                                         <h4>Marketing Mastery Course</h4>
                                         <p>
                                             <span><i class="fa fa-book" aria-hidden="true"></i>01 Course</span>
@@ -500,7 +500,7 @@
                                 <div class="master_program_box">
                                     <div class="master_program_top top-yellow"></div>
                                     <div class="master_program_bottom">
-                                        <img src="biz/img/bb.jpg" class="master_logo_icon" />
+                                        <img src="{{ asset('public/frontend-styles/biz/img/bb.jpg') }}" class="master_logo_icon" />
                                         <h4>Branding Mastery Courses</h4>
                                         <p>
                                             <span><i class="fa fa-book" aria-hidden="true"></i>08 Courses</span>
@@ -518,7 +518,7 @@
                                 <div class="master_program_box">
                                     <div class="master_program_top top-blue"></div>
                                     <div class="master_program_bottom">
-                                        <img src="biz/img/bb.jpg" class="master_logo_icon" />
+                                        <img src="{{ asset('public/frontend-styles/biz/img/bb.jpg') }}" class="master_logo_icon" />
                                         <h4>Traffic Mastery Courses</h4>
                                         <p>
                                             <span><i class="fa fa-book" aria-hidden="true"></i>17 Courses</span>
@@ -536,7 +536,7 @@
                                 <div class="master_program_box">
                                     <div class="master_program_top top-pink"></div>
                                     <div class="master_program_bottom">
-                                        <img src="biz/img/bb.jpg" class="master_logo_icon" />
+                                        <img src="{{ asset('public/frontend-styles/biz/img/bb.jpg') }}" class="master_logo_icon" />
                                         <h4>Influence Mastery Courses</h4>
                                         <p>
                                             <span><i class="fa fa-book" aria-hidden="true"></i>24 Courses</span>
@@ -554,7 +554,7 @@
                                 <div class="master_program_box">
                                     <div class="master_program_top top-green"></div>
                                     <div class="master_program_bottom">
-                                        <img src="biz/img/bb.jpg" class="master_logo_icon" />
+                                        <img src="{{ asset('public/frontend-styles/biz/img/bb.jpg') }}" class="master_logo_icon" />
                                         <h4>Finance Mastery Courses</h4>
                                         <p>
                                             <span><i class="fa fa-book" aria-hidden="true"></i>26 Courses</span>
@@ -636,7 +636,7 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="ace-bundle-img wow bounceInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                            <img src="Biz/img/stock-banner.jpg" />
+                            <img src="{{ asset('public/frontend-styles/Biz/img/stock-banner.jpg') }}" />
                             <h2>Stock Market Mastery</h2>
                         </div>
                     </div>
@@ -695,7 +695,7 @@
                                                     <div class="our__courseflixContant">
 
                                                         <div class="courseflix-img">
-                                                            <img src="Biz/Subscription/img/sub_con_img/719CopyWritingFromScratch.jpg" />
+                                                            <img src="{{ asset('public/frontend-styles/Biz/Subscription/img/sub_con_img/719CopyWritingFromScratch.jpg') }}" />
                                                         </div>
                                                         <div class="text-div">
                                                             <h2>Learn Copywriting From Scratch</h2>
@@ -714,7 +714,7 @@
                                                     <div class="our__courseflixContant">
 
                                                         <div class="courseflix-img">
-                                                            <img src="Biz/Subscription/img/sub_con_img/143EmailMarketingandMarketing.jpg" />
+                                                            <img src="{{ asset('public/frontend-styles/Biz/Subscription/img/sub_con_img/143EmailMarketingandMarketing.jpg') }}" />
                                                         </div>
                                                         <div class="text-div">
                                                             <h2>Email Marketing and Marketing Automation</h2>
@@ -733,7 +733,7 @@
                                                     <div class="our__courseflixContant">
 
                                                         <div class="courseflix-img">
-                                                            <img src="Biz/Subscription/img/sub_con_img/873WordPress-Academy.jpg" />
+                                                            <img src="{{ asset('public/frontend-styles/Biz/Subscription/img/sub_con_img/873WordPress-Academy.jpg') }}" />
                                                         </div>
                                                         <div class="text-div">
                                                             <h2>WordPress Academy: Learn WordPress Step by Step</h2>
@@ -752,7 +752,7 @@
                                                     <div class="our__courseflixContant">
 
                                                         <div class="courseflix-img">
-                                                            <img src="Biz/Subscription/img/sub_con_img/818Guide-to-Graphology.jpg" />
+                                                            <img src="{{ asset('public/frontend-styles/Biz/Subscription/img/sub_con_img/818Guide-to-Graphology.jpg') }}" />
                                                         </div>
                                                         <div class="text-div">
                                                             <h2>Beginners Guide to Graphology (Handwriting Analysis)</h2>
@@ -771,7 +771,7 @@
                                                     <div class="our__courseflixContant">
 
                                                         <div class="courseflix-img">
-                                                            <img src="Biz/Subscription/img/sub_con_img/917DiabetesManagement.jpg" />
+                                                            <img src="{{ asset('public/frontend-styles/Biz/Subscription/img/sub_con_img/917DiabetesManagement.jpg') }}" />
                                                         </div>
                                                         <div class="text-div">
                                                             <h2>Diabetes Management Program</h2>
@@ -790,7 +790,7 @@
                                                     <div class="our__courseflixContant">
 
                                                         <div class="courseflix-img">
-                                                            <img src="Biz/Subscription/img/sub_con_img/55WomenHealth.jpg" />
+                                                            <img src="{{ asset('public/frontend-styles/Biz/Subscription/img/sub_con_img/55WomenHealth.jpg') }}" />
                                                         </div>
                                                         <div class="text-div">
                                                             <h2>Beginners Guide to Women Health</h2>
@@ -809,7 +809,7 @@
                                                     <div class="our__courseflixContant">
 
                                                         <div class="courseflix-img">
-                                                            <img src="Biz/Subscription/img/sub_con_img/163WeightManagement.jpg" />
+                                                            <img src="{{ asset('public/frontend-styles/Biz/Subscription/img/sub_con_img/163WeightManagement.jpg') }}" />
                                                         </div>
                                                         <div class="text-div">
                                                             <h2>Basics of Weight Management</h2>
@@ -828,7 +828,7 @@
                                                     <div class="our__courseflixContant">
 
                                                         <div class="courseflix-img">
-                                                            <img src="Biz/Subscription/img/sub_con_img/526LearnNutrition.jpg" />
+                                                            <img src="{{ asset('public/frontend-styles/Biz/Subscription/img/sub_con_img/526LearnNutrition.jpg') }}" />
                                                         </div>
                                                         <div class="text-div">
                                                             <h2>Learn Nutrition For Different Life Stages</h2>
@@ -847,7 +847,7 @@
                                                     <div class="our__courseflixContant">
 
                                                         <div class="courseflix-img">
-                                                            <img src="Biz/Subscription/img/sub_con_img/327DietManagement.jpg" />
+                                                            <img src="{{ asset('public/frontend-styles/Biz/Subscription/img/sub_con_img/327DietManagement.jpg') }}" />
                                                         </div>
                                                         <div class="text-div">
                                                             <h2>Diet Management Course For Beginners</h2>
@@ -866,7 +866,7 @@
                                                     <div class="our__courseflixContant">
 
                                                         <div class="courseflix-img">
-                                                            <img src="Biz/Subscription/img/sub_con_img/125ContentWriting.jpg" />
+                                                            <img src="{{ asset('public/frontend-styles/Biz/Subscription/img/sub_con_img/125ContentWriting.jpg') }}" />
                                                         </div>
                                                         <div class="text-div">
                                                             <h2>Content Writing Mastery Course</h2>
@@ -899,7 +899,7 @@
                             <div class="our__courseflixContant">
 
                                 <div class="courseflix-img">
-                                    <img src="Biz/Subscription/img/business.jpg" />
+                                    <img src="{{ asset('public/frontend-styles/Biz/Subscription/img/business.jpg') }}" />
                                 </div>
                                 <div class="text-div">
                                     <h2>Business</h2>
@@ -959,7 +959,7 @@
                 <div class="row" style="display: none;">
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="courseflix__contantArea">
-                            <img src="Biz/img/gold-bundle.png">
+                            <img src="{{ asset('public/frontend-styles/Biz/img/gold-bundle.png') }}">
                             <div class="text-div">
                                 <h2>Courses 1</h2>
                                 <p>
@@ -971,7 +971,7 @@
                     </div>
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="courseflix__contantArea">
-                            <img src="Biz/img/gold-bundle.png">
+                            <img src="{{ asset('public/frontend-styles/Biz/img/gold-bundle.png') }}">
                             <div class="text-div">
                                 <h2>Courses 1</h2>
                                 <p>
@@ -996,7 +996,7 @@
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="explore-div">
                             <div class="explore-icon">
-                                <img src="Biz/img/geography.png">
+                                <img src="{{ asset('public/frontend-styles/Biz/img/geography.png') }}">
                             </div>
                             <div class="explore-title">
                                 <h3>Explore</h3>
@@ -1008,7 +1008,7 @@
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="explore-div mid-div">
                             <div class="explore-icon">
-                                <img src="Biz/img/online-learning.png">
+                                <img src="{{ asset('public/frontend-styles/Biz/img/online-learning.png') }}">
                             </div>
                             <div class="explore-title">
                                 <h3>Learn</h3>
@@ -1020,7 +1020,7 @@
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="explore-div">
                             <div class="explore-icon">
-                                <img src="Biz/img/reward.png">
+                                <img src="{{ asset('public/frontend-styles/Biz/img/reward.png') }}">
                             </div>
                             <div class="explore-title">
                                 <h3>Inspire</h3>
@@ -1220,8 +1220,8 @@
                 <div class="row biz_review_main">
                     <div class="col-sm-4">
                         <div class="biz_review">
-                            <img src="Biz/img/bg1.png" class="biz_review_desk">
-                            <img src="Biz/img/review-hm.png" class="biz_review_mob">
+                            <img src="{{ asset('public/frontend-styles/Biz/img/bg1.png') }}" class="biz_review_desk">
+                            <img src="{{ asset('public/frontend-styles/Biz/img/review-hm.png') }}" class="biz_review_mob">
                         </div>
                     </div>
                     <div class="col-sm-8">
@@ -1247,10 +1247,10 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="test-img desk-img">
-                                <img src="Biz/img/bg1.png">
+                                <img src="{{ asset('public/frontend-styles/Biz/img/bg1.png') }}">
                             </div>
                             <div class="test-img mob-img">
-                                <img src="Biz/img/review-hm.png">
+                                <img src="{{ asset('public/frontend-styles/Biz/img/review-hm.png') }}">
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4 col-xs-12">
@@ -1261,7 +1261,7 @@
                         </div>
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="test-img-second desk-img">
-                                <img src="Biz/img/bg2.png">
+                                <img src="{{ asset('public/frontend-styles/Biz/img/bg2.png') }}">
                             </div>
                         </div>
                     </div>
@@ -1436,7 +1436,7 @@
                     <h2 class="heading-black index-title">Bizgurukul Learner Support</h2>
                 </div>
                 <div class="customer-support-box">
-                    <img src="Biz/img/support_side_img.png" />
+                    <img src="{{ asset('public/frontend-styles/Biz/img/support_side_img.png') }}" />
                     <div class="support_sub_box">
                         <h5><i class="fa fa-phone" aria-hidden="true"></i>+91 8567856753</h5>
                         <p>(We are available on Monday-Sunday from 9:30 AM to 6:00 PM)</p>

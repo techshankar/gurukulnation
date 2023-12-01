@@ -12,42 +12,43 @@
     <meta name="google-site-verification" content="4m34zbds07T3HNZlPrwj2YO3V4o6ODko6YbKW58UcC8" />
     <meta name="robots" content="index, follow" />
     <meta name="facebook-domain-verification" content="2q8g4raztua7quei6ung8ku4prbzse" />
-    <script src="cdn-cgi/apps/head/FyMUmghuDMHd-hdsZH7l5zQAJkQ.js"></script>
-    <link href="assets/img/favicon.png" rel="icon" />
+    <script src="{{ asset('public/frontend-styles/cdn-cgi/apps/head/FyMUmghuDMHd-hdsZH7l5zQAJkQ.js')}}"></script>
+    <link href="{{ asset('public/frontend-styles/assets/img/favicon.png') }}" rel="icon" />
     <link rel="canonical" href="index.html" />
-    <link href="../fonts.googleapis.com/css283ac.css?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-    <link href="../fonts.googleapis.com/css277b1.css?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <link href="{{ asset('public/frontend-styles/fonts.googleapis.com/css283ac.css?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap') }}" rel="stylesheet" />
+
+    <link href="{{ asset('public/frontend-styles/fonts.googleapis.com/css277b1.css?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&amp;display=swap') }}" rel="stylesheet" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>
-        Bizgurukul | Offers The Finest Online Learning Courses In India
+        Gurukul Nation | Offers The Finest Online Learning Courses In India
     </title>
 
 
     <!-- story styles -->
 
-    <link rel="stylesheet" href="Biz/css/dist/skins/stylef9e3.css?v=1.1" />
-    <link rel="stylesheet" href="Biz/css/dist/skins/zuck.min8a25.css?v=1.13" />
-    <link rel="stylesheet" href="Biz/css/dist/skins/snapgram.css" />
-    <link rel="stylesheet" href="Biz/css/dist/skins/vemdezap.css" />
-    <link rel="stylesheet" href="Biz/css/dist/skins/facesnap.css" />
-    <link rel="stylesheet" href="Biz/css/dist/skins/snapssenger.css" />
+    <link rel="stylesheet" href="{{ asset('public/frontend-styles/Biz/css/dist/skins/stylef9e3.css?v=1.1') }}" />
+    <link rel="stylesheet" href="{{ asset('public/frontend-styles/Biz/css/dist/skins/zuck.min8a25.css?v=1.13') }}" />
+    <link rel="stylesheet" href="{{ asset('public/frontend-styles/Biz/css/dist/skins/snapgram.css') }}" />
+    <link rel="stylesheet" href="{{ asset('public/frontend-styles/Biz/css/dist/skins/vemdezap.css') }}" />
+    <link rel="stylesheet" href="{{ asset('public/frontend-styles/Biz/css/dist/skins/facesnap.css') }}" />
+    <link rel="stylesheet" href="{{ asset('public/frontend-styles/Biz/css/dist/skins/snapssenger.css') }}" />
 
-    <script src="Biz/css/dist/skins/zuck.min.js"></script>
-    <script src="Biz/css/dist/skins/script.js"></script>
+    <script src="{{ asset('public/frontend-styles/Biz/css/dist/skins/zuck.min.js') }}"></script>
+    <script src="{{ asset('public/frontend-styles/Biz/css/dist/skins/script.js') }}"></script>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="Biz/css/headerbccc.css?v=4.8" />
-    <link rel="stylesheet" href="Biz/css/footerffaf.css?v=1.4" />
-    <link rel="stylesheet" href="Biz/css/carousel.css" />
-    <link rel="stylesheet" href="Biz/css/carouseller.css" />
-    <link rel="stylesheet" href="Biz/css/animate.css" />
-    <link href="Biz/css/FormLabel_Designc619.css?v=1.0" rel="stylesheet" />
-    <link rel="preconnect" href="../fonts.googleapis.com/index.html" />
-    <link rel="preconnect" href="../fonts.gstatic.com/index.html" crossorigin="" />
-    <link href="../fonts.googleapis.com/css2b660.css?&amp;family=Jost:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-    <link href="../jquery.app/jqueryscripttop.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('public/frontend-styles/Biz/css/headerbccc.css?v=4.8') }}" />
+    <link rel="stylesheet" href="{{ asset('public/frontend-styles/Biz/css/footerffaf.css?v=1.4') }}" />
+    <link rel="stylesheet" href="{{ asset('public/frontend-styles/Biz/css/carousel.css') }}" />
+    <link rel="stylesheet" href="{{ asset('public/frontend-styles/Biz/css/carouseller.css') }}" />
+    <link rel="stylesheet" href="{{ asset('public/frontend-styles/Biz/css/animate.css') }}" />
+    <link href="{{ asset('public/frontend-styles/Biz/css/FormLabel_Designc619.css?v=1.0') }}" rel="stylesheet" />
+    <link rel="preconnect" href="{{ asset('public/frontend-styles/fonts.googleapis.com/index.html') }}" />
+    <link rel="preconnect" href="{{ asset('/public/frontend-styles/fonts.gstatic.com/index.html') }}" crossorigin="" />
+    <link href="{{ asset('public/frontend-styles/fonts.googleapis.com/css2b660.css?&amp;family=Jost:wght@300;400;500;600;700;800;900&amp;display=swap') }}" rel="stylesheet" />
+    <link href="{{ asset('public/frontend-styles/jquery.app/jqueryscripttop.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('public/frontend-styles/maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css') }}" />
 
     <style>
         main {
@@ -164,8 +165,8 @@
         </div>
 
 
-        <script src="Scripts/jquery-3.4.1.js" type="text/javascript"></script>
-        <script src="WebResource8e0e.js?d=x2nkrMJGXkMELz33nwnakFhMwSRPYA1fXDhikMF5PwpvwNb00ciAUtqkaX1h6UbiFfrJB91omWoyKZA_27co2PPUi3bRmnlsXGkiaJVRw9U1&amp;t=638246535643328042" type="text/javascript"></script>
+        <script src="{{ asset('public/frontend-styles/Scripts/jquery-3.4.1.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('public/frontend-styles/WebResource8e0e.js?d=x2nkrMJGXkMELz33nwnakFhMwSRPYA1fXDhikMF5PwpvwNb00ciAUtqkaX1h6UbiFfrJB91omWoyKZA_27co2PPUi3bRmnlsXGkiaJVRw9U1&amp;t=638246535643328042') }}" type="text/javascript"></script>
         <script type="text/javascript">
             //<![CDATA[
             function WebForm_OnSubmit() {
@@ -205,7 +206,7 @@
                                 <div class="header__logo">
                                     <a class="navbar-brand" href="Default.html">
                                         <!-- <img src="biz/img/logof9e3.png?v=1.1" alt="logo" class="logo-img" /> -->
-                                        <img src="biz/img/myimgs/gurukul_logo.png" alt="logo" class="logo-img" />
+                                        <img src="{{ asset('public/frontend-styles/biz/img/myimgs/gurukul_logo.png') }}" alt="logo" class="logo-img" />
 
                                     </a>
                                 </div>
@@ -411,7 +412,7 @@
                                                                 <ul class="dropdown__colum dropdown__columTwoC">
                                                                     <li>
                                                                         <a href="content-creation-course.html" target="_blank">
-                                                                            <img src="biz/IntsProg/img/ccc_banner_mobc619.jpg?v=1.0" style="border:1px solid #ccc;" /></a>
+                                                                            <img src="{{ asset('public/frontend-styles/biz/IntsProg/img/ccc_banner_mobc619.jpg?v=1.0') }}" style="border:1px solid #ccc;" /></a>
                                                                     </li>
                                                                 </ul>
                                                             </div>
@@ -438,14 +439,14 @@
 
                                     <div id="stories" class="storiesWrapper"></div>
 
-                                    <script src="Biz/css/dist/skins/zuck.minf9e3.js?v=1.1"></script>
-                                    <script src="Biz/css/dist/skins/scriptf9e3.js?v=1.1"></script>
+                                    <script src="{{ asset('public/frontend-styles/Biz/css/dist/skins/zuck.minf9e3.js?v=1.1') }}"></script>
+                                    <script src="{{ asset('public/frontend-styles/Biz/css/dist/skins/scriptf9e3.js?v=1.1') }}"></script>
 
 
 
                                     <div class="cart">
                                         <button id="btn_cart" type="button" class="shopping-bag">
-                                            <img src="biz/img/bag.png" />
+                                            <img src="{{ asset('public/frontend-styles/biz/img/bag.png') }}" />
                                         </button>
                                     </div>
 
@@ -456,15 +457,15 @@
                 </nav>
             </header>
 
-            <script src="../ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-            <script src="../maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            <script src="{{ asset('public/frontend-styles/ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js') }}"></script>
+            <script src="{{ asset('public/frontend-styles/maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js') }}"></script>
 
 
-            <meta name="description" content="Bizgurukul is India's fastest-growing online learning platform where you can upgrade yourself with a wide range of online courses through digital marketplaces.">
-            <link rel="stylesheet" href="Biz/css/carousel.css">
-            <link rel="stylesheet" href="Biz/css/carouselhomeflag.css">
-            <link href="Biz/css/index17e6.css?v=5.2" rel="stylesheet" />
-            <link href="Biz/css/homenew3cc5.css?v=1.6" rel="stylesheet" />
+            <meta name="description" content="Gurukul Nation is India's fastest-growing online learning platform where you can upgrade yourself with a wide range of online courses through digital marketplaces.">
+            <link rel="stylesheet" href="{{ asset('public/frontend-styles/Biz/css/carousel.css') }}">
+            <link rel="stylesheet" href="{{ asset('public/frontend-styles/Biz/css/carouselhomeflag.css') }}">
+            <link href="{{ asset('public/frontend-styles/Biz/css/index17e6.css?v=5.2') }}" rel="stylesheet" />
+            <link href="{{ asset('public/frontend-styles/Biz/css/homenew3cc5.css?v=1.6') }}" rel="stylesheet" />
 
             <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css" rel="stylesheet" />
 

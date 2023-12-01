@@ -1,0 +1,83 @@
+﻿.form-group label {
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+}
+.form-group {
+    margin-bottom: 25px;
+}
+    .form-group.form-group-bottom {
+        margin-bottom:3px;
+    }
+    .form-group input {
+        color: #333;
+        background: transparent;
+        border: 1px solid #CCCCCC;
+        box-shadow: none;
+        border-radius: 4px;
+        font-size: 16px;
+        height: 50px;
+        position: relative;
+        z-index: 9;
+    }
+
+    .form-group select {
+        color: #333 !important;
+        background: transparent;
+        border: 1px solid #CCCCCC !important;
+        box-shadow: none;
+        border-radius: 4px;
+        font-size: 16px;
+        height: 50px;
+        position: relative;
+        z-index: 9;
+    }
+        .form-group select:focus {
+            box-shadow:none;
+            outline:none;
+        }
+        .has-float-label {
+            position: relative;
+        }
+
+    .has-float-label label {
+        position: absolute;
+        opacity: 1;
+        transition: all .2s;
+        top: -.5em;
+        left: 12px;
+        z-index: 3;
+        line-height: 1;
+        padding: 0 1px;
+        margin: 0;
+        font-weight: 500;
+        background: #fff;
+        z-index: 99;
+        width: fit-content !important;
+        display: block !important;
+    }
+
+        /*.has-float-label label::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            background: #fff;
+            height: 2px;
+            top: 50%;
+            left: -.2em;
+            right: -.2em;
+            z-index: -1;
+        }*/
+
+
+    .has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+        opacity: 0
+    }
+
+    .has-float-label .form-control:placeholder-shown:not(:focus) + label {
+        opacity: .7;
+        top: 17px;
+        left: 12px;
+        z-index:1;
+        font-size: 16px !important;
+    }
