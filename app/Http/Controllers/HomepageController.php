@@ -304,6 +304,12 @@ class HomepageController extends Controller
         $data['title'] = $request->title;
         $data['sub_title'] = $request->sub_title;
         $data['details'] = $request->details;
+        $data['title2'] = $request->title2;
+        $data['sub_title2'] = $request->sub_title2;
+        $data['details2'] = $request->details2;
+        $data['title3'] = $request->title3;
+        $data['sub_title3'] = $request->sub_title3;
+        $data['details3'] = $request->details3;
         $data['updated_at'] = Carbon::now();
         if($request->id){
          $id = HowGurukulNationWork::where('id', $request->id)->update($data);

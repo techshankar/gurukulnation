@@ -5,12 +5,25 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
+use App\Models\CourseCategory;
+use App\Models\Course;
+use App\Models\Faqs;
+use App\Models\HowGurukulNationWork;
+use App\Models\LearnerSupport;
+use App\Models\WhyGurukulNation;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('frontend.index');
+        $banners = DB::table('banners')->limit(1)->orderBy('id','desc')->get();
+        $courseCategories = CourseCategory::latest()->take(5)->get();
+        $courses = Course::latest()->take(5)->get();
+        $faqs = Faqs::all();
+        $howGurukulNation = HowGurukulNationWork::find(1);
+        $whyGurukulNation = WhyGurukulNation::find(1);
+        $learnerSupport = LearnerSupport::find(1);
+        return view('frontend.index', compact('banners','courseCategories','courses','howGurukulNation','whyGurukulNation','faqs','learnerSupport'));
     }
     
     public function blogsFrntendList(){

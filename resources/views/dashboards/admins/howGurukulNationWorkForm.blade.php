@@ -58,19 +58,45 @@
                                     @csrf
                                     <input type="hidden" name="id" value="@if(!empty($howGurukulNationWork->id)){{ $howGurukulNationWork->id }}@else @endif">
                                     <div class="form-group row">
-                                        <div class="col-lg-6">
-                                            <label for="inputName" class="col-sm-6 col-form-label">Title</label>
+                                        <div class="col-lg-4">
+                                            <label for="inputName" class="col-sm-6 col-form-label">Title One</label>
                                             <input type="text" class="form-control" name="title" required value="@if(!empty($howGurukulNationWork->id)){{ $howGurukulNationWork->title }}@else @endif">
                                         </div>
-                                        <div class="col-lg-6">
-                                            <label for="inputName" class="col-sm-6 col-form-label">Title</label>
+                                        <div class="col-lg-4">
+                                            <label for="inputName" class="col-sm-6 col-form-label">Title Two</label>
+                                            <input type="text" class="form-control" name="title2" required value="@if(!empty($howGurukulNationWork->id)){{ $howGurukulNationWork->title2 }}@else @endif">
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label for="inputName" class="col-sm-6 col-form-label">Title Three</label>
+                                            <input type="text" class="form-control" name="title3" required value="@if(!empty($howGurukulNationWork->id)){{ $howGurukulNationWork->title3 }}@else @endif">
+                                        </div>
+                                        </div>
+                                    <div class="form-group row">    
+                                        <div class="col-lg-4">
+                                            <label for="inputName" class="col-sm-6 col-form-label">Sub Title One</label>
                                             <input type="text" class="form-control" name="sub_title" required value="@if(!empty($howGurukulNationWork->id)){{ $howGurukulNationWork->sub_title }}@else @endif">
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label for="inputName" class="col-sm-6 col-form-label">Sub Title Two</label>
+                                            <input type="text" class="form-control" name="sub_title2" required value="@if(!empty($howGurukulNationWork->id)){{ $howGurukulNationWork->sub_title2 }}@else @endif">
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label for="inputName" class="col-sm-6 col-form-label">Sub Title Three</label>
+                                            <input type="text" class="form-control" name="sub_title3" required value="@if(!empty($howGurukulNationWork->id)){{ $howGurukulNationWork->sub_title3 }}@else @endif">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-lg-12">
-                                            <label for="inputName" class="col-sm-6 col-form-label">about Description</label>
+                                            <label for="inputName" class="col-sm-6 col-form-label">Description One</label>
                                             <textarea name="details" class="form-control">@if(!empty($howGurukulNationWork->id)){{ $howGurukulNationWork->details }}@else @endif</textarea>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label for="inputName" class="col-sm-6 col-form-label">Description Two</label>
+                                            <textarea name="details2" class="form-control">@if(!empty($howGurukulNationWork->id)){{ $howGurukulNationWork->details2 }}@else @endif</textarea>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label for="inputName" class="col-sm-6 col-form-label">Description Three</label>
+                                            <textarea name="details3" class="form-control">@if(!empty($howGurukulNationWork->id)){{ $howGurukulNationWork->details3 }}@else @endif</textarea>
                                         </div>
                                     </div>
                                     

@@ -123,9 +123,19 @@
                                     </div>
 
                                     <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <label for="inputName" class="col-sm-12 col-form-label">Home Page Description:</label>
+                                            <textarea name="home_page_desc" class="form-control" id="editorHomePage"></textarea>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="inputName" class="col-sm-12 col-form-label">Short Description:</label>
+                                            <textarea name="short_desc" class="form-control" id="editorShortDesc"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
                                         <label for="inputName" class="col-sm-12 col-form-label">Description:</label>
                                         <div class="col-sm-12">
-                                            <textarea name="course_description" class="form-control" id="course_description"></textarea>
+                                            <textarea name="course_description" class="form-control" id="editor"></textarea>
                                         </div>
                                     </div>
 
@@ -295,5 +305,15 @@
     // tagInput1.addData(['Write your full sentence' , 'Then press Enter button' , 'Your sentence add'])
 
     // for input what you learn? 
+
+// for ck-editor 
+ClassicEditor.create(document.querySelector("#editorHomePage")).catch((error) => {
+  console.error(error);
+});
+
+ClassicEditor.create(document.querySelector("#editorShortDesc")).catch((error) => {
+  console.error(error);
+});
+// for ck-editor
 </script>
 @endsection

@@ -50,6 +50,8 @@ class CoursesController extends Controller
         $slug = Str::slug($request->title);
         $data['slug'] = $slug;
         $data['what_you_will_learn'] = $whatULearn; 
+        $data['home_page_desc'] = $request->home_page_desc;
+        $data['short_desc'] = $request->short_desc;
         $data['course_description'] = $request->course_description;
         $data['created_at'] = Carbon::now();
         $id = Course::create($data)->id;
@@ -89,6 +91,8 @@ class CoursesController extends Controller
         $slug = Str::slug($request->title);
         $data['slug'] = $slug;
         $data['what_you_will_learn'] = $request->what_you_will_learn;
+        $data['home_page_desc'] = $request->home_page_desc;
+        $data['short_desc'] = $request->short_desc;
         $data['course_description'] = $request->course_description;
         $data['created_at'] = Carbon::now();
         $id = Course::where('id', $id)->update($data);

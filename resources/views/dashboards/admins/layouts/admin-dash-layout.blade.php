@@ -332,8 +332,16 @@
   <!-- AdminLTE App -->
   <script src="{{ url('public/dist/js/adminlte.min.js')}}"></script>
 
+
+  
   {{-- CUSTOM JS CODES --}}
   <script>
+// for ck-editor 
+ClassicEditor.create(document.querySelector("#editor")).catch((error) => {
+  console.error(error);
+});
+// for ck-editor 
+
     $.ajaxSetup({
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
