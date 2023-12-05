@@ -9,6 +9,7 @@ use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\categoryController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CareerController;
 use App\Http\Controllers\TestmonialsController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\CoursesController;
@@ -181,6 +182,13 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth','PreventBackHis
         Route::get('edit/video/{id}',[VideoController::class,'editVideo'])->name('admin.editVideo');
         Route::get('delete/video/{id}',[VideoController::class,'deleteVideo'])->name('admin.deleteVideo');
         
+        // careers 
+        Route::get('careers',[CareerController::class,'index'])->name('admin.careers');
+        Route::get('add/career/form',[CareerController::class,'addCareerForm'])->name('admin.addCareer');
+        Route::post('save/career',[CareerController::class,'saveCareer'])->name('admin.saveCareer');
+        Route::get('edit/career/{id}',[CareerController::class,'editCareer'])->name('admin.editCareer');
+        Route::get('delete/career/{id}',[CareerController::class,'deleteCareer'])->name('admin.deleteCareer');
+        
         // Reviews 
         Route::get('reviews',[ReviewsController::class,'index'])->name('admin.reviews');
         Route::get('add/reviews/form',[ReviewsController::class,'addReviewsForm'])->name('admin.addReviews');
@@ -243,3 +251,5 @@ Route::get('service/details/{slug}',[HomeController::class,'serviceDetails']);
 Route::post('news/letter/saved',[HomeController::class,'savedNewsLetter']);
 // contact
 Route::post('contact/store',[HomeController::class,'saveContactDetails']);
+// courses
+Route::get('course/list/{id}',[HomeController::class,'courseList']);

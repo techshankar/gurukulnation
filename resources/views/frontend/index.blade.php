@@ -90,7 +90,7 @@
                                 <p class="bundle-info"><i class="fa fa-check" aria-hidden="true"></i>Live Q&amp;A Support</p>
                                 <p class="bundle-info"><i class="fa fa-check" aria-hidden="true"></i>13k+ Students Enrolled</p>
                                 <p class="bundle-info"><i class="fa fa-check" aria-hidden="true"></i>Bizgurukul Certificate</p>
-                                <a href="#">Know More</a>
+                                <a href="{{ URL::to('course/list', $bundles->category_id) }}">Know More</a>
                             </div>
                             <div class="digital_course_right">
                                 <img src="{{ asset('public/frontend-styles/Biz/img/marketing_videoc619.jpg?v=1.0') }}" />

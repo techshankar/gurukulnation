@@ -147,6 +147,15 @@
 
 
             <li class="nav-item">
+              <a href="{{ route('admin.careers')}}" class="nav-link {{ (request()->is('admin/careers*')) ? 'active' : '' }}">
+                <i class="nav-icon fas fa-hdd"></i>
+                <p>
+                  Careers 
+                </p>
+              </a>
+            </li>
+
+            <li class="nav-item">
               <a href="{{ route('admin.how_gurukul_nation_work')}}" class="nav-link {{ (request()->is('admin/how_gurukul_nation_work*')) ? 'active' : '' }}">
                 <i class="nav-icon fas fa-hdd"></i>
                 <p>

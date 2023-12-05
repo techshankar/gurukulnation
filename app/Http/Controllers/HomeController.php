@@ -84,4 +84,9 @@ class HomeController extends Controller
             return back()->with('error', 'Something Went Wrong');
         }
     }
+
+    public function courseList($id){
+        $courses = Course::where('category_id',$id)->get();
+        return view('frontend.courselist', compact('courses'));
+    }
 }

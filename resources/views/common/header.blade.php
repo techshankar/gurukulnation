@@ -49,6 +49,7 @@
     <link href="{{ asset('public/frontend-styles/fonts.googleapis.com/css2b660.css?&amp;family=Jost:wght@300;400;500;600;700;800;900&amp;display=swap') }}" rel="stylesheet" />
     <link href="{{ asset('public/frontend-styles/jquery.app/jqueryscripttop.css') }}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="{{ asset('public/frontend-styles/maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css') }}" />
+    <link href="{{ asset('public/frontend-styles/biz/css/marketingmasteryc619.css?v=1.0') }}" rel="stylesheet" />
 
     <style>
         main {
