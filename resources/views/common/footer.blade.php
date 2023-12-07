@@ -363,7 +363,7 @@
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="footer_left">
                                     <div class="footer-logo">
-                                        <a href="Default.html">
+                                        <a href="{{ route('/') }}">
                                             <img src="{{ asset('public/frontend-styles/biz/img/myimgs/gurukul_logo.png') }}" />
                                             
                                         </a>
@@ -391,13 +391,12 @@
                                 <div class="footer-aboutus">
                                     <h4>Support</h4>
                                     <ul>
-                                        <li><a href="Biz/contactus.html">Contact Us</a></li>
-                                        <li><a href="Default.html#media-sec">Press</a></li>
-                                        <li><a href="Biz/disclaimer.html">Disclaimer</a></li>
-                                        <li><a href="Biz/Privacy.html">Privacy Policy</a></li>
-                                        <li><a href="Biz/terms.html">Terms and Conditions</a></li>
-                                        <li><a href="Biz/RefundPolicy.html">Refund Policy</a></li>
-                                        <li><a href="Biz/EndUserLicense.html">End User License Agreement</a></li>
+                                        <li><a href="{{ URL::to('contact/us') }}">Contact Us</a></li>
+                                        <li><a href="#">Disclaimer</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Terms and Conditions</a></li>
+                                        <li><a href="#">Refund Policy</a></li>
+                                        <li><a href="@">End User License Agreement</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -405,7 +404,7 @@
                                 <div class="footer-aboutus">
                                     <h4>Useful Links</h4>
                                     <ul>
-                                        <li><a href="Biz/aboutus.html">About Us</a></li>
+                                        <li><a href="{{ URL::to('about/us') }}">About Us</a></li>
                                        
                                         <li><a href="Biz/career.html">Career</a></li>
                                         
@@ -933,9 +932,7 @@
     </script>
     
 
-    <script src="biz/js/custome_js/cart7839.js?v=1.2"></script>
-
-
+<script src="biz/js/custome_js/cart7839.js?v=1.2"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"82992cc35f7a8944","b":1,"version":"2023.10.0","token":"0b2d30c0d91c41ef8c5e660185295aa3"}' crossorigin="anonymous"></script>
 </body>
 

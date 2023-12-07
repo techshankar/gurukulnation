@@ -76,7 +76,7 @@
                                     @csrf
 
                                     <div class="form-group row">
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-3">
                                             <label for="inputName" class="col-sm-12 col-form-label">Course Category:</label>
                                             <select name="category_id" value="{{ $courses->category_id }}" class="form-control">
                                                 <option>-- Select course category --</option>
@@ -85,13 +85,17 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-3">
                                             <label for="inputName" class="col-sm-6 col-form-label">Title:</label>
                                             <input type="input" class="form-control" name="title" value="{{$courses->title}}" required>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-3">
                                             <label for="inputName" class="col-sm-6 col-form-label">Sub Title:</label>
                                             <input type="input" class="form-control" name="sub_title" value="{{$courses->sub_title}}" required>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="inputName" class="col-sm-6 col-form-label">Price:</label>
+                                            <input type="input" class="form-control" name="price" value="{{$courses->price}}" required>
                                         </div>
                                     </div>
 

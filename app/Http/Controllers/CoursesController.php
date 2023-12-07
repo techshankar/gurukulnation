@@ -49,6 +49,7 @@ class CoursesController extends Controller
         $data['sub_title'] = $request->sub_title;
         $slug = Str::slug($request->title);
         $data['slug'] = $slug;
+        $data['price'] = $request->price;
         $data['what_you_will_learn'] = $whatULearn; 
         $data['home_page_desc'] = $request->home_page_desc;
         $data['short_desc'] = $request->short_desc;
@@ -90,6 +91,7 @@ class CoursesController extends Controller
         $data['sub_title'] = $request->sub_title;
         $slug = Str::slug($request->title);
         $data['slug'] = $slug;
+        $data['price'] = $request->price;
         $data['what_you_will_learn'] = $request->what_you_will_learn;
         $data['home_page_desc'] = $request->home_page_desc;
         $data['short_desc'] = $request->short_desc;

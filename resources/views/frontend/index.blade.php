@@ -48,7 +48,7 @@
                 <h2 class="index-title">Intensive Program</h2>
             </div>
             <div class="creation_box">
-                <a href="content-creation-course.html" target="_blank">
+                <a href="#" target="_blank">
                     <img src="{{ asset('public/frontend-styles/Biz/IntsProg/img/ccc_banner_desk2ffaf.jpg?v=1.4') }}" class="ccc_banner_desk" />
                     <img src="{{ asset('public/frontend-styles/Biz/IntsProg/img/ccc_banner_mobffaf.jpg?v=1.4') }}" class="ccc_banner_mob" />
                 </a>
@@ -89,11 +89,13 @@
                                 </p>
                                 <p class="bundle-info"><i class="fa fa-check" aria-hidden="true"></i>Live Q&amp;A Support</p>
                                 <p class="bundle-info"><i class="fa fa-check" aria-hidden="true"></i>13k+ Students Enrolled</p>
-                                <p class="bundle-info"><i class="fa fa-check" aria-hidden="true"></i>Bizgurukul Certificate</p>
-                                <a href="{{ URL::to('course/list', $bundles->category_id) }}">Know More</a>
+                                <p class="bundle-info"><i class="fa fa-check" aria-hidden="true"></i>Gurukul Nation Certificate</p>
+                                @php $catSlug = DB::table('course_categories')->where('id',$bundles->category_id)->first(); @endphp
+                                <a href="{{ URL::to('course/list',$catSlug->slug) }}">Know More</a>
+                                <!-- <a href="{{ URL::to('course/list', $bundles->category_id) }}">Know More</a> -->
                             </div>
                             <div class="digital_course_right">
-                                <img src="{{ asset('public/frontend-styles/Biz/img/marketing_videoc619.jpg?v=1.0') }}" />
+                                <img src="{{ $bundles->thumbnail }}" />
                             </div>
                         </section>
                         @endforeach

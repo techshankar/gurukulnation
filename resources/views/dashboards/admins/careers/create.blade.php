@@ -37,7 +37,7 @@
 
                             <!-- /.tab-pane -->
                             <div class="active tab-pane tabcontent" id="">
-                                <form class="form-horizontal" action="{{ route('admin.saveCareer') }}" method="POST">
+                                <form class="form-horizontal" action="{{ route('admin.saveCareer') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group row">
                                         <div class="col-lg-6">
@@ -47,18 +47,23 @@
 
                                         <div class="col-lg-6">
                                             <label for="inputName" class="col-sm-6 col-form-label">Job Location:</label>
-                                            <input type="text" id="tag-input1" class="form-control" name="job_location" required>
+                                            <input type="text" placeholder="Enter Job Location" class="form-control" name="job_location" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-4">
                                             <label for="inputName" class="col-sm-12 col-form-label">Qualification:</label>
                                             <input type="text" class="form-control" placeholder="Enter Qualification" name="qualification">
                                         </div>
 
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-4">
                                             <label for="inputName" class="col-sm-6 col-form-label">Exprience:</label>
-                                            <input type="text" class="form-control" name="exprience" required>
+                                            <input type="text" placeholder="Enter Exprience" class="form-control" name="exprience" required>
+                                        </div>
+                                        
+                                        <div class="col-lg-4">
+                                            <label for="inputName" class="col-sm-6 col-form-label">Page Banner:</label>
+                                            <input type="file" class="form-control" name="image" required>
                                         </div>
                                     </div>
 

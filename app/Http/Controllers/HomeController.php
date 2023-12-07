@@ -10,6 +10,7 @@ use App\Models\Course;
 use App\Models\Faqs;
 use App\Models\HowGurukulNationWork;
 use App\Models\LearnerSupport;
+use App\Models\Video;
 use App\Models\WhyGurukulNation;
 
 class HomeController extends Controller
@@ -85,8 +86,29 @@ class HomeController extends Controller
         }
     }
 
-    public function courseList($id){
-        $courses = Course::where('category_id',$id)->get();
-        return view('frontend.courselist', compact('courses'));
+    public function courseList($slug){
+        $catId=DB::table('course_categories')->where('slug',$slug)->first();
+        $courses = Course::where('category_id',$catId->id)->get();
+        $courseCategories = CourseCategory::all();
+        $vdos = Video::limit(1)->take(1)->get();
+        return view('frontend.courselist', compact('courses','courseCategories','vdos'));
+    }
+    
+    public function courseDetails($slug){
+        $catId=DB::table('course_categories')->where('slug',$slug)->first();
+        $courses = Course::where('category_id',$catId->id)->first();
+        $courseCategories = CourseCategory::where('id',$catId->id)->first();
+        $vdos = Video::where('cat_id',$catId->id)->first();
+        $allCourse = Course::all();
+        $faqs = Faqs::all();
+        return view('frontend.coursedetails', compact('courses','courseCategories','vdos','faqs','allCourse'));
+    }
+
+    public function aboutUs(){
+        dd('about us need to implement theme page');
+    }
+    
+    public function contactUs(){
+        dd('contact us need to implement theme page');
     }
 }

@@ -37,7 +37,7 @@
 
                             <!-- /.tab-pane -->
                             <div class="active tab-pane tabcontent">
-                            <form class="form-horizontal" action="{{ route('admin.saveCareer') }}" method="POST">
+                                <form class="form-horizontal" action="{{ route('admin.saveCareer') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <input type="hidden" name="id" value="{{ $careers->id }}">
                                     <div class="form-group row">
@@ -74,6 +74,17 @@
                                         </div>
                                     </div>
 
+                                    <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="inputName" class="col-sm-6 col-form-label">Page Banner:</label>
+                                        <input type="file" class="form-control" name="image" value="{{$careers->image}}">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="inputName" class="col-sm-6 col-form-label">Old Page Banner:</label>
+                                        <img src="{{$careers->image}}" alt="" style="height:120px; width: 500px; border-radius:5%;">
+                                    </div>
+                                    </div>
+
                                     <div class="form-group row">
                                         <div class="col-sm-12 text-center">
                                             <button type="submit" class="btn btn-success">Submit</button>
@@ -98,16 +109,15 @@
 
 <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
 <script>
-
     // for ck-editor 
-ClassicEditor.create(document.querySelector("#editorHomePage")).catch((error) => {
-  console.error(error);
-});
+    ClassicEditor.create(document.querySelector("#editorHomePage")).catch((error) => {
+        console.error(error);
+    });
 
-ClassicEditor.create(document.querySelector("#editorShortDesc")).catch((error) => {
-  console.error(error);
-});
-// for ck-editor
+    ClassicEditor.create(document.querySelector("#editorShortDesc")).catch((error) => {
+        console.error(error);
+    });
+    // for ck-editor
 </script>
 
 @endsection

@@ -11,6 +11,8 @@ use App\Models\OurStoryAndMission;
 use App\Models\howGurukulNationWork;
 use App\Models\WhyGurukulNation;
 use App\Models\LearnerSupport;
+use Illuminate\Foundation\Auth\User;
+
 class HomepageController extends Controller
 {
     function index()
@@ -351,5 +353,16 @@ class HomepageController extends Controller
             return back()->with('error', 'Something Went Wrong');
         }
 
+    }
+
+    public function usersList(){
+        $users = User::where('role_id',1)->where('user_status',1)->paginate(10);
+        return view('dashboards.admins.userlist', compact('users'));
+    }
+    
+    public function blockUser($id){
+        $data['user_status'] = 0;
+         User::where('id',$id)->update($data);
+        return back()->with('success', 'User blocked successfully');
     }
 }

@@ -20,6 +20,12 @@ class CareerController extends Controller
     }
     
     public function saveCareer(Request $request) {
+        
+        if ($request->image) {
+            $fileName = 'image' . time() . '.' . $request->image->extension();
+            $request->image->move(public_path('uploads'), $fileName);
+            $data['image'] = url('public/uploads') . '/' . $fileName;
+        }
 
         $data['designation'] = $request->designation;
         $slug = STR::slug($request->designation);

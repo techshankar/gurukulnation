@@ -93,6 +93,10 @@
                                             <label for="inputName" class="col-sm-6 col-form-label">Sub Title:</label>
                                             <input type="input" class="form-control" id="inputName" placeholder="Enter Sub Title" name="sub_title" required>
                                         </div>
+                                        <div class="col-lg-4">
+                                            <label for="inputName" class="col-sm-6 col-form-label">Price:</label>
+                                            <input type="input" class="form-control" id="inputName" placeholder="Enter Price" name="price" required>
+                                        </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-lg-6">
