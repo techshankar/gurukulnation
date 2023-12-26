@@ -5,7 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Career;
 use Carbon\Carbon;
+use Facade\FlareClient\Http\Response;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use File;
+use Repsonse;
+use Illuminate\Support\Facades\Storage;
 
 class CareerController extends Controller
 {
@@ -56,5 +61,15 @@ class CareerController extends Controller
         }else{
             return back()->with('error', 'Something Went Wrong');
         }
+    }
+    
+    public function jobAppliedList(){
+        $jobappliendlist = DB::table('apply_jobs')->paginate(10);
+        return view('dashboards.admins.careers.jobapplylist', compact('jobappliendlist'));
+    }
+    
+    public function cvDownload($id){
+        $data = DB::table('apply_jobs')->where('id',$id)->first();
+        return Storage::download($data->resume);
     }
 }

@@ -14,8 +14,8 @@
 
                 <div class="item active">
                     <div class="banner_item">
-                        <img class="desktop__viewB_slide" src="{{ asset('public/frontend-styles/biz/img/myimgs/new_blue_banner.jpg') }}" />
-                        <img class="mobile__viewB_slide" src="{{ asset('public/frontend-styles/biz/img/myimgs/new_blue_banner.jpg') }}" />
+                        <img class="desktop__viewB_slide" src="{{ asset('public/frontend-styles/Biz/img/myimgs/new_blue_banner.jpg') }}" />
+                        <img class="mobile__viewB_slide" src="{{ asset('public/frontend-styles/Biz/img/myimgs/new_blue_banner.jpg') }}" />
                         <div class="banner_video">
                             <div class="banner_video_box">
                                 @foreach($banners as $row)
@@ -44,12 +44,24 @@
     </section>
     <section class="creation_section">
         <div class="container-90">
+            @if(Session::has('success'))<!-- flash message  -->
+            <div class="alert alert-success">
+                {{Session::get('success')}}
+            </div>
+            @endif
+            <div x-data="{ showMessage: true }" x-show="showMessage" x-init="setTimeout(() => showMessage = false, 3000)">
+                @if(Session::has('error'))
+                <div class="alert alert-danger p-3 text-green-700 bg-green-300 rounded">
+                    {{Session::get('error')}}
+                </div>
+                @endif
+            </div><!--/ flash message  -->
             <div class="creation_heading">
                 <h2 class="index-title">Intensive Program</h2>
             </div>
             <div class="creation_box">
                 <a href="#" target="_blank">
-                    <img src="{{ asset('public/frontend-styles/Biz/IntsProg/img/ccc_banner_desk2ffaf.jpg?v=1.4') }}" class="ccc_banner_desk" />
+                    <img src="{{ asset('public/frontend-styles/Biz/img/myimgs/content_banner_home.jpg') }}" class="ccc_banner_desk" />
                     <img src="{{ asset('public/frontend-styles/Biz/IntsProg/img/ccc_banner_mobffaf.jpg?v=1.4') }}" class="ccc_banner_mob" />
                 </a>
             </div>
@@ -76,13 +88,12 @@
                         </ul>
                     </div>
                     <div class="digital_bundle_right">
-                        @foreach($courses as $key=>$bundles)
+                        @foreach($courseCategories as $row)
                         <section class="digital_course_main" id="{{ $key+1 }}">
                             <div class="digital_course_left">
-                                @foreach($courseCategories as $row)
-                                <h3>@if($row->id == $bundles->category_id){{ $row->name }} @endif</h3>
-                                @endforeach
-                                <p>{{ strip_tags($bundles->home_page_desc) }}</p>
+                                @php $courseDesNThumb = DB::table('courses')->where('category_id', $row->id)->first(); @endphp
+                                <h3>@if($row->id){{ $row->name }} @endif</h3>
+                                <p>{{ strip_tags($courseDesNThumb->home_page_desc) }}</p>
                                 <p>
                                     <span><i class="fa fa-book" aria-hidden="true"></i>01 Course</span>
                                     <span class="program_hrs"><i class="fa fa-clock-o" aria-hidden="true"></i>15+ Hours</span>
@@ -90,12 +101,10 @@
                                 <p class="bundle-info"><i class="fa fa-check" aria-hidden="true"></i>Live Q&amp;A Support</p>
                                 <p class="bundle-info"><i class="fa fa-check" aria-hidden="true"></i>13k+ Students Enrolled</p>
                                 <p class="bundle-info"><i class="fa fa-check" aria-hidden="true"></i>Gurukul Nation Certificate</p>
-                                @php $catSlug = DB::table('course_categories')->where('id',$bundles->category_id)->first(); @endphp
-                                <a href="{{ URL::to('course/list',$catSlug->slug) }}">Know More</a>
-                                <!-- <a href="{{ URL::to('course/list', $bundles->category_id) }}">Know More</a> -->
+                                <a href="{{ URL::to('course/list',$row->slug) }}">Know More</a>
                             </div>
                             <div class="digital_course_right">
-                                <img src="{{ $bundles->thumbnail }}" />
+                                <img src="{{ $courseDesNThumb->thumbnail }}" />
                             </div>
                         </section>
                         @endforeach
@@ -125,7 +134,7 @@
                             <div class="item">
                                 <div class="shadow-effect-in">
 
-                                    <a href="Biz/Subscription/CfCourseDetail3ea4.html?course=aBdsUosgN7I=">
+                                    <a href="#">
                                         <div class="our__courseflixContant">
 
                                             <div class="courseflix-img">
@@ -149,7 +158,7 @@
                     <div class="row">
                         <div class="col-md-12 col-xs-12">
                             <div class="all-coursesBtn">
-                                <a class="explore__btn" href="#">Explore more courses</a>
+                                <a class="explore__btn" href="{{ URL::to('upskilling/courses') }}">Explore more courses</a>
                             </div>
                         </div>
                     </div>
@@ -400,7 +409,7 @@
                     <div class="biz_review biz_review_content">
                         <h2 class="index-title">What Others Have To Say About Bizgurukul</h2>
                         <p>Bizgurukul has been a life-changing platform for thousands of Indians. Browse what people have to say about us.</p>
-                        <a href="#">Browse Reviews</a>
+                        <a href="{{ URL::to('reviews/what/other/say') }}">Browse Reviews</a>
                     </div>
                 </div>
             </div>
@@ -439,12 +448,12 @@
                         </p>
                     </li>
                     @endforeach
-                </div>
-                <!-- <div class="more_-faq">
+            </div>
+            <!-- <div class="more_-faq">
                     <a class="moreless-button" href="javascript:void(0)">↓</a>
                 </div> -->
-                </ul>
-            </div>
+            </ul>
+        </div>
         </div>
     </section>
     <script>
@@ -480,11 +489,19 @@
                     <div class="disclaimerWrap__content">
                         <p>
                             <b>Disclaimer : </b>
-                            <br />{{ $learnerSupport->desclaimer }}</p>
+                            <br />{{ $learnerSupport->desclaimer }}
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </main>
+
+<!-- for disapera flash message  -->
+<script>
+    $(document).ready(function() {
+        $(".alert").delay(5000).slideUp(300);
+    });
+</script>
 @endsection

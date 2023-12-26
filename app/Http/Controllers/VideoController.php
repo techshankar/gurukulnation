@@ -15,7 +15,7 @@ class VideoController extends Controller
     {
         $videos = DB::table('videos as v')
         ->join('courses as c', 'c.id', '=', 'v.course_id')
-        ->join('course_categories as cc', 'cc.id', '=', 'v.cat_id')->select('v.*','cc.name','c.title','c.thumbnail')->paginate(10);
+        ->join('course_categories as cc', 'cc.id', '=', 'v.cat_id')->select('v.*','cc.name','c.title','c.thumbnail')->orderBy('id','DESC')->paginate(10);
         return view('dashboards.admins.courses.video.list', compact('videos'));
     }
 
@@ -26,7 +26,6 @@ class VideoController extends Controller
     }
     
     public function saveVideo(Request $request) {
-
         if ($request->video) {
             $fileName = 'video' . time() . '.' . $request->video->extension();
             $request->video->move(public_path('courseThumbnailsNvdo'), $fileName);
@@ -37,7 +36,7 @@ class VideoController extends Controller
             $data['vdo_url'] = $request->vdo_url;
         }
         
-
+        $data['vdo_heading'] = $request->vdo_heading;
         $data['cat_id'] = $request->cat_id;
         $data['course_id'] = $request->course_id;
         $data['vdo_priority'] = $request->vdo_priority;

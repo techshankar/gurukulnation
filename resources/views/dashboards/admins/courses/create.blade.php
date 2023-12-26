@@ -75,25 +75,26 @@
                                 <form class="form-horizontal" action="{{ route('admin.saveCourse') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
 
+                                    
                                     <div class="form-group row">
-                                        <div class="col-lg-4">
-                                            <label for="inputName" class="col-sm-12 col-form-label">Course Category:</label>
+                                        <div class="col-lg-3">
+                                            <label for="inputName" class="col-sm-12 col-form-label">Package:</label>
                                             <select name="category_id" class="form-control">
-                                                <option>-- Select course category --</option>
+                                                <option>-- Select Package --</option>
                                                 @foreach($courseCatcary as $row)
                                                 <option value="{{ $row->id }}">{{ $row->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-3">
                                             <label for="inputName" class="col-sm-6 col-form-label">Title:</label>
                                             <input type="input" class="form-control" id="inputName" placeholder="Enter Title" name="title" required>
                                         </div>
-                                        <div class="col-lg-4">
-                                            <label for="inputName" class="col-sm-6 col-form-label">Sub Title:</label>
-                                            <input type="input" class="form-control" id="inputName" placeholder="Enter Sub Title" name="sub_title" required>
+                                        <div class="col-lg-3">
+                                            <label for="inputName" class="col-sm-6 col-form-label">Designed By:</label>
+                                            <input type="input" class="form-control" id="inputName" placeholder="Enter Designed By" name="sub_title" required>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-3">
                                             <label for="inputName" class="col-sm-6 col-form-label">Price:</label>
                                             <input type="input" class="form-control" id="inputName" placeholder="Enter Price" name="price" required>
                                         </div>
@@ -105,7 +106,7 @@
                                         </div>
 
                                         <div class="col-lg-6">
-                                            <label for="inputName" class="col-sm-6 col-form-label">Brands:</label>
+                                            <label for="inputName" class="col-sm-12 col-form-label">Brands<span class="text-danger">(*Write your brands and press enter button)</span>:</label>
                                             <input type="text" id="tag-input1" class="form-control" name="brands[]" required>
                                         </div>
                                     </div>
@@ -310,14 +311,14 @@
 
     // for input what you learn? 
 
-// for ck-editor 
-ClassicEditor.create(document.querySelector("#editorHomePage")).catch((error) => {
-  console.error(error);
-});
+    // for ck-editor 
+    ClassicEditor.create(document.querySelector("#editorHomePage")).catch((error) => {
+        console.error(error);
+    });
 
-ClassicEditor.create(document.querySelector("#editorShortDesc")).catch((error) => {
-  console.error(error);
-});
-// for ck-editor
+    ClassicEditor.create(document.querySelector("#editorShortDesc")).catch((error) => {
+        console.error(error);
+    });
+    // for ck-editor
 </script>
 @endsection

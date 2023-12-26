@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\HomeController;
@@ -16,6 +17,7 @@ use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\FaqsController;
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -51,6 +53,18 @@ Route::get('/welcome', function () {
 //     return view('frontend.signup-3');
 // })->name('signup');
 
+Route::get('user/signup', function () {
+    return view('frontend.usersignup');
+})->name('user.signup');
+
+Route::get('user/signin', function () {
+    return view('frontend.usersignin');
+})->name('user.signin');
+
+Route::get('user/forget/password', function () {
+    return view('frontend.userforgetpassword');
+})->name('user.forget.password');
+
 //Auth routes
 Route::middleware(['prefix' => 'admin'], ['middleware' => 'PreventBackHistory'])->group(function () {
         Auth::routes();
@@ -62,7 +76,11 @@ Route::get('/', [HomeController::class, 'index'])->name('/');
 // Route::post('/verifyOtp',[UserController::class,'verifyOtp'])->name('user.verifyOtp');
 // Route::post('/login',[UserController::class,'login'])->name('user.login');
 // Route::post('/register',[UserController::class,'register'])->name('user.register');
-// Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
+// Route::post('user/signup/saved',[UserController::class,'userSignupSaved'])->name('user.signup.saved');
+Route::post('user/signup/saved',[RegisterController::class,'userSignupSaved'])->name('user.signup.saved');
+Route::post('user/sign/in', [RegisterController::class, 'signIn'])->name('user.signIn');
+Route::get('user/logout',[RegisterController::class,'logout'])->name('user.logout');
+Route::post('reset/password/send/email',[MailController::class,'resetPasswordSendEmail'])->name('user.logout');
 
 Route::group(['prefix' => 'admin'],  function () {
         Route::get('/', [AdminController::class, 'viewLogin'])->name('admin');
@@ -129,6 +147,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['isAdmin', 'auth', 'PreventB
         // about
         Route::get('about-us', [HomepageController::class, 'aboutForm'])->name('admin.about');
         Route::post('about-us/update', [HomepageController::class, 'aboutUpdate'])->name('admin.about_update');
+         // Contact
+        Route::get('contact/us/udpate/address/form', [HomepageController::class, 'contactForm'])->name('admin.contact.form');
+        Route::post('contact-us/address/updated', [HomepageController::class, 'contactUpdate'])->name('admin.contact.update');
 
         // how_gurukul_nation_work
         Route::get('how/gurukul/nation/work', [HomepageController::class, 'howGurukulNationWorkForm'])->name('admin.how_gurukul_nation_work');
@@ -183,6 +204,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['isAdmin', 'auth', 'PreventB
         Route::get('delete/video/{id}', [VideoController::class, 'deleteVideo'])->name('admin.deleteVideo');
 
         // careers 
+        Route::get('job/applied/list', [CareerController::class, 'jobAppliedList'])->name('admin.job_applied_list');
+        Route::get('download/cv/{id}', [CareerController::class, 'cvDownload']);
         Route::get('careers', [CareerController::class, 'index'])->name('admin.careers');
         Route::get('add/career/form', [CareerController::class, 'addCareerForm'])->name('admin.addCareer');
         Route::post('save/career', [CareerController::class, 'saveCareer'])->name('admin.saveCareer');
@@ -231,9 +254,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['isAdmin', 'auth', 'PreventB
         // Route::get('packersMoversList',[PackerMoverController::class,'packersMoversList'])->name('admin.packersMoversList');
         // Route::get('viewOrderDetails',[PackerMoverController::class,'viewOrderDetails'])->name('admin.viewOrderDetails');
 
+        // Route::get('fetchSubCategory',[CoursesController::class,'fetchSubCategory'])->name('admin.fetchSubCategory');
 
-
-
+        // for get course as according to course category 
+        Route::get('fetchCourse',[CoursesController::class,'fetchCourse'])->name('admin.fetchCourse');
 });
 
 // Route::group(['prefix'=>'user', 'middleware'=>['isUser','auth','PreventBackHistory']], function(){
@@ -251,12 +275,38 @@ Route::get('all/services', [HomeController::class, 'servicesFrntendList']);
 Route::get('service/details/{slug}', [HomeController::class, 'serviceDetails']);
 // Newsletters
 Route::post('news/letter/saved', [HomeController::class, 'savedNewsLetter']);
-// contact
-Route::post('contact/store', [HomeController::class, 'saveContactDetails']);
 // courses
 Route::get('course/list/{slug}', [HomeController::class, 'courseList']);
 Route::get('course/details/{slug}', [HomeController::class, 'courseDetails']);
 // about us
-Route::get('about/us', [HomeController::class, 'aboutUs']);
+Route::get('about-us', [HomeController::class, 'aboutUs']);
 // contact us
-Route::get('contact/us', [HomeController::class, 'contactUs']);
+Route::post('contact/store', [HomeController::class, 'saveContactDetails']);
+Route::get('contact-us', [HomeController::class, 'contactUs']);
+// reviews
+Route::get('reviews/what/other/say', [HomeController::class, 'reviews']);
+// upskilling courses
+Route::get('upskilling/courses', [HomeController::class, 'upskillingCourse']);
+Route::get('get-course/{id}', [HomeController::class, 'getCourse']);
+// careers
+Route::get('career/list', [HomeController::class, 'careerList']);
+Route::get('career/details/{slug}', [HomeController::class, 'careerDetails']);
+Route::post('apply/job', [HomeController::class, 'applyJob']);
+
+// basic route like terms,privacy,etc.
+Route::get('disclaimer', function(){
+        return view('frontend.disclaimer');
+});
+
+Route::get('privacy-policy', function(){
+        return view('frontend.privacypolicy');
+});
+Route::get('terms-&-conditions', function(){
+        return view('frontend.termsnconditions');
+});
+Route::get('refund-policy', function(){
+        return view('frontend.refundpolicy');
+});
+Route::get('end-user-license-agreement', function(){
+        return view('frontend.enduserlicenseagreement');
+});

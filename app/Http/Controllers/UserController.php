@@ -125,10 +125,14 @@ class UserController extends Controller
         }
     }
 
+    // public function userSignupSaved(Request $request){
+    //    dd($request->all());
+    // }
+
     public function logout(Request $request)
     {
         Session::flush();
         Auth::logout();
-        return redirect('/');
+        return redirect('admin');
     }
 }

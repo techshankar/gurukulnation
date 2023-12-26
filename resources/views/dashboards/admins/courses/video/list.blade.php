@@ -41,8 +41,9 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Category</th>
-                                    <th>Course</th>
+                                    <th>Package Name</th>
+                                    <th>Course Name</th>
+                                    <th>Video Name</th>
                                     <th>Video Thumbnail</th>
                                     <th>Action</th>
                                 </tr>
@@ -63,6 +64,7 @@
                                     <td>{{$key+1}}</td>
                                     <td>{{$val->name}}</td>
                                     <td>{{$val->title}}</td>
+                                    <td>{{$val->vdo_heading}}</td>
                                     <td> <img src="{{$val->thumbnail}}" alt="" style="height:50px;"></td>
                                     <td>
                                         <a class="btn btn-success" title="Edit Video" href="{{route('admin.editVideo', ['id' => $val->id])}}"><i class="nav-icon fas fa-edit"></i></a>

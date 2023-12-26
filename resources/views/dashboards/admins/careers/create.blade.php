@@ -57,14 +57,14 @@
                                         </div>
 
                                         <div class="col-lg-4">
-                                            <label for="inputName" class="col-sm-6 col-form-label">Exprience:</label>
+                                            <label for="inputName" class="col-sm-6 col-form-label">Exprience In Years:</label>
                                             <input type="text" placeholder="Enter Exprience" class="form-control" name="exprience" required>
                                         </div>
                                         
-                                        <div class="col-lg-4">
+                                        <!-- <div class="col-lg-4">
                                             <label for="inputName" class="col-sm-6 col-form-label">Page Banner:</label>
                                             <input type="file" class="form-control" name="image" required>
-                                        </div>
+                                        </div> -->
                                     </div>
 
                                     <div class="form-group row">

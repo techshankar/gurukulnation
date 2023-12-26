@@ -42,23 +42,69 @@
                                 <form class="form-horizontal" action="{{ route('admin.saveVideo') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
 
+<!-- 
                                     <div class="form-group row">
-                                        <div class="col-lg-4">
-                                            <label for="inputName" class="col-sm-12 col-form-label">Category:</label>
+                                        <div class="col-sm-4">
+                                            <label for="inputName" class="col-sm-12 col-form-label">Select Category Name:</label>
+                                            <select name="cat_id" class="form-control" id="catId">
+                                                <option value="">Select Category</option>
+                                                @foreach($courseCatcary as $val)
+                                                <option value="{{$val->id}}">{{$val->name}}</option>
+                                                @endforeach
+                                            </select>
+                                            <span class="text-danger error-text oldpassword_error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-4">
+                                            <label for="inputName" class="col-sm-12 col-form-label">Select Sub Category Name:</label>
+                                            <select name="title" class="form-control" id="subCatId">
+                                                <option value="">Select Sub Category</option>
+                                            </select>
+                                            <span class="text-danger error-text oldpassword_error"></span>
+                                        </div>
+                                    </div>
+
+ -->
+
+                                    <div class="form-group row">
+                                        <div class="col-lg-12">
+                                            <label for="inputName" class="col-sm-12 col-form-label">Video Heading:</label>
+                                            <input type="text" placeholder="Enter Video Heading" class="form-control" name="vdo_heading" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <!-- <div class="col-lg-4">
+                                            <label for="inputName" class="col-sm-12 col-form-label">Package:</label>
                                             <select name="cat_id" class="form-control">
-                                                <option>-- Select category --</option>
+                                                <option>-- Select Package --</option>
                                                 @foreach($courseCatcary as $row)
                                                 <option value="{{ $row->id }}">{{ $row->name }}</option>
                                                 @endforeach
                                             </select>
+                                        </div> -->
+                                        <div class="col-sm-4">
+                                            <label for="inputName" class="col-sm-12 col-form-label">Select Package Name:</label>
+                                            <select name="cat_id" class="form-control" id="catId">
+                                                <option value="">Select Package</option>
+                                                @foreach($courseCatcary as $val)
+                                                <option value="{{$val->id}}">{{$val->name}}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
-                                        <div class="col-lg-4">
+                                        <!-- <div class="col-lg-4">
                                             <label for="inputName" class="col-sm-12 col-form-label">Courses:</label>
                                             <select name="course_id" class="form-control">
-                                                <option>-- Select course category --</option>
+                                                <option>-- Select course --</option>
                                                 @foreach($course as $row)
                                                 <option value="{{ $row->id }}">{{ $row->title }}</option>
                                                 @endforeach
+                                            </select>
+                                        </div> -->
+                                        <div class="col-sm-4">
+                                            <label for="inputName" class="col-sm-12 col-form-label">Select Course Name:</label>
+                                            <select name="course_id" class="form-control" id="courseId">
+                                                <option value="">Select Course</option>
                                             </select>
                                         </div>
                                         <div class="col-lg-4">
@@ -107,8 +153,6 @@
                                     </div>
                                 </form>
                             </div>
-
-
                         </div><!-- /.card-body -->
                     </div>
                     <!-- /.card -->
@@ -129,4 +173,24 @@
             console.error(error);
         });
 </script>
+
+<!-- for select course according to package/category  -->
+<script>
+    $('#catId').change(function() {
+        var cat_id = $(this).val();
+        $.ajax({
+            type: "GET",
+            url: "{{url('admin/fetchCourse')}}",
+            data: "cat_id=" + $(this).val(),
+            async: false,
+            success: function(response) {
+                $('#courseId').html(response)
+            },
+            error: function() {
+                alert('Error occured');
+            }
+        });
+    });
+</script>
+<!--/ for select course according to package/category  -->
 @endsection

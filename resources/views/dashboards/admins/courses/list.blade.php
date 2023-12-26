@@ -40,8 +40,9 @@
                         <table class="table table-hover text-nowrap">
                             <thead>
                                 <tr>
-                                    <th>SNo.</th>
-                                    <th>Content</th>
+                                    <th>#</th>
+                                    <th>Package Name</th>
+                                    <th>Course</th>
                                     <th>Thumbnail</th>
                                     <th>Certificate</th>
                                     <th>Action</th>
@@ -55,13 +56,18 @@
                                 </tr>
                                 @endif
                                 @foreach($course as $key=> $val)
-
-                                @php $split = str_split($val->title, 8);
+               
+                                @php
+                                 $packageCat = DB::table('course_categories')->where('id',$val->category_id)->get();
+                                 $split = str_split($val->title, 8);
                                  $final = $split[0] . "..."; 
                                 @endphp
                                 <tr>
                                     <td>{{$key+1}}</td>
-                                    <td>{{$final}}</td>
+                                    @foreach($packageCat as $row)
+                                    <td>{{ $row->name }}</td>
+                                    @endforeach
+                                    <td>{{$val->title}}</td>
                                     <td> <img src="{{$val->thumbnail}}" alt="" style="height:80px;"></td>
                                     <td> <img src="{{$val->certificate_img}}" alt="" style="height:80px;"></td>
                                     <td>

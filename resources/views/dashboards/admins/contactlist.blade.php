@@ -33,6 +33,7 @@
                                     </button>
                                 </div>
                             </div> -->
+                            <a href="{{ route('admin.contact.form') }}" class="btn btn-primary" >Update Address</a>
                         </div>
                     </div>
 

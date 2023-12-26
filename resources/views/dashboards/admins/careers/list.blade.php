@@ -2,6 +2,7 @@
 @section('title','Career List')
 
 @section('content')
+
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
@@ -58,7 +59,12 @@
                                 <tr>
                                     <td>{{$key+1}}</td>
                                     <td>{{$val->designation}}</td>
-                                    <td>{{$val->qualification}}</td>
+                                    @php
+                                        $packageCat = DB::table('course_categories')->where('id',$val->category_id)->get();
+                                        $split = str_split($val->qualification, 60);
+                                        $final = $split[0] . "..."; 
+                                    @endphp
+                                    <td>{{$final}}</td>
                                     <td>{{$val->job_location}}</td>
                                     <td>
                                         <a class="btn btn-success" title="Edit Career" href="{{route('admin.editCareer', ['id' => $val->id])}}"><i class="nav-icon fas fa-edit"></i></a>

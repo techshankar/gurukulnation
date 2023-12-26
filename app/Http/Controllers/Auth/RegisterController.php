@@ -5,9 +5,12 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Models\Users;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Auth;
+use Session;
 
 use Illuminate\Http\Request;
 
@@ -111,6 +114,65 @@ class RegisterController extends Controller
              return redirect()->back()->with('error','Failed to register');
          }
 
+    }
+
+
+    public function userSignupSaved(Request $request){
+        // dd($request->all());
+
+        $request->validate([
+            'name' => ['required',],
+            'email' => ['required', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'min:8'],
+         ]);
+
+         $user = new Users();
+         $user->name = $request->name;
+         $user->email = $request->email;
+         $user->phone = $request->phone;
+         $user->state = $request->state;
+         $user->referral_code = $request->referral_code;
+         $user->role_id = 1;
+         $user->password = \Hash::make($request->password);
+
+         if( $user->save() ){
+
+            return redirect('user/signin')->with('success','Registered successfully. Now you can login.');
+         }else{
+             return redirect()->back()->with('error','Failed to register');
+         }
+
+    }
+
+
+    public function signIn(Request $request)
+    {
+        $input = $request->all();
+
+        $this->validate($request, [
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+        if (auth()->attempt(array('email' => $input['email'], 'password' => $input['password']))) {
+            if (auth()->user()->role_id == 1) {
+
+                return redirect()->route('/');
+            }
+        } else {
+            return redirect()->route('user.signIn')->with('error', 'Email or password is wrong');
+        }
+    }
+
+    public function logout(Request $request)
+    {
+        Session::flush();
+        Auth::logout();
+        return redirect('user/signin');
+    }
+    
+    public function resetPasswordSendEmail(Request $request)
+    {
+        dd($request->all());
     }
 
 

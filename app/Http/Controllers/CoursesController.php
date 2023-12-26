@@ -6,13 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\Course;
 use App\Models\CourseCategory;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class CoursesController extends Controller
 {
     public function index()
     {
-        $course = Course::paginate(10);
+        $course = Course::orderBy('id','DESC')->paginate(10);
         return view('dashboards.admins.courses.list', compact('course'));
     }
 
@@ -112,5 +113,17 @@ class CoursesController extends Controller
             $course->delete();
             return redirect('admin/courses')->with('success', 'Course deleted successfully');
         }
+    }
+
+
+    function fetchCourse(Request $request){
+        $cat_id = $request->cat_id;
+        $subCategory = DB::table('courses')->where('category_id',$cat_id)->get();
+        $options = '';
+        foreach($subCategory as $val){
+            $options.='<option value="'.$val->id.'">'.$val->title.'</option>';
+        }
+        echo $options;
+
     }
 }

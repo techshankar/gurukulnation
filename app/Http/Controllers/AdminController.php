@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Career;
+use App\Models\Course;
 use Illuminate\Http\Request;
 use Auth;
 use App\Models\Users;
@@ -13,7 +15,11 @@ class AdminController extends Controller
 {
     function index()
     {
-        return view('dashboards.admins.index');
+        $courseCount = Course::count();
+        $jobSeekerCount = Career::count();
+        $usersCount = Users::where('role_id',1)->count();
+        $contactsCount = DB::table('contacts')->count();
+        return view('dashboards.admins.index', compact('courseCount','jobSeekerCount','usersCount','contactsCount'));
     }
 
     function profile()

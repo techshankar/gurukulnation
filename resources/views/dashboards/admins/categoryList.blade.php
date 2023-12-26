@@ -1,12 +1,12 @@
 @extends('dashboards.admins.layouts.admin-dash-layout')
-@section('title','Course Categories List')
+@section('title','Package List')
 
 @section('content')
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Course Categories</h1>
+                <h1>Package</h1>
             </div>
             <div class="col-sm-6">
                 <a class="btn btn-success" title="Add New Course Category" style="float:right" href="{{ route('admin.addcategory')}}">Add New</a>
@@ -20,7 +20,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Course Categories List</h3>
+                        <h3 class="card-title">Package List</h3>
                         <div class="card-tools">
                             <!-- <div class="input-group input-group-sm" style="width: 150px;">
                                 <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -55,7 +55,7 @@
                             <thead>
                                 <tr>
                                     <th>SNo.</th>
-                                    <th>Category Name</th>
+                                    <th>Package Name</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -71,8 +71,8 @@
                                     <td>{{$key+1}}</td>
                                     <td>{{$val->name}}</td>
                                     <td>
-                                        <a class="btn btn-success" href="{{route('admin.editcategory', ['id' => $val->id])}}" title="Edit Course Category"><i class="nav-icon fas fa-edit"></i></a>
-                                        <a class="btn btn-danger" title="Delete Course Category" onclick="return alert('Are you sure want to delete this?');" href="{{route('admin.deletecategory', ['id' => $val->id])}}"><i class="nav-icon fas fa-trash"></i></a>
+                                        <a class="btn btn-success" href="{{route('admin.editcategory', ['id' => $val->id])}}" title="Edit Package"><i class="nav-icon fas fa-edit"></i></a>
+                                        <a class="btn btn-danger" title="Delete Package" onclick="return alert('Are you sure want to delete this?');" href="{{route('admin.deletecategory', ['id' => $val->id])}}"><i class="nav-icon fas fa-trash"></i></a>
 
                                     </td>
                                 </tr>

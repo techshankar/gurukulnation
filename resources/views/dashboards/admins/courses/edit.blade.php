@@ -79,7 +79,7 @@
                                         <div class="col-lg-3">
                                             <label for="inputName" class="col-sm-12 col-form-label">Course Category:</label>
                                             <select name="category_id" value="{{ $courses->category_id }}" class="form-control">
-                                                <option>-- Select course category --</option>
+                                                <option>-- Select Package --</option>
                                                 @foreach($courseCatcary as $row)
                                                 <option value="{{ $row->id }}" {{ $row->id == $courses->category_id ? 'selected' : '' }}>{{ $row->name }}</option>
                                                 @endforeach
@@ -90,7 +90,7 @@
                                             <input type="input" class="form-control" name="title" value="{{$courses->title}}" required>
                                         </div>
                                         <div class="col-lg-3">
-                                            <label for="inputName" class="col-sm-6 col-form-label">Sub Title:</label>
+                                            <label for="inputName" class="col-sm-6 col-form-label">Designed By:</label>
                                             <input type="input" class="form-control" name="sub_title" value="{{$courses->sub_title}}" required>
                                         </div>
                                         <div class="col-lg-3">
@@ -102,14 +102,14 @@
                                     <div class="form-group row">
                                         <div class="col-lg-6">
                                             <label for="inputName" class="col-sm-6 col-form-label">What you will learn?:</label>
-                                            <input type="input" class="form-control" name="what_you_will_learn"  value="{{$courses->what_you_will_learn}}" required>
-                                            
+                                            <input type="input" class="form-control" name="what_you_will_learn" value="{{$courses->what_you_will_learn}}" required>
+
                                             <!-- <input type="text" id="tag-input1" class="form-control" name="what_you_will_learn[]" value="{{$courses->what_you_will_learn }}"> -->
                                         </div>
-                                        
+
                                         <div class="col-lg-6">
                                             <label for="inputName" class="col-sm-6 col-form-label">Brands:</label>
-                                            <input type="input" class="form-control" name="brands[]"  value="{{$courses->brands}}" required>
+                                            <input type="input" class="form-control" name="brands[]" value="{{$courses->brands}}" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -122,7 +122,7 @@
                                             <textarea name="short_desc" id="editorShortDesc" class="form-control">{{ $courses->short_desc }}</textarea>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group row">
                                         <label for="inputName" class="col-sm-12 col-form-label">Course Description:</label>
                                         <div class="col-sm-12">
@@ -135,7 +135,7 @@
                                             <input type="file" class="form-control" name="thumbnail" value="{{$courses->thumbnail}}">
                                         </div>
                                         <div class="col-lg-3">
-                                        <label for="inputName" class="col-sm-6 col-form-label">Old Thumbnail:</label>
+                                            <label for="inputName" class="col-sm-6 col-form-label">Old Thumbnail:</label>
                                             <img src="{{$courses->thumbnail}}" alt="" style="height:120px; width: 240px; border-radius:5%;">
                                         </div>
                                         <div class="col-lg-3">
@@ -310,14 +310,14 @@
     // for input what you learn? 
 
     // for ck-editor 
-ClassicEditor.create(document.querySelector("#editorHomePage")).catch((error) => {
-  console.error(error);
-});
+    ClassicEditor.create(document.querySelector("#editorHomePage")).catch((error) => {
+        console.error(error);
+    });
 
-ClassicEditor.create(document.querySelector("#editorShortDesc")).catch((error) => {
-  console.error(error);
-});
-// for ck-editor
+    ClassicEditor.create(document.querySelector("#editorShortDesc")).catch((error) => {
+        console.error(error);
+    });
+    // for ck-editor
 </script>
 
 @endsection

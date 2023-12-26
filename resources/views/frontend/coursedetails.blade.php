@@ -26,7 +26,7 @@
             <!-- details  -->
             <div class="bundel_main_content">
                 <div class="bundel_courses_banner_content">
-                    <h2 class="heading-black">{{ $courses->title }}</h2>
+                <h2 class="heading-black">@if(!empty($courses->title)){{ $courses->title }}@endif</h2>
                     <p>{{ $courses->sub_title }}</p>
                     <h6><span class="best_selling">Best seller</span><span class="language"><i class="fa fa-volume-up" aria-hidden="true"></i>@if(!empty($vdos->language)){{$vdos->language}}@endif</span></h6>
                 </div>
@@ -35,7 +35,8 @@
                     <iframe src='{{ $vdos->video }}' class="embed-responsive-item" title="How to Earn 1Lakh a Month with Social Media? | Gurukulnation | Affiliate Marketing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                     @else
                     @if(!empty($vdos->vdo_url))
-                     {{ $vdos->vdo_url }}
+                    <iframe width="1424" height="532" src="{{$vdos->vdo_url}}" title="Salman Khan Rapid Fire Round" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
                     @endif
                     @endif
                     <!-- <div class="bundle_overlay getleadPop">
@@ -74,7 +75,7 @@
 
                         <div class="key-feature addReadMore showlesscontent">
                             <!-- <h4>Do you want to learn how to work with Excel?</h4> -->
-                            <p>{{ $courses->course_description }}</p>
+                            <p>{{ strip_tags($courses->course_description) }}</p>
 
                         </div>
                         <div class="key-feature">
@@ -88,11 +89,10 @@
                     </div>
                     <div class="expand-div">
                         <div class="lecture-div">
-                            <ul> @php $countCourse = $allCourse->count(); @endphp
+                            <ul>
                                 <li>Sections 1</li>
-                                <li>{{$countCourse}} Lectures</li>
+                                <li>{{$allVdos->count()}} Lectures</li>
                                 <li>3 Hr. 35 Min. </li>
-
                             </ul>
                         </div>
                         <div class="expand-txt">
@@ -115,11 +115,11 @@
                                 </div>
                                 <div id="collapseOne" class="panel-collapse collapse in " role="tabpanel" aria-labelledby="headingOne">
                                     <div class="panel-body ">
-                                        @foreach($allCourse as $row)
+                                        @foreach($allVdos as $row)
                                         <ul class="video-ul ">
 
                                             <li>
-                                                <div class='video-sapn'><i class='fa fa-play-circle' aria-hidden='true'></i><a href='#'>{{ $row->title }}</a></div>
+                                                <div class='video-sapn'><i class='fa fa-play-circle' aria-hidden='true'></i><a href='#'>{{ $row->vdo_heading }}</a></div>
                                                 <!-- <div class='preview-span' data='https://player.vimeo.com/video/696950688?h=8df88c066d'><a style='cursor: pointer'> Preview</a></div>-->
                                                 <div class='time-span'>02:04</div>
                                             </li>
@@ -225,7 +225,7 @@
                         </div>
                         <div class="col-sm-5">
                             <div class="become_contact_right become_right buy-now-section">
-                                <img src="{{ asset('public/frontend-styles/biz/img/left-arrow.png') }}" class="move-arrow" />
+                                <img src="{{ asset('public/frontend-styles/Biz/img/left-arrow.png') }}" class="move-arrow" />
 
                                 <input type="button" name="ctl00$ContentPlaceHolder1$btnbuy" value="Buy Now" id="ContentPlaceHolder1_btnbuy" class="btn buy-btn" />
                             </div>

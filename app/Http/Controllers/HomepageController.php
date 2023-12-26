@@ -11,6 +11,7 @@ use App\Models\OurStoryAndMission;
 use App\Models\howGurukulNationWork;
 use App\Models\WhyGurukulNation;
 use App\Models\LearnerSupport;
+use App\Models\Contact;
 use Illuminate\Foundation\Auth\User;
 
 class HomepageController extends Controller
@@ -364,5 +365,30 @@ class HomepageController extends Controller
         $data['user_status'] = 0;
          User::where('id',$id)->update($data);
         return back()->with('success', 'User blocked successfully');
+    }
+    
+    public function contactForm(){
+        $contact = Contact::where('id',1)->where('status',2)->first();
+        return view('dashboards.admins.contactForm', compact('contact'));
+    }
+
+    public function contactUpdate(Request $request){
+        $data['address'] = $request->address;
+        $data['info_email'] = $request->info_email;
+        $data['support_email'] = $request->support_email;
+        $data['status'] = 2;
+        if($request->id){
+            $data['updated_at'] = Carbon::now();
+         $id = Contact::where('id', $request->id)->update($data);
+        }else{
+            $data['created_at'] = Carbon::now();
+            $id = Contact::create($data);
+        }
+        if ($id) {
+            return back()->with('success', 'Data saved successfully');
+        } else {
+            return back()->with('error', 'Something Went Wrong');
+        }
+
     }
 }
