@@ -70,7 +70,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                        <form action="{{ URL::to('reset-password-send-email') }}" method="post">
+                        <form action="{{ URL::to('reset-user-password-save') }}" method="post">
                             @csrf
                             <div class="text-center">
                                 <img src="{{ asset('public/frontend-styles/Biz/img/myimgs/gurukul_logo.png') }}" style="width: 200px;" alt="logo.png" />
@@ -78,17 +78,21 @@
                             <div class="auth-box card">
                                 <div class="card-block">
                                     <div class="row m-b-20">
-                                        <div class="col-md-12">
-                                            <h3 class="text-center">Forgot Password</h3>
-                                        </div>
                                     </div>
-                                    <p class="text-muted text-center p-b-5">Reset your password to get access to your account</p>
+                                    <p class="text-muted text-center p-b-5">Reset your password</p>
                                     <div class="form-group form-primary" style="margin-bottom: 5px;">
-                                        <input name="email" type="email" id="txtMobileNumber" class="form-control" placeholder="Enter Your Email" required="" />
+                                        <input name="email" type="email"  class="form-control" readonly value="{{ $email }}" />
+                                    </div>
+                                    <div class="form-group form-primary" style="margin-bottom: 5px;">
+                                        <input name="password" type="password" id="password" class="form-control" placeholder="Enter Your Password" required="" />
+                                    </div>
+                                    <div class="form-group form-primary" style="margin-bottom: 5px;">
+                                        <input name="conform_password" type="conform_password" id="confirm_password" class="form-control" placeholder="Enter Your Conform Password" required="" />
+                                        <span id="confirm_password_msg"></span>
                                     </div>
                                     <div class="row m-t-30">
                                         <div class="col-md-12">
-                                            <input type="submit" value="Set Password"  id="btnSubmit" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20" />
+                                            <input type="submit" id="sign_in_btn" onclick="return false" value="Reset Password"  id="btnSubmit" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20" />
                                         </div>
                                     </div>
                                     <div class="row m-b-20">
@@ -126,6 +130,54 @@
     <script type="text/javascript" src="{{ asset('public/frontend-styles/Content/bower_components/jquery-i18next/js/jquery-i18next.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/frontend-styles/Content/assets/js/common-pages.js') }}"></script>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"829e984e08536b9f","version":"2023.10.0","token":"0b2d30c0d91c41ef8c5e660185295aa3"}' crossorigin="anonymous"></script>
+
+
+    <script>
+                $(document).ready(function(){
+          
+          $("#confirm_password").bind('keyup change', function(){
+
+            check_Password( $("#password").val(), $("#confirm_password").val() )
+            
+            
+          })
+
+          $("#sign_in_btn").click(function(){
+
+            check_Password( $("#password").val(), $("#confirm_password").val() )
+
+          })
+        })
+
+        function check_Password( Pass, Con_Pass){
+
+          if(Pass === ""){
+
+            
+
+          }else if( Pass === Con_Pass){
+
+            $("#sign_in_btn").removeAttr("onclick")
+            $('#confirm_password_msg').show()
+            $("#confirm_password_msg").html('<div class="alert alert-success">Password matched</div>')
+
+            setTimeout(function() {
+                $('#confirm_password_msg').fadeOut('slow');
+            }, 3000);
+
+          }else{
+            $("#confirm_password").focus()
+            $('#confirm_password_msg').show()
+            $("#confirm_password_msg").html('<div class="alert alert-danger">Password did not matched</div>')
+
+            setTimeout(function() {
+                $('#confirm_password_msg').fadeOut('slow');
+            }, 3000);
+
+          }
+
+        }
+    </script>
 </body>
 
 </html>

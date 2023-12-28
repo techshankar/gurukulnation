@@ -75,7 +75,7 @@
                     <h2 class="index-title">Digital Entrepreneurship Bundles</h2>
                     <p>Choose from the wide range of skillful courses to crack the ultimate code of success in the social media world.</p>
                 </div>
-                <div class="digital_bundle_main_section">
+                <div class="">
                     <div class="digital_bundle_left">
                         <ul class="digital_navigation">
                             @foreach($courseCategories as $key=>$row)

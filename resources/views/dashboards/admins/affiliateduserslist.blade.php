@@ -1,12 +1,12 @@
 @extends('dashboards.admins.layouts.admin-dash-layout')
-@section('title','Users List')
+@section('title','Affiliated Users List')
 
 @section('content')
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Users List</h1>
+                <h1>Affiliated Users List</h1>
             </div>
         </div>
     </div>
@@ -17,8 +17,9 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Users List</h3>
+                        <h3 class="card-title">Affiliated Users List</h3>
                         <div class="card-tools">
+                            <a href="{{URL::to('admin/users/list')}}" class="btn btn-info">Back To Users List</a>
                         </div>
                     </div>
                     @if ($message = Session::get('success'))
@@ -47,13 +48,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @if(count($users)==0)
+                                @if(count($affiliatedusers)==0)
                                 <tr>
                                     <td>No data Found</td>
 
                                 </tr>
                                 @endif
-                                @foreach($users as $key=> $val)
+                                @foreach($affiliatedusers as $key=> $val)
                                 <tr>
                                     <td>{{$key+1}}</td>
                                     <td>{{$val->name}}</td>
@@ -68,7 +69,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        {!! $users->links() !!}
+                        {!! $affiliatedusers->links() !!}
                     </div>
                 </div>
             </div>

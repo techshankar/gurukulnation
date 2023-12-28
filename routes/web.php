@@ -77,11 +77,16 @@ Route::get('/', [HomeController::class, 'index'])->name('/');
 // Route::post('/login',[UserController::class,'login'])->name('user.login');
 // Route::post('/register',[UserController::class,'register'])->name('user.register');
 // Route::post('user/signup/saved',[UserController::class,'userSignupSaved'])->name('user.signup.saved');
-Route::post('user/signup/saved',[RegisterController::class,'userSignupSaved'])->name('user.signup.saved');
-Route::post('user/sign/in', [RegisterController::class, 'signIn'])->name('user.signIn');
+Route::post('user-signup-saved',[RegisterController::class,'userSignupSaved'])->name('user.signup.saved');
+Route::post('user-sign-in', [RegisterController::class, 'signIn'])->name('user.signIn');
 Route::get('user/logout',[RegisterController::class,'logout'])->name('user.logout');
-Route::post('reset/password/send/email',[MailController::class,'resetPasswordSendEmail'])->name('user.logout');
+// reset password send email
+Route::post('reset-password-send-email',[MailController::class,'resetPasswordSendEmail'])->name('reset.password.send.email');
+// after emailed 
+Route::get('reset-your-password',[MailController::class,'resetPasswordForm']);
+Route::post('reset-user-password-save',[MailController::class,'resetUserPasswordSave']);
 
+Route::get('logout',[AdminController::class,'adminLogout'])->name('adminLogout');
 Route::group(['prefix' => 'admin'],  function () {
         Route::get('/', [AdminController::class, 'viewLogin'])->name('admin');
         Route::post('/login', [LoginController::class, 'login'])->name('admin.login');
@@ -243,6 +248,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['isAdmin', 'auth', 'PreventB
         Route::post('edit_banners/{id}', [HomepageController::class, 'edit_banners'])->name('admin.edit_banners');
         // users list
         Route::get('users/list', [HomepageController::class, 'usersList'])->name('admin.usersList');
+        // affiliated users list
+        Route::get('affiliated-users-list/{refferel_code}', [HomepageController::class, 'affiliatedUsersList']);
         Route::get('users/block/{id}', [HomepageController::class, 'blockUser'])->name('admin.blockUser');
 
         // Route::get('sub_category',[categoryController::class,'sub_category'])->name('admin.sub_category');

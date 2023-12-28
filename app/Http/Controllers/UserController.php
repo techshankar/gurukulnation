@@ -129,10 +129,10 @@ class UserController extends Controller
     //    dd($request->all());
     // }
 
-    public function logout(Request $request)
+    public function logout()
     {
         Session::flush();
         Auth::logout();
-        return redirect('admin');
+        return redirect('/');
     }
 }

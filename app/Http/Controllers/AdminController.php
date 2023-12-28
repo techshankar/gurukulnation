@@ -10,6 +10,7 @@ use App\Models\Users;
 use App\Models\Settings;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
+use Session;
 
 class AdminController extends Controller
 {
@@ -173,5 +174,12 @@ class AdminController extends Controller
     {
         $contacts = DB::table('contacts')->orderBy('id','desc')->paginate(10);
         return view('dashboards.admins.contactlist', compact('contacts'));
+    }
+
+    public function adminLogout(Request $request)
+    {
+        Session::flush();
+        Auth::logout();
+        return redirect('admin');
     }
 }

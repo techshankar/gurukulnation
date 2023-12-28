@@ -386,13 +386,13 @@
                     </div>
                     <div class="footer-social">
                         <ul>
-                            <li><a class="footer__insta" href="https://www.instagram.com/bizgurukul/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a class="footer__facebook" href="https://www.facebook.com/Bizgurukul-100750271589910" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                            <li><a class="footer__insta" href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a class="footer__facebook" href="#" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
 
-                            <li><a class="footer__twiter" href="https://twitter.com/Bizgurukul_IND" target="_blank"><img src="{{ asset('public/frontend-styles/Biz/img/twitter_new_icon.png') }}" class="twitter_new_logo" /></a></li>
+                            <li><a class="footer__twiter" href="#" target="_blank"><img src="{{ asset('public/frontend-styles/Biz/img/twitter_new_icon.png') }}" class="twitter_new_logo" /></a></li>
 
-                            <li><a class="footer__youtube" href="https://www.youtube.com/c/Bizgurukul" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                            <li><a class="footer__linked" href="https://www.linkedin.com/company/officialbizgurukul" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a class="footer__youtube" href="#" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                            <li><a class="footer__linked" href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                 </div>

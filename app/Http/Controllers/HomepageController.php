@@ -356,9 +356,16 @@ class HomepageController extends Controller
 
     }
 
+    // users list 
     public function usersList(){
-        $users = User::where('role_id',1)->where('user_status',1)->paginate(10);
+        $users = User::where('role_id',1)->where('user_status',1)->orderBy('id','DESC')->paginate(10);
         return view('dashboards.admins.userlist', compact('users'));
+    }
+
+    // affiliated users 
+    public function affiliatedUsersList($refferel_code){
+        $affiliatedusers = User::where('role_id',1)->where('referred_by_code',$refferel_code)->orderBy('id','DESC')->paginate(10);
+        return view('dashboards.admins.affiliateduserslist', compact('affiliatedusers'));
     }
     
     public function blockUser($id){

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Marioxsoftware.com</title>
+    <title>Gurukul Nation</title>
 </head>
 <body>
     <h1>{{ $mailData['title'] }}</h1>
     <p>{{ $mailData['body'] }}</p>
+
+    <form action="{{ URL::to('reset-your-password') }}" method="get">
+        <input type="hidden" name="id" value="{{ $mailData['id'] }}">
+        <input type="hidden" name="email" value="{{ $mailData['email'] }}">
+        <input type="submit" class="btn btn-success" value="Reset Password">
+    </form>
   
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
      
     <p>Thank you</p>
+    <p>Gurukul Nation</p>
+    <a href="{{ URL::to('/') }}">Gurukulnation.com</a>
 </body>
 </html>

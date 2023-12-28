@@ -7,12 +7,12 @@ use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use App\Models\Users;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Auth;
 use Session;
 
 use Illuminate\Http\Request;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class RegisterController extends Controller
 {
@@ -118,8 +118,6 @@ class RegisterController extends Controller
 
 
     public function userSignupSaved(Request $request){
-        // dd($request->all());
-
         $request->validate([
             'name' => ['required',],
             'email' => ['required', 'email', 'max:255', 'unique:users'],
@@ -131,7 +129,13 @@ class RegisterController extends Controller
          $user->email = $request->email;
          $user->phone = $request->phone;
          $user->state = $request->state;
-         $user->referral_code = $request->referral_code;
+         $user->user_status = 1;
+         if($request->referral_code){
+             $user->referred_by_code = $request->referral_code;
+         }
+            // BRC: Course Bundle refferel code
+         $user->my_refere_code = "CBRC".rand(9,999999);
+         $user->bundle_id = $request->course_id;
          $user->role_id = 1;
          $user->password = \Hash::make($request->password);
 
