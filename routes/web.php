@@ -18,6 +18,7 @@ use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\FaqsController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\PhonePeController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -317,3 +318,7 @@ Route::get('refund-policy', function(){
 Route::get('end-user-license-agreement', function(){
         return view('frontend.enduserlicenseagreement');
 });
+
+// payment 
+Route::get('phonepe',[PhonePeController::class,'phonePe']);
+Route::any('phonepe-response',[PhonePeController::class,'response'])->name('response');
