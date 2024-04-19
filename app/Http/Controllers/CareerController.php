@@ -64,7 +64,7 @@ class CareerController extends Controller
     }
     
     public function jobAppliedList(){
-        $jobappliendlist = DB::table('apply_jobs')->paginate(10);
+        $jobappliendlist = DB::table('apply_jobs')->orderBy('id', 'desc')->paginate(10);
         return view('dashboards.admins.careers.jobapplylist', compact('jobappliendlist'));
     }
     

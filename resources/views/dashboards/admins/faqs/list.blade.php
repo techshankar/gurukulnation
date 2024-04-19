@@ -64,8 +64,8 @@
                                 @endphp
                                 <tr>
                                     <td>{{$key+1}}</td>
-                                    <td>{{$question}}</td>
-                                    <td>{{$answer}}</td>
+                                    <td>{!!$question!!}</td>
+                                    <td>{!!$answer!!}</td>
                                     <td>
                                         <a class="btn btn-success" title="Edit Faqs" href="{{route('admin.editFaqs', ['id' => $val->id])}}"><i class="nav-icon fas fa-edit"></i></a>
                                         <a class="btn btn-danger" onclick="return alert('Are sure want to delete this?');" title="Delete Faqs" href="{{route('admin.deleteFaqs', ['id' => $val->id])}}"><i class="nav-icon fas fa-trash"></i></a>

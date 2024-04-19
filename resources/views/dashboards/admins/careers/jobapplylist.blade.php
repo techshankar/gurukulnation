@@ -34,7 +34,7 @@
                                     <th>Mobile</th>
                                     <th>Current Location</th>
                                     <th>Reference</th>
-                                    <th>Relocate</th>
+                                    <th>Is Relocate?</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>

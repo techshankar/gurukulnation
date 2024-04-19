@@ -79,7 +79,7 @@ Route::get('/', [HomeController::class, 'index'])->name('/');
 // Route::post('/register',[UserController::class,'register'])->name('user.register');
 // Route::post('user/signup/saved',[UserController::class,'userSignupSaved'])->name('user.signup.saved');
 Route::post('user-signup-saved',[RegisterController::class,'userSignupSaved'])->name('user.signup.saved');
-Route::post('user-sign-in', [RegisterController::class, 'signIn'])->name('user.signIn');
+Route::post('user-sign-in', [RegisterController::class, 'signIn'])->name('user.login');
 Route::get('user/logout',[RegisterController::class,'logout'])->name('user.logout');
 // reset password send email
 Route::post('reset-password-send-email',[MailController::class,'resetPasswordSendEmail'])->name('reset.password.send.email');

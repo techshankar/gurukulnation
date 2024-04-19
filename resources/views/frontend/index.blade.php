@@ -171,7 +171,7 @@
     <section class="work-section wow fadeInUp">
         <div class="container-80">
             <div class="work-heading">
-                <h2 class="heading-black index-title">How Bizgurukul Workss</h2>
+                <h2 class="heading-black index-title">How Gurukul Nation Workss</h2>
             </div>
             <div class="row ">
                 <div class="col-md-4 col-sm-4 col-xs-12">
@@ -407,8 +407,8 @@
                 </div>
                 <div class="col-sm-8">
                     <div class="biz_review biz_review_content">
-                        <h2 class="index-title">What Others Have To Say About Bizgurukul</h2>
-                        <p>Bizgurukul has been a life-changing platform for thousands of Indians. Browse what people have to say about us.</p>
+                        <h2 class="index-title">What Others Have To Say About Gurukul Nation</h2>
+                        <p>Gurukul Nation has been a life-changing platform for thousands of Indians. Browse what people have to say about us.</p>
                         <a href="{{ URL::to('reviews/what/other/say') }}">Browse Reviews</a>
                     </div>
                 </div>
@@ -443,7 +443,7 @@
                         <i></i>
                         <h2>{{ $row->question }}</h2>
                         <p>
-                            <span>{{ $row->answer }}
+                            <span>{!! $row->answer !!}
                             </span>
                         </p>
                     </li>

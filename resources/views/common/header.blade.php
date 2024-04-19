@@ -453,7 +453,7 @@
 
                                                                 <li><a href="{{URL::to('about-us')}}">About Us</a></li>
 
-                                                                <li><a href="Biz/career.html">Career</a></li>
+                                                                <li><a href="{{ url('career/list') }}">Career</a></li>
                                                                 <li><a href="{{URL::to('contact-us')}}">Contact Us</a></li>
                                                             </ul>
                                                         </div>

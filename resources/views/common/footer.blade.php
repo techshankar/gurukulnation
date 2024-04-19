@@ -7,14 +7,14 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-body">
-                <div class="row about_bizgurukul_row2">
+                <div class="row about_Gurukulnation_row2">
                     <div class="col-sm-6">
-                        <div class="about_bizgurukul_img2">
+                        <div class="about_Gurukulnation_img2">
                             <img src="{{ asset('public/frontend-styles/Biz/img/contact.jpg') }}" />
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="about_bizgurukul_content">
+                        <div class="about_Gurukulnation_content">
                             <div id="user_detail">
                                 <h4 class="modal-title">Please Register Here:</h4>
 
@@ -56,9 +56,9 @@
                 <button type="button" class="close" data-dismiss="modal">
                     <img src="{{ asset('public/frontend-styles/Biz/img/cancel2.png') }}">
                 </button>
-                <div class="row about_bizgurukul_row2">
+                <div class="row about_Gurukulnation_row2">
                     <div class="col-sm-12">
-                        <div class="about_bizgurukul_content">
+                        <div class="about_Gurukulnation_content">
                             <h4 class="modal-title">Request a call back</h4>
 
                             <div id="dv_tbleaduser_detail">
@@ -315,15 +315,15 @@
     {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Bizgurukul",
-        "url": "https://bizgurukul.com/",
-        "logo": "https://bizgurukul.com/Biz/img/logo.png",
+        "name": "Gurukulnation",
+        "url": "https://Gurukulnation.com/",
+        "logo": "https://Gurukulnation.com/Biz/img/logo.png",
         "sameAs": [
-            "https://www.facebook.com/Bizgurukul-100750271589910",
-            "https://twitter.com/Bizgurukul_IND",
-            "https://www.instagram.com/bizgurukul/",
-            "https://www.youtube.com/c/Bizgurukul",
-            "https://www.linkedin.com/company/officialbizgurukul"
+            "https://www.facebook.com/Gurukulnation-100750271589910",
+            "https://twitter.com/Gurukulnation_IND",
+            "https://www.instagram.com/Gurukulnation/",
+            "https://www.youtube.com/c/Gurukulnation",
+            "https://www.linkedin.com/company/officialGurukulnation"
         ]
     }
 </script>
@@ -332,8 +332,8 @@
     {
         "@context": "https://schema.org/",
         "@type": "WebSite",
-        "name": "Bizgurukul",
-        "url": "https://bizgurukul.com/",
+        "name": "Gurukulnation",
+        "url": "https://Gurukulnation.com/",
         "potentialAction": {
             "@type": "SearchAction",
             "target": "{search_term_string}",
@@ -380,7 +380,7 @@
 
                         <div class="footer__about">
                             <!-- <p>
-                                            Bizgurukul is bringing the learner community of all age groups under one roof to learn, implement, and grow with the dynamic skills of the future to help you stand out of the crowd.
+                                            Gurukulnation is bringing the learner community of all age groups under one roof to learn, implement, and grow with the dynamic skills of the future to help you stand out of the crowd.
                                         </p> -->
                         </div>
                     </div>
@@ -426,10 +426,10 @@
 
                     <div class="mobile_footer">
                         <!-- <img src="Biz/img/app_view3.png" class="view_app" />
-                                    <h6>Download the Bizgurukul App</h6>
+                                    <h6>Download the Gurukulnation App</h6>
                                     <div class="app_footer">
-                                        <a href="https://apps.apple.com/in/app/bizgurukul/id6448565147" target="_blank"><img src="Biz/img/appstore.png" /></a>
-                                        <a href="https://play.google.com/store/search?q=Bizgurukul&amp;c=apps&amp;hl=en-IN" target="_blank"><img src="Biz/img/googleplay.png" /></a>
+                                        <a href="https://apps.apple.com/in/app/Gurukulnation/id6448565147" target="_blank"><img src="Biz/img/appstore.png" /></a>
+                                        <a href="https://play.google.com/store/search?q=Gurukulnation&amp;c=apps&amp;hl=en-IN" target="_blank"><img src="Biz/img/googleplay.png" /></a>
                                     </div> -->
                     </div>
                 </div>
@@ -805,7 +805,7 @@
                                 Zuck.buildTimelineItem(
                                     "ramon",
                                     "Biz/img/bb.jpg",
-                                    "Bizgurukul",
+                                    "Gurukulnation",
                                     "",
                                     timestamp(),
                                     [
@@ -946,6 +946,6 @@
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"82992cc35f7a8944","b":1,"version":"2023.10.0","token":"0b2d30c0d91c41ef8c5e660185295aa3"}' crossorigin="anonymous"></script>
 </body>
 
-<!-- Mirrored from www.bizgurukul.com/Default by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Nov 2023 13:14:55 GMT -->
+<!-- Mirrored from www.Gurukulnation.com/Default by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Nov 2023 13:14:55 GMT -->
 
 </html>

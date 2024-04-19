@@ -163,7 +163,7 @@ class RegisterController extends Controller
                 return redirect()->route('/');
             }
         } else {
-            return redirect()->route('user.signIn')->with('error', 'Email or password is wrong');
+            return redirect()->route('user.signin')->with('error', 'Email or password is wrong');
         }
     }
 
