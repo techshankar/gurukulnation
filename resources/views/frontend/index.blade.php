@@ -3,7 +3,8 @@
 
 <main>
     <section style="display: block;">
-        <div id="carousel-example-generic1" class="carousel banner__slider slide" data-ride="carousel" data-interval="4000">
+        <div id="carousel-example-generic1" class="carousel banner__slider slide" data-ride="carousel"
+            data-interval="4000">
             <!-- Indicators -->
             <ol class="carousel-indicators">
             </ol>
@@ -14,19 +15,25 @@
 
                 <div class="item active">
                     <div class="banner_item">
-                        <img class="desktop__viewB_slide" src="{{ asset('public/frontend-styles/Biz/img/myimgs/new_blue_banner.jpg') }}" />
-                        <img class="mobile__viewB_slide" src="{{ asset('public/frontend-styles/Biz/img/myimgs/new_blue_banner.jpg') }}" />
-                        <div class="banner_video">
-                            <div class="banner_video_box">
-                                @foreach($banners as $row)
-                                <img class="" src="{{ $row->banner }}" />
-                                @endforeach
-                                <img class="iframe_img1" src="{{ asset('public/frontend-styles/Biz/img/iframe_img2.png') }}" />
-                            </div>
-                        </div>
+                        <img class="desktop__viewB_slide"
+                            src="{{ asset('public/frontend-styles/Biz/img/myimgs/study_img.jpeg') }}" />
                     </div>
                 </div>
 
+                <div class="item">
+                    <div class="banner_item">
+                        <img class="desktop__viewB_slide"
+                            src="{{ asset('public/frontend-styles/Biz/img/myimgs/study_img.jpeg') }}" />
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="banner_item">
+                        <img class="desktop__viewB_slide"
+                            src="{{ asset('public/frontend-styles/Biz/img/myimgs/study_img.jpeg') }}" />
+
+                    </div>
+                </div>
 
             </div>
 
@@ -42,131 +49,30 @@
         </div>
 
     </section>
-    <section class="creation_section">
-        <div class="container-90">
-            @if(Session::has('success'))<!-- flash message  -->
-            <div class="alert alert-success">
-                {{Session::get('success')}}
-            </div>
-            @endif
-            <div x-data="{ showMessage: true }" x-show="showMessage" x-init="setTimeout(() => showMessage = false, 3000)">
-                @if(Session::has('error'))
-                <div class="alert alert-danger p-3 text-green-700 bg-green-300 rounded">
-                    {{Session::get('error')}}
-                </div>
-                @endif
-            </div><!--/ flash message  -->
-            <div class="creation_heading">
-                <h2 class="index-title">Intensive Program</h2>
-            </div>
-            <div class="creation_box">
-                <a href="#" target="_blank">
-                    <img src="{{ asset('public/frontend-styles/Biz/img/myimgs/content_banner_home.jpg') }}" class="ccc_banner_desk" />
-                    <img src="{{ asset('public/frontend-styles/Biz/IntsProg/img/ccc_banner_mobffaf.jpg?v=1.4') }}" class="ccc_banner_mob" />
-                </a>
-            </div>
-        </div>
-    </section>
 
-    <section class="digital_bundle">
-        <div class="container-90">
-            <div class="digital_bun">
-                <div class="digital_bundle_heading">
-                    <h2 class="index-title">Digital Entrepreneurship Bundles</h2>
-                    <p>Choose from the wide range of skillful courses to crack the ultimate code of success in the social media world.</p>
+    <div class="why-number-div-outer">
+        <div class="container-80">
+            <div class="why-number-div">
+                <div class="why-num-sec">
+                    <h2><span class="counter" data-count="{{ $whyGurukulNation->count1 }}">0</span>+</h2>
+                    <p>{{ $whyGurukulNation->title1 }}</p>
                 </div>
-                <div class="">
-                    <div class="digital_bundle_left">
-                        <ul class="digital_navigation">
-                            @foreach($courseCategories as $key=>$row)
-                            <li>
-                                <a href="#{{ $key+1 }}">
-                                    <span>{{ $row->name }}</span>
-                                </a>
-                            </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    <div class="digital_bundle_right">
-                        @foreach($courseCategories as $row)
-                        <section class="digital_course_main" id="{{ $key+1 }}">
-                            <div class="digital_course_left">
-                                @php $courseDesNThumb = DB::table('courses')->where('category_id', $row->id)->first(); @endphp
-                                <h3>@if($row->id){{ $row->name }} @endif</h3>
-                                <p>{{ strip_tags($courseDesNThumb->home_page_desc) }}</p>
-                                <p>
-                                    <span><i class="fa fa-book" aria-hidden="true"></i>01 Course</span>
-                                    <span class="program_hrs"><i class="fa fa-clock-o" aria-hidden="true"></i>15+ Hours</span>
-                                </p>
-                                <p class="bundle-info"><i class="fa fa-check" aria-hidden="true"></i>Live Q&amp;A Support</p>
-                                <p class="bundle-info"><i class="fa fa-check" aria-hidden="true"></i>13k+ Students Enrolled</p>
-                                <p class="bundle-info"><i class="fa fa-check" aria-hidden="true"></i>Gurukul Nation Certificate</p>
-                                <a href="{{ URL::to('course/list',$row->slug) }}">Know More</a>
-                            </div>
-                            <div class="digital_course_right">
-                                <img src="{{ $courseDesNThumb->thumbnail }}" />
-                            </div>
-                        </section>
-                        @endforeach
-                    </div>
+                <div class="why-num-sec">
+                    <h2><span class="counter" data-count="{{ $whyGurukulNation->count2 }}">0</span> Lakh+</h2>
+                    <p>{{ $whyGurukulNation->title2 }}</p>
+                </div>
+
+                <div class="why-num-sec">
+                    <h2><span class="counter" data-count="{{ $whyGurukulNation->count3 }}">0</span>+</h2>
+                    <p>{{ $whyGurukulNation->title3 }}</p>
+                </div>
+                <div class="why-num-sec">
+                    <h2><span class="counter" data-count="{{ $whyGurukulNation->count4 }}">0</span>Cr.+</h2>
+                    <p>{{ $whyGurukulNation->title4 }}</p>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="courseflix wow fadeInUp">
-        <div class="">
-            <section class="courseflix-section">
-                <div class="container-80">
-                    <div class="row">
-                        <div class="col-md-12 col-xs-12">
-                            <div class="courseflix__heading">
-                                <h2 class="index-title"><span>Ups</span>killing Courses</h2>
-                                <p>This segment offers lifetime access to a plethora of courses with self-paced learning. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- TESTIMONIALS -->
-                    <section class="testimonials-in">
-                        <div id="customers-testimonials-course" class="owl-carousel owl-theme owl-loaded owl-drag owl-carousel-courseflix">
-
-                            <!--COURSE 1 -->
-                            @foreach($courses as $row)
-                            <div class="item">
-                                <div class="shadow-effect-in">
-
-                                    <a href="#">
-                                        <div class="our__courseflixContant">
-
-                                            <div class="courseflix-img">
-                                                <img src="{{ $row->thumbnail }}" />
-                                            </div>
-                                            <div class="text-div">
-                                                <h2>{{ $row->title }}</h2>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            @endforeach
-
-                            <!--END OF COURSE 1 -->
-                        </div>
-                    </section>
-                    <!-- END OF TESTIMONIALS -->
-                    <div class="row">
-                        <div class="col-md-12 col-xs-12">
-                            <div class="all-coursesBtn">
-                                <a class="explore__btn" href="{{ URL::to('upskilling/courses') }}">Explore more courses</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </section>
-
+    </div>
 
     <section class="work-section wow fadeInUp">
         <div class="container-80">
@@ -214,32 +120,116 @@
 
         </div>
     </section>
-    <section class="why-section">
-        <div class="container-80">
-            <div class="why-heading">
-                <h2 class="heading-black index-title">Why Gurukul Nation</h2>
-            </div>
-            <div class="why-number-div">
-                <div class="why-num-sec">
-                    <h2><span class="counter" data-count="{{ $whyGurukulNation->count1 }}">0</span>+</h2>
-                    <p>{{ $whyGurukulNation->title1 }}</p>
-                </div>
-                <div class="why-num-sec">
-                    <h2><span class="counter" data-count="{{ $whyGurukulNation->count2 }}">0</span> Lakh+</h2>
-                    <p>{{ $whyGurukulNation->title2 }}</p>
-                </div>
+    <section class="courseflix wow fadeInUp">
+        <div class="">
+            <section class="courseflix-section">
+                <div class="container-80">
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <div class="courseflix__heading">
+                                <h2 class="index-title"><span>Ups</span>killing Courses</h2>
+                                <p>This segment offers lifetime access to a plethora of courses with self-paced
+                                    learning. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TESTIMONIALS -->
+                    <section class="testimonials-in">
+                        <div id="customers-testimonials-course"
+                            class="owl-carousel owl-theme owl-loaded owl-drag owl-carousel-courseflix">
 
-                <div class="why-num-sec">
-                    <h2><span class="counter" data-count="{{ $whyGurukulNation->count3 }}">0</span>+</h2>
-                    <p>{{ $whyGurukulNation->title3 }}</p>
+                            <!--COURSE 1 -->
+                            @foreach($courses as $row)
+                            <div class="item">
+                                <div class="shadow-effect-in">
+
+                                    <a href="#">
+                                        <div class="our__courseflixContant">
+
+                                            <div class="courseflix-img">
+                                                <img src="{{ $row->thumbnail }}" />
+                                            </div>
+                                            <div class="text-div">
+                                                <h2>{{ $row->title }}</h2>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry.</p>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            @endforeach
+
+                            <!--END OF COURSE 1 -->
+                        </div>
+                    </section>
+                    <!-- END OF TESTIMONIALS -->
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <div class="all-coursesBtn">
+                                <a class="explore__btn" href="{{ URL::to('upskilling/courses') }}">Explore more
+                                    courses</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="why-num-sec">
-                    <h2><span class="counter" data-count="{{ $whyGurukulNation->count4 }}">0</span>Cr.+</h2>
-                    <p>{{ $whyGurukulNation->title4 }}</p>
+            </section>
+        </div>
+    </section>
+    <section class="digital_bundle">
+        <div class="container-90">
+            <div class="digital_bun">
+                <div class="digital_bundle_heading">
+                    <h2 class="index-title">Digital Entrepreneurship Bundles</h2>
+                    <p>Choose from the wide range of skillful courses to crack the ultimate code of success in the
+                        social media world.</p>
+                </div>
+                <div class="">
+                    <div class="digital_bundle_left">
+                        <ul class="digital_navigation">
+                            @foreach($courseCategories as $key=>$row)
+                            <li>
+                                <a href="#{{ $key+1 }}">
+                                    <span>{{ $row->name }}</span>
+                                </a>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div class="digital_bundle_right">
+                        @foreach($courseCategories as $row)
+                        <section class="digital_course_main" id="{{ $key+1 }}">
+                            <div class="digital_course_left">
+                                @php $courseDesNThumb = DB::table('courses')->where('category_id',
+                                $row->id)->first();
+                                @endphp
+                                <h3>@if($row->id){{ $row->name }} @endif</h3>
+                                <p>{{ strip_tags($courseDesNThumb->home_page_desc) }}</p>
+                                <p>
+                                    <span><i class="fa fa-book" aria-hidden="true"></i>01 Course</span>
+                                    <span class="program_hrs"><i class="fa fa-clock-o" aria-hidden="true"></i>15+
+                                        Hours</span>
+                                </p>
+                                <p class="bundle-info"><i class="fa fa-check" aria-hidden="true"></i>Live Q&amp;A
+                                    Support</p>
+                                <p class="bundle-info"><i class="fa fa-check" aria-hidden="true"></i>13k+ Students
+                                    Enrolled</p>
+                                <p class="bundle-info"><i class="fa fa-check" aria-hidden="true"></i>Gurukul Nation
+                                    Certificate</p>
+                                <a href="{{ URL::to('course/list',$row->slug) }}">Know More</a>
+                            </div>
+                            <div class="digital_course_right">
+                                <img src="{{ $courseDesNThumb->thumbnail }}" />
+                            </div>
+                        </section>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
     <script>
         $(document).ready(function() {
             $(".counter").each(function() {
@@ -251,7 +241,6 @@
                 }).animate({
                     countNum: countTo,
                 }, {
-
                     duration: 3000,
                     easing: 'linear',
                     step: function() {
@@ -265,16 +254,13 @@
         });
     </script>
 
-
     <script>
         var currentTab = 0; // Current tab is set to be the first tab (0)
         showTab(currentTab); // Display the current tab
-
         function showTab(n) {
             // This function will display the specified tab of the form...
             var x = document.getElementsByClassName("tab");
             x[n].style.display = "block";
-
             //... and fix the Previous/Next buttons:
             //if (n == 0) {
             //    document.getElementById("prevBtn").style.display = "none";
@@ -345,11 +331,7 @@
         }
     </script>
 
-
     <!-- testi_sec -->
-
-
-
 
     <script>
         jQuery(document).ready(function($) {
@@ -364,7 +346,9 @@
                 slideBy: 1,
                 autoplayTimeout: 3000,
                 smartSpeed: 1000,
-                navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>", "<i class='fa fa-angle-right' aria-hidden='true'></i>"],
+                navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>",
+                    "<i class='fa fa-angle-right' aria-hidden='true'></i>"
+                ],
                 responsive: {
                     0: {
                         items: 1,
@@ -399,16 +383,19 @@
     <section class="biz_review_section">
         <div class="container">
             <div class="row biz_review_main">
-                <div class="col-sm-4">
+                <div class="col-sm-2">
                     <div class="biz_review">
-                        <img src="{{ asset('public/frontend-styles/Biz/img/bg1.png') }}" class="biz_review_desk">
+                        <!-- <img src="{{ asset('public/frontend-styles/Biz/img/bg1.png') }}" class="biz_review_desk"> -->
+                        <img src="{{ asset('public/courseThumbnailsNvdo/thumbnail1701430809.jpg') }}"
+                            class="biz_review_desk">
                         <img src="{{ asset('public/frontend-styles/Biz/img/review-hm.png') }}" class="biz_review_mob">
                     </div>
                 </div>
                 <div class="col-sm-8">
                     <div class="biz_review biz_review_content">
                         <h2 class="index-title">What Others Have To Say About Gurukul Nation</h2>
-                        <p>Gurukul Nation has been a life-changing platform for thousands of Indians. Browse what people have to say about us.</p>
+                        <p>Gurukul Nation has been a life-changing platform for thousands of Indians. Browse what
+                            people have to say about us.</p>
                         <a href="{{ URL::to('reviews/what/other/say') }}">Browse Reviews</a>
                     </div>
                 </div>
@@ -436,23 +423,22 @@
         <div class="container">
             <h2 class="faq__title index-title"><span>Fre</span>quently Asked Questions</h2>
             <div id="faq">
-                <ul>
+
+                <ul class="accordion-list">
                     @foreach($faqs as $row)
                     <li>
-                        <input type="checkbox" checked>
-                        <i></i>
-                        <h2>{{ $row->question }}</h2>
-                        <p>
-                            <span>{!! $row->answer !!}
-                            </span>
-                        </p>
+                        <h3>{{ $row->question }}</h3>
+                        <div class="answer">
+                            {!! $row->answer !!}
+                        </div>
                     </li>
+
                     @endforeach
+
+                </ul>
+
             </div>
-            <!-- <div class="more_-faq">
-                    <a class="moreless-button" href="javascript:void(0)">↓</a>
-                </div> -->
-            </ul>
+
         </div>
         </div>
     </section>
@@ -467,7 +453,6 @@
         });
     </script>
 
-
     <section class="customer-support-section">
         <div class="container">
             <div class="customer-support-heading">
@@ -478,14 +463,6 @@
                 <div class="support_sub_box">
                     <h5><i class="fa fa-phone" aria-hidden="true"></i>{{ $learnerSupport->mobile_no }}</h5>
                     <p>({{ $learnerSupport->days_n_time }})</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="disclaimerWrap">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="disclaimerWrap__content">
                         <p>
                             <b>Disclaimer : </b>
@@ -496,12 +473,36 @@
             </div>
         </div>
     </section>
+    <section class="disclaimerWrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <!-- for disapera flash message  -->
 <script>
     $(document).ready(function() {
         $(".alert").delay(5000).slideUp(300);
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('.accordion-list > li > .answer').hide();
+        $('.accordion-list > li').click(function() {
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active").find(".answer").slideUp();
+            } else {
+                $(".accordion-list > li.active .answer").slideUp();
+                $(".accordion-list > li.active").removeClass("active");
+                $(this).addClass("active").find(".answer").slideDown();
+            }
+            return false;
+        });
     });
 </script>
 @endsection

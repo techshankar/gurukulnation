@@ -365,7 +365,9 @@ section.buy-now-section {
 }
 
 main {
-    background-image: url('../img/Branding-Mastery-line-25.png');
+    /* background-image: url('../img/Branding-Mastery-line-25.png'); */
+    background-image: none;
+    background-color: #fff;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

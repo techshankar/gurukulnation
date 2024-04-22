@@ -251,6 +251,7 @@ section.digital_bundle {
 
 .biz_review_section {
     padding:40px 0;
+    background-color: #f1f1f1;
 }
     .biz_review_section .biz_review img {
         max-width:100%;
@@ -262,6 +263,8 @@ section.digital_bundle {
     .biz_review_section .biz_review_main {
         display: flex;
         align-items: center;
+        flex-direction: column;
+        text-align:center;
     }
     .biz_review_section .biz_review .index-title:before {
         margin: inherit;
@@ -293,12 +296,15 @@ section.digital_bundle {
         }
 .customer-support-box {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+
     gap: 50px;
 }
     .customer-support-box img {
-        max-width:280px;
+        max-width:480px;
+        width: 100%;
     }
+
 .support_sub_box h5 {
     color: #333;
     font-size: 24px;
@@ -584,6 +590,8 @@ img.free_mob {
     .biz_review_section .biz_review_main {
         display: inherit;
     }
+
+    
     .biz_review_section .biz_review img.biz_review_mob {
         display: block;
     }

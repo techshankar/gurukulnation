@@ -67,6 +67,9 @@
     <link href="{{ asset('public/frontend-styles/Biz/css/enduser.css') }}" rel="stylesheet" />
     <link href="{{ asset('public/frontend-styles/Biz/css/hidesection.css') }}" rel="stylesheet" />
     <link href="{{ asset('public/frontend-styles/Biz/css/terms.css') }}" rel="stylesheet" />
+    <link href="{{ asset('public/frontend-styles/Content/assets/css/style.css') }}" rel="stylesheet" />
+
+    
 
     <style>
         .box-shadow-menu {
@@ -281,8 +284,8 @@
                                     <li><a href="{{ route('user.signin') }}" class="login-a">Login</a></li>
                                     @endif
                                     <ul class="nav navbar-nav nav__menu">
-                                        <li><a href="{{ route('/') }}">Home</a></li>
-                                        <li class="biz_bundle_nav" style="display:none">
+                                        <!-- <li><a href="{{ route('/') }}">Home</a></li> -->
+                                        <li cladropdown-toggless="biz_bundle_nav" style="display:none">
                                             <div class="header__dropdown">
                                                 <button class="dropdown-toggle dropdown_nav_show1" type="button">
                                                     Bundle Courses
@@ -444,41 +447,20 @@
                                             <div class="dropdown header__dropdown header__dropdownTwo">
                                                 <button class="dropdown-toggle" type="button" data-toggle="dropdown">
                                                     <!-- <i class="fa fa-ellipsis-h" aria-hidden="true"></i> -->
-                                                    <i class="fa fa-bars" aria-hidden="true"></i>
+                                                    <i class="fa fa-bars" aria-hidden="true"></i> Menu
                                                 </button>
                                                 <ul class="dropdown-menu dropdown__two">
                                                     <div class="row">
-                                                        <div class="col-md-3 col-sm-3 xol-xs-12">
+                                                        <div class="col-md-12 col-sm-12 xol-xs-12">
                                                             <ul class="dropdown__colum dropdown__columTwoA">
-
+                                                            <li><a href="{{URL::to('/')}}">Home</a></li>
                                                                 <li><a href="{{URL::to('about-us')}}">About Us</a></li>
 
                                                                 <li><a href="{{ url('career/list') }}">Career</a></li>
                                                                 <li><a href="{{URL::to('contact-us')}}">Contact Us</a></li>
                                                             </ul>
                                                         </div>
-                                                        <div class="col-md-3 col-sm-3 xol-xs-12">
-                                                            <!-- <ul class="dropdown__colum dropdown__columTwoB">
-                                                                    <li><a href="Biz/BecomeAnInst.html">Become An Instructor</a></li>
-                                                                    <li id="li_becminstr"><a href="Biz/BecomeAnAffiliate.html">Become An Affiliate</a></li>
-                                                                </ul> -->
-                                                        </div>
-                                                        <div class="col-md-3 col-sm-3 xol-xs-12">
-                                                            <ul class="dropdown__colum dropdown__columTwoC">
-                                                                <li>
-                                                                    <a href="content-creation-course.html" target="_blank">
-                                                                        <img src="{{ asset('public/frontend-styles/Biz/IntsProg/img/ccc_banner_mobc619.jpg?v=1.0') }}" style="border:1px solid #ccc;" /></a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-md-3 col-sm-3 xol-xs-12">
-                                                            <!-- <ul class="dropdown__colum dropdown__columTwoD">
-                                                                    <li class="mockup_training">
-                                                                        <h5>The ultimate playbook for creating viral content & monetize it like a pro</h5>
-                                                                        <h4>Content Creation Mastery</h4>
-                                                                    </li>
-                                                                </ul> -->
-                                                        </div>
+                                                        
                                                     </div>
                                                 </ul>
                                             </div>
