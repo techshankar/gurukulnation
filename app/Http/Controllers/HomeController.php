@@ -201,11 +201,17 @@ class HomeController extends Controller
         }
             $html .= '
             <div class="col-lg-4">
-            <img src="' . $row->thumbnail . '">
+            <div class="course_box">
+            <img src="' . $row->thumbnail . '" width=100%>
+            <div class="text">
             <h4>'.$row->title.'</h4>
+            <div class="view_more">
             <a href="'.url('/course/details/'.$row->slug.'/').'">View Details</a>
-            <strong><h4 style="margin-left: 15em; width: 15px; color: blue;">₹' . $row->price . '</h4></strong>
-            </div><span style="margin-left: 15em;"></span>';
+            <strong>₹' . $row->price . '</strong>
+            </div>
+            </div>
+            </div>
+            </div>';
         }
         return response()->json($html);
     }

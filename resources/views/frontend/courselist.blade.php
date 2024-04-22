@@ -91,18 +91,7 @@ $catName = DB::table('course_categories')->where('id',$catId)->first();
                         <a href="{{ URL::to('course/details',$row->slug) }}" class="exp-btn">Explore Now</a>
                     </div>
 
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12 b">
-                    <div class="course-img-div copywrite">
-                        <a href="../bundel_courses/BundleCourseDet9441.html?course=23Yy/qB87Eo=">
-                        <img src="{{ $row->thumbnail }}" height="400">
-
-                        <div class="slide-name">
-                                <h2>{{ $row->title }}</h2>
-                                <!-- <h4>Anmol Duggal</h4> -->
-                            </div>
-                        </a>
-                        <div class="course-detail-right course-txt">
+                    <div class="course-detail-right course-txt">
                             <h3>This Course Includes</h3>
                             @php $vdos = DB::table('videos')->where('course_id',$row->id)->first(); @endphp
                             <ul>
@@ -130,6 +119,18 @@ $catName = DB::table('course_categories')->where('id',$catId)->first();
 
 
                         </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 b">
+                    <div class="course-img-div copywrite">
+                        <a href="../bundel_courses/BundleCourseDet9441.html?course=23Yy/qB87Eo=">
+                        <img src="{{ $row->thumbnail }}" height="400">
+
+                        <div class="slide-name">
+                                <h2>{{ $row->title }}</h2>
+                                <!-- <h4>Anmol Duggal</h4> -->
+                            </div>
+                        </a>
+                        
                     </div>
                 </div>
             </div>
