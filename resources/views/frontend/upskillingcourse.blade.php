@@ -34,7 +34,7 @@
 
             <ul class="list-unstyled components">
                 @foreach($courseCategories as $key=>$row)
-                <li class='@if($key == 0)? "active" : " " @endif cls_cat' data-url="{{ URL::to('get-course', $row->id) }}"><a href='javascript:void(0)' class='cls_category' id="show-course">{{ $row->name }}</a></li>
+                <li class='@if($key == 0)active @endif cls_cat' data-url="{{ URL::to('get-course', $row->id) }}"><a href='javascript:void(0)' class='cls_category' id="show-course">{{ $row->name }}</a></li>
                 @endforeach
             </ul>
 
@@ -42,7 +42,7 @@
         </nav>
 
         <!-- Page Content Holder -->
-        <div class="row">
+        <div class="row" style="width:80%">
         <span id="courses"></span>
     </div>
     </div>

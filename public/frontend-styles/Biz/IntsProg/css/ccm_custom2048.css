@@ -117,7 +117,7 @@ header {
 }
 
 .video_content_card h4 span {
-    color: #0e86d4;
+    color: #00205d;
 }
 
     .video_content_card h4 span.pro_span {
@@ -228,7 +228,7 @@ header {
     }
 
     h3.ccm_heading span {
-        color: #0e86d4;
+        color: #00205d;
     }
 
 .program_scection {
@@ -502,7 +502,7 @@ header {
 
     #course_week h5 span {
         color: #fff;
-        background: #0e86d4;
+        background: #00205d;
         padding: 2px 5px;
         width: 65px;
         border-radius: 4px;
@@ -673,7 +673,7 @@ header {
 
         .trainer_section .inst_main_box .inst_box p {
             color: #fff;
-            background: #0e86d4;
+            background: #00205d;
             margin-bottom: 0;
             width: fit-content;
             padding: 1px 10px;
@@ -682,7 +682,7 @@ header {
         }
 
         .trainer_section .inst_main_box .inst_box h6 {
-            color: #0e86d4;
+            color: #00205d;
             background: #fff;
             border-radius: 25px;
             font-size: 12px;
@@ -1194,7 +1194,7 @@ footer {
     position: relative;
 }
     .trainer_content_box h6 {
-        color: #0e86d4;
+        color: #00205d;
         font-size: 19px;
         font-weight: 600;
     }
@@ -1206,7 +1206,7 @@ footer {
         height: 50px;
         width: 5px;
         left: 0;
-        background: #0e86d4;
+        background: #00205d;
     }
 .trainer_content_box h3 {
     font-size: 28px;
@@ -1985,7 +1985,7 @@ img.guaranteed_gif {
         text-transform: uppercase;
     }
     .trainer_content_box h6 {
-        color: #0e86d4;
+        color: #00205d;
         font-size: 17px;
         font-weight: 600;
     }

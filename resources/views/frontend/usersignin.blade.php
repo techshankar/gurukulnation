@@ -10,13 +10,8 @@
                 <div class="col-md-12">
                     <div class="logIN__formDiv">
                         <div class="logIN__formRow  row">
-                            <div class="col-sm-6">
-                                <div class="logIN__images">
-                                    <img class="signIn__desktop" src="{{ asset('public/frontend-styles/Biz/img/login_side3.png') }}">
-                                    <img class="signIn__mobile" src="{{ asset('public/frontend-styles/Biz/img/login_side2.png') }}" ">
-                                </div>
-                                </div>
-                                <div class=" col-sm-6">
+                            
+                                
                                     <div class="login__formMain">
                                         <div class="login-form">
                                             <div class="form-div">
@@ -36,7 +31,7 @@
                                                     @csrf
                                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                                         <div class="signup-heading">
-                                                            <h2>SignIn to Gurukul Nation</h2>
+                                                            <h2>SignIn to Gurukul Nationn</h2>
 
                                                         </div>
                                                         <div class="login_error_alt">
@@ -72,7 +67,7 @@
 
                                         </div>
                                     </div>
-                                </div>
+                                
 
 
                             </div>

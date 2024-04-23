@@ -46,10 +46,11 @@ section.form-section {
     float: left;
     width: 100%;
 }
+
 .bundle-img-div {
     float: left;
     width: 100%;
-	 background-image: url('../img/Signup-Page-line.png');
+	 /* background-image: url('../img/Signup-Page-line.png'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -60,9 +61,7 @@ section.form-section {
 	text-align:center;
 	position:relative;
 }
-.bundle-img:hover {
-    top: -20px;
-}
+
 .bundle-img img {
      width: 100%;
 }

@@ -74,7 +74,7 @@ section.gold-banner-section {
 }
 
     .why-num-sec h2 {
-        color: #1879c3;
+        color: #00205d;
         font-size: 40px;
         font-weight: 700;
         margin-bottom: 0;
@@ -345,7 +345,7 @@ section.buy-now-section {
 .course-detail-right {
     float: left;
     width: 350px;
-    position: absolute;
+    /* position: absolute; */
     right: 20%;
     top: 70px;
     background: #fff;

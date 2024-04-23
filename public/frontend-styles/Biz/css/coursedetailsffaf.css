@@ -64,7 +64,7 @@ ul.rating li {
     box-sizing: border-box;
 }
 ul.rating li:first-child {
-    color: #1879c2;
+    color: #00205d;
 }
 ul.rating li:first-child i{
 	color:#f18d07;
@@ -139,12 +139,12 @@ ul.rating li:last-child i{
     text-align: center;
 }
 .start-div a {
-    background-color: #1879c2;
+    background-color: #00205d;
     color: #fff !important;
     font-weight: 600;
     border-radius: 50px;
     font-size: 16px;
-    border: 1px solid #1879c2;
+    border: 1px solid #00205d;
     padding: 10px 50px;
     margin: 50px 0;
     display: inline-block;
@@ -204,7 +204,7 @@ section.course-desc-section {
     width: 100%;
 }
 .course-detail h4 {
-    color: #1879c2;
+    color: #00205d;
 }
 .course-detail ul {
     padding: 0;
@@ -230,7 +230,7 @@ section.course-desc-section {
 	box-sizing:border-box;
 }
     .key-feature h4 {
-        color: #1879c2;
+        color: #00205d;
         font-family: "Poppins",sans-serif !important;
     }
     .key-feature p {
@@ -298,7 +298,7 @@ section.course-content {
         font-size: 15px;
     }
 .expand-txt p {
-    color: #1879c2;
+    color: #00205d;
     font-size: 16px;
 }
 .expand-tab .panel-heading {
@@ -338,7 +338,7 @@ section.course-content {
     font-family: "Poppins",sans-serif !important;
 }
 button.exp-li-btn {
-    color: #1879c2;
+    color: #00205d;
     font-size: 16px;
     background: transparent;
     font-weight: 600;
@@ -412,7 +412,7 @@ ul.video-ul {
     font-size: 15px;
 }
 a.pre {
-    color: #1879c2 !important;
+    color: #00205d !important;
     pointer-events: none;
     cursor: default;
     text-decoration: none;
@@ -435,7 +435,7 @@ a.pre {
     font-size: 15px;
 }
 .preview-span a:hover{
- color: #1879c2;
+ color: #00205d;
  text-decoration:none;
 }
 .more-section {
@@ -452,16 +452,16 @@ a.pre {
     
 }
 .more-section a{
-	color:#1879c2;
+	color:#00205d;
 	font-size:20px;
 	font-weight:500;
-	border: 2px solid #1879c2;
+	border: 2px solid #00205d;
     padding: 10px 0;
     border-radius: 6px;
 	display:block;
 }
 .more-section a:hover{
-	color:#1879c2;
+	color:#00205d;
 }
 section.instructor-section {
     padding-bottom: 50px;
@@ -493,7 +493,7 @@ section.instructor-section {
     width: 100%;
 }
 .instructor-detail h2 {
-    color: #1879c2;
+    color: #00205d;
 }
 .instructor-detail h4 {
     color: #939393;
@@ -652,7 +652,7 @@ section.instructor-section {
 .instructors-slider .slide-name h2 {
     font-weight: 500;
     font-size: 24px;
-    color: #1879c2;
+    color: #00205d;
 }
 .instructors-slider .slide-name h4 {
     color: #858585;
@@ -675,7 +675,7 @@ section.instructor-section {
     box-sizing: border-box;
 }
 .comment-name h3 {
-    color: #1879c2;
+    color: #00205d;
     font-size: 18px;
     font-weight: 600;
 }
@@ -712,7 +712,7 @@ section.instructor-section {
 }
 .student-select select {
     padding: 0 10px;
-    color: #1879c2;
+    color: #00205d;
 }
 .video-test-div {
     float: left;
@@ -723,7 +723,7 @@ section.instructor-section {
    width:100%;
 }
 .video-head h4 {
-    color: #1879c2;
+    color: #00205d;
 }
 .instructors-slider {
     float: left;
@@ -802,16 +802,16 @@ section.instructor-section {
     margin: 20px 0;
 }
 .write-more-section a {
-    color: #1879c2;
+    color: #00205d;
     font-size: 20px;
     font-weight: 500;
-    border: 2px solid #1879c2;
+    border: 2px solid #00205d;
     padding: 10px 0;
     border-radius: 6px;
     display: block;
 }
 .write-more-section a:hover {
-    color: #1879c2;
+    color: #00205d;
 }
 
 section.gold-bundle {
@@ -823,7 +823,7 @@ section.gold-bundle {
     width: 100%;
 }
 .gold-content h2 {
-    color: #1879c2;
+    color: #00205d;
 }
 
 /*slider2*/
@@ -852,7 +852,7 @@ section.gold-bundle {
 .car__3 .slide-name h2 {
     font-weight: 500;
     font-size: 24px;
-    color: #1879c2;
+    color: #00205d;
 	min-height: 52px;
 }
 .car__3 .slide-name h4 {
@@ -863,7 +863,7 @@ section.gold-bundle {
     bottom: 50% !important;
     font-size: 60px !important;
     opacity: 1 !important;
-    color: #1879c2 !important;
+    color: #00205d !important;
 }
 .star-section {
     float: left;
@@ -900,7 +900,7 @@ section.gold-bundle {
 .slide-name h2 {
     font-weight: 700;
     font-size: 24px;
-    color: #1879c2;
+    color: #00205d;
 }
 .slide-name h4 {
     color: #858585;
@@ -939,11 +939,11 @@ section.gold-bundle {
     }
 
 .glyphicon-chevron-left:before {
-    color: #1879c2;
+    color: #00205d;
 }
 
 .glyphicon-chevron-right:before {
-    color: #1879c2;
+    color: #00205d;
 }
 
 .courses__slider .car__3 {
@@ -967,9 +967,9 @@ section.gold-bundle {
     }
 
     .courses__slider .car__3 .slide__btn button {
-        border: 1px solid #1879c2;
+        border: 1px solid #00205d;
         font-size: 12px;
-        background-color: #1879c2;
+        background-color: #00205d;
         color: #fff;
         border-radius: 5px;
         padding: 5px 10px;
@@ -980,7 +980,7 @@ section.gold-bundle {
 
         .courses__slider .car__3 .slide__btn button:hover {
             background-color: transparent;
-            color: #1879c2;
+            color: #00205d;
         }
 
 
@@ -1103,8 +1103,8 @@ section.gold-bundle {
         font-size: 16px;
         font-weight: 500;
         /* text-transform: uppercase; */
-        color: #1879c2;
-        color: #1879c2;
+        color: #00205d;
+        color: #00205d;
         font-size: 17px;
         font-weight: 700;
         cursor: pointer;
@@ -1128,8 +1128,8 @@ section.gold-bundle {
     font-size: 16px;
     font-weight: 500;
     /* text-transform: uppercase; */
-    color: #1879c2;
-    color: #1879c2;
+    color: #00205d;
+    color: #00205d;
     font-size: 17px;
     font-weight: 700;
     cursor: pointer;
@@ -1316,7 +1316,7 @@ main {
             color: #333;
         }
             .bundel_courses_review .bundel_courses_review_box ul li:last-child {
-                color: #1879c2;
+                color: #00205d;
             }
             .bundel_courses_review .bundel_courses_review_box ul li h3 {
                 font-size: 25px;
@@ -1474,11 +1474,11 @@ main {
 }
 .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
     background: transparent;
-    border: 2px solid #1879c2;
+    border: 2px solid #00205d;
     height: 45px;
     width: 45px;
     border-radius: 100%;
-    color: #1879c2;
+    color: #00205d;
     font-size: 25px;
     transition: 0.4s;
     position: absolute;
@@ -1551,8 +1551,8 @@ main {
         display: block;
         text-align: center;
         transition: 0.5s;
-        background-color: #1879c2;
-        border: 2px solid #1879c2;
+        background-color: #00205d;
+        border: 2px solid #00205d;
         font-weight:400;
     }
 
@@ -1565,14 +1565,14 @@ main {
         display: block;
         text-align: center;
         transition: 0.5s;
-        background-color: #1879c2;
-        border: 2px solid #1879c2;
+        background-color: #00205d;
+        border: 2px solid #00205d;
         font-weight: 400;
         margin-top:15px;
     }
     .bundel_courses_purchase_box .courses_purchase_box .add_to_cart.buy-btn {
         font-size: 18px;
-        color: #1879c2 !important;
+        color: #00205d !important;
         width: 100%;
         border-radius: 4px;
         padding: 12px;
@@ -1580,18 +1580,18 @@ main {
         text-align: center;
         transition: 0.5s;
         background-color: transparent;
-        border: 2px solid #1879c2;
+        border: 2px solid #00205d;
         font-weight: 400;
     }
 
 
     .bundel_courses_purchase_box .courses_purchase_box .buy__now.buy-btn.buy-btn-bottom:hover {
         background-color: transparent;
-        color: #1879c2 !important;
+        color: #00205d !important;
     }
 
     .bundel_courses_purchase_box .courses_purchase_box .add_to_cart.buy-btn:hover {
-        background-color: #1879c2;
+        background-color: #00205d;
         color: #fff !important;
     }
 
@@ -1606,7 +1606,7 @@ main {
                 font-family: "Poppins",sans-serif !important;
             }
         .bundel_courses_purchase_box .courses_purchase_box h6 i {
-            color: #1879c2;
+            color: #00205d;
             margin-right: 15px;
             font-size: 18px;
         }
@@ -1681,7 +1681,7 @@ section.faq {
 }
 
 #faq h2 {
-    color: #1879c2;
+    color: #00205d;
     font-size: 17px;
     line-height: 34px;
     text-align: left;
@@ -1731,9 +1731,9 @@ section.faq {
     perspective: 900;
     padding: 0;
     margin: 0;
-    background-color: #fff;
+    /* background-color: #fff;
     border: 1px solid #dde6ed;
-    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%); */
     border-radius: 4px;
 }
 
@@ -1765,7 +1765,7 @@ section.faq {
             #faq ul li i:before {
                 content: "";
                 position: absolute;
-                background-color: #1879c2;
+                background-color: #00205d;
                 width: 3px;
                 height: 9px;
             }
@@ -1773,7 +1773,7 @@ section.faq {
             #faq ul li i:after {
                 content: "";
                 position: absolute;
-                background-color: #1879c2;
+                background-color: #00205d;
                 width: 3px;
                 height: 9px;
             }
@@ -1843,7 +1843,7 @@ section.faq {
     border: none;
     background-color: transparent;
     transition: 0.3s;
-    color: #1879c2;
+    color: #00205d;
     top: auto;
     bottom: 22px;
     margin: 0 45px;
@@ -1860,8 +1860,8 @@ section.faq {
 }
 
 .bundel_students_review .owl-carousel .owl-nav [class*='owl-']:hover {
-    background-color: #1879c254;
-    color: #1879c2;
+    background-color: #00205d54;
+    color: #00205d;
     text-shadow: none;
 }
 .key-feature .addReadMore.showmorecontent .SecSec {
@@ -1901,7 +1901,7 @@ section.faq {
 }
 
     .bundel_students_review .owl-carousel button.owl-dot.active {
-        background-color: #1879c2;
+        background-color: #00205d;
     }
 
 .bundel_students_review .bundel_students_review_box {
@@ -1972,13 +1972,13 @@ section.faq {
 }
 
 .become_contact_right a {
-    background-color: #1879c2;
+    background-color: #00205d;
     padding: 12px 35px;
     border-radius: 30px;
     font-size: 17px;
     color: #fff;
     text-align: center;
-    outline: 2px solid #1879c2;
+    outline: 2px solid #00205d;
     outline-offset: -2px;
     transition: 0.4s;
     font-family: "Poppins",sans-serif !important;
@@ -1986,14 +1986,14 @@ section.faq {
 }
 
 .become_contact_right .btn.buy-btn {
-    background-color: #1879c2;
+    background-color: #00205d;
     padding: 12px 35px;
     border-radius: 30px;
     font-size: 17px;
     color: #fff;
     font-weight:600;
     text-align: center;
-    outline: 2px solid #1879c2;
+    outline: 2px solid #00205d;
     outline-offset: -2px;
     transition: 0.4s;
     font-family: "Poppins",sans-serif !important;
@@ -2004,7 +2004,7 @@ section.faq {
 
 .become_contact_right a.buy-btn:hover, .bundel_courses_purchase_box .courses_purchase_box a.buy-btn:hover, .become_contact_right .btn.buy-btn:hover {
     background-color: transparent;
-    color: #1879c2 !important;
+    color: #00205d !important;
 }
 
 .become_contact_right img {
@@ -2068,7 +2068,7 @@ section.faq {
     border: none;
     background-color: transparent;
     transition: 0.3s;
-    color: #1879c2;
+    color: #00205d;
     top: auto;
     bottom: 22px;
     margin: 0 45px;
@@ -2085,8 +2085,8 @@ section.faq {
 }
 
 .related_courses_slider .owl-carousel .owl-nav [class*='owl-']:hover {
-    background-color: #1879c254;
-    color: #1879c2;
+    background-color: #00205d54;
+    color: #00205d;
     text-shadow: none;
 }
 
@@ -2124,7 +2124,7 @@ section.faq {
 }
 
     .related_courses_slider .owl-carousel button.owl-dot.active {
-        background-color: #1879c2;
+        background-color: #00205d;
     }
 
 .related_courses_slider .related_courses_box {
@@ -2201,7 +2201,7 @@ section.faq {
 }
 .courses_purchase_box a.buy-btn.buy-btn-bottom {
     font-size: 18px;
-    color: #1879c2 !important;
+    color: #00205d !important;
     width: 100%;
     border-radius: 4px;
     padding: 12px;
@@ -2209,13 +2209,13 @@ section.faq {
     text-align: center;
     transition: 0.5s;
     background-color: #fff;
-    border: 2px solid #1879c2;
+    border: 2px solid #00205d;
     font-weight: 400;
     margin-top: 20px;
 }
 
 .courses_purchase_box a.buy-btn.buy-btn-bottom:hover {
-        background: #1879c2;
+        background: #00205d;
         color: #fff !important;
     }
 
@@ -2291,8 +2291,8 @@ section.faq {
 }
 
     .enter__detailModal .modal-dialog .modal-content .modal-footer .btn {
-        background: #1879c2;
-        border: 1px solid #1879c2;
+        background: #00205d;
+        border: 1px solid #00205d;
         padding: 12px 30px;
         font-size: 20px;
         font-weight: 500;
@@ -2303,7 +2303,7 @@ section.faq {
         transition: 0.3s;
     }
         .enter__detailModal .modal-dialog .modal-content .modal-footer .btn:hover {
-            color: #1879c2;
+            color: #00205d;
             background: #fff;
         }
 
@@ -2495,11 +2495,11 @@ section.faq {
 
 .courses_purchase_box.buy-now-section .add_to_cart {
     background-color: transparent;
-    color: #1879c2;
+    color: #00205d;
     font-weight: 600;
 }
     .courses_purchase_box.buy-now-section .add_to_cart:hover {
-        background-color: #1879c2;
+        background-color: #00205d;
         color: #fff;
     }
 
@@ -2512,14 +2512,14 @@ section.faq {
     display: block;
     text-align: center;
     transition: 0.5s;
-    background-color: #1879c2;
-    border: 2px solid #1879c2;
+    background-color: #00205d;
+    border: 2px solid #00205d;
     font-weight: 600;
     margin-top:15px;
 }
 .courses_purchase_box.buy-now-section .buy__now:hover {
     background-color: transparent;
-    color: #1879c2;
+    color: #00205d;
 }
 
 ul.video-ul li:first-child .video-sapn a, ul.video-ul li:nth-child(2) .video-sapn a {

@@ -25349,7 +25349,7 @@ section.form-section {
                     text-align: left;
                     font-size: 14px;
                     font-weight: 600;
-                    color: #0E86D4;
+                    color: #00205d;
                     padding-left: 10px;
                 }
             .leaderBoard__tabel table tr th:last-child {
@@ -25783,4 +25783,10 @@ div#MainContent_calculation_panel {
         line-height: 24px;
         padding-right: 0;
     }
+}
+
+
+
+.navbar-default.header__nav{
+padding:10px 0;
 }
