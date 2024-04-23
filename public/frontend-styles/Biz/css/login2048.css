@@ -7,7 +7,7 @@ section.signup-section {
     font-size: 16px;
 }
 .signup-heading p a{
-    color: #1879c2;
+    color: #00205d;
 }
 section.form-section {
     padding: 8rem 0;
@@ -36,14 +36,12 @@ section.form-section {
 	text-align:center;
 	position:relative;
 }
-.bundle-img:hover {
-    top: -20px;
-}
+
 .bundle-img img {
      width: 100%;
 }
 .bundle-img h4 {
-    color: #1879c2;
+    color: #00205d;
     padding-top: 10px;
     font-size: 24px;
 }
@@ -74,7 +72,7 @@ section.form-section {
 	margin-bottom:15px;
 }
 .aff-div button {
-    background: #1879c2;
+    background: #00205d;
     border: 1px solid transparent;
     box-shadow: none;
     font-size: 15px;
@@ -96,7 +94,7 @@ section.form-section {
       color: #8a8a8a;
 }
 .checkbox label span{
-      color: #1879c2;
+      color: #00205d;
 }
 .bundle-section h3 {
     color: #000;
@@ -113,9 +111,9 @@ section.form-section {
     box-sizing: border-box;
 }
 #btnLogin {
-    border: 1px solid #1879c2;
+    border: 1px solid #00205d;
     color: #fff;
-    background-color: #1879c2;
+    background-color: #00205d;
     font-size: 16px;
     width: 100%;
     display: inline-block;
@@ -143,7 +141,7 @@ section.form-section {
     outline: none;
 }
     .submit-btn button:hover {
-        background-color: #1879c2;
+        background-color: #00205d;
     }
 .or-txt {
     float: left;
@@ -179,7 +177,7 @@ section.form-section {
 	display:none;
 }
 .signup-otp a{
-	color:#1879c2;
+	color:#00205d;
 	text-decoration:underline;
 	font-size:16px;
 	font-weight:500;
@@ -189,6 +187,7 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background: #d9d9d9;
 }
 
 .captcha-div {
@@ -210,7 +209,7 @@ a.forget-pass {
     box-sizing: border-box;
     font-size: 15px;
     font-weight: 500;
-    color: #0E86D4;
+    color: #00205d;
 }
 /*----responsive----*/
 @media(max-width:480px)
@@ -263,14 +262,15 @@ a.forget-pass {
     margin-bottom: 3rem;
     overflow: hidden;*/
     /*box-shadow: 0px 3px 15px rgb(0 0 0 / 15%);*/
-    box-shadow: 0px 50px 80px rgb(0 0 0 / 15%);
-    background: #fff;
+    /* box-shadow: 0px 50px 80px rgb(0 0 0 / 15%); */
+    /* background: #fff; */
     padding: 25px;
     border-radius: 6px;
 }
 .logIN__formDiv .logIN__formRow {
     display: flex;
     align-items: center;
+    width: 100%;
 }
     /*.logIN__formDiv .logIN__formRow .logIN__images {
         background-color: #e3f0f5;
@@ -295,7 +295,7 @@ a.forget-pass {
 .login-form {
     /*float: left;
     width: 100%;*/
-    padding-left:60px;
+    /* padding-left:60px; */
 }
     .login-form .signup-heading h2 {
         text-align: center;
@@ -307,7 +307,7 @@ a.forget-pass {
         border-top-right-radius: 10px;
         font-size: 25px;
         display: inline-block;
-        /* border-bottom: 2px solid #1879c2; */
+        /* border-bottom: 2px solid #00205d; */
         position: relative;
     }
         .login-form .signup-heading h2::after {
@@ -315,7 +315,7 @@ a.forget-pass {
             position: absolute;
             bottom: -8px;
             left: 0;
-            background-color: #1879c2;
+            background-color: #00205d;
             height: 3px;
             width: 100px;
         }
@@ -334,7 +334,7 @@ a.forget-pass {
         position: absolute;
         bottom: -8px;
         left: 0;
-        background-color: #1879c2;
+        background-color: #00205d;
         height: 2px;
         width: 100px;
     }
@@ -392,6 +392,12 @@ a.forget-pass {
     border: 1px solid #ccc;
     box-shadow:none;
 }
+
+.login__formMain{
+    width: 77%;
+    margin: auto;
+}
+
 /**/
 @media screen and (max-width:767px) {
     .logIN__formDiv .logIN__formRow {
@@ -415,6 +421,8 @@ a.forget-pass {
     .logIN__formRow .login__formMain {
         width: 100%;
     }
+
+    
     .login-form {
         width: 100%;
         padding: 40px 10px;

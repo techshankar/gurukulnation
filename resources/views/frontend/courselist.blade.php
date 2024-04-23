@@ -33,7 +33,8 @@ $catName = DB::table('course_categories')->where('id',$catId)->first();
 
         </div>
     </section>
-    @if(Session::has('success'))<!-- flash message  -->
+    @if(Session::has('success'))
+    <!-- flash message  -->
     <div class="alert alert-success">
         {{Session::get('success')}}
     </div>
@@ -44,7 +45,8 @@ $catName = DB::table('course_categories')->where('id',$catId)->first();
             {{Session::get('error')}}
         </div>
         @endif
-    </div><!--/ flash message  -->
+    </div>
+    <!--/ flash message  -->
 
     <section class="why-section">
         <div class="container">
@@ -66,7 +68,8 @@ $catName = DB::table('course_categories')->where('id',$catId)->first();
                     <p>Hours</p>
                 </div>
             </div>
-            <div class="mob-gold-banner"><!-- for mobile  -->
+            <div class="mob-gold-banner">
+                <!-- for mobile  -->
                 <div class="gold-banner-txt">
                     @foreach($courses as $row)
                     <h2>{{$row->title}}</h2>
@@ -74,7 +77,8 @@ $catName = DB::table('course_categories')->where('id',$catId)->first();
                     <h3>Digital Entrepreneurship Bundles I</h3>
                     <a href="#">Buy Now</a>
                 </div>
-            </div><!--/ for mobile  -->
+            </div>
+            <!--/ for mobile  -->
         </div>
     </section>
 
@@ -88,49 +92,48 @@ $catName = DB::table('course_categories')->where('id',$catId)->first();
                     <div class="digital-course-txt pd-txt">
                         <h2 class="heading-orange">{{$row->title}}</h2>
                         <p>{{ strip_tags($row->short_desc) }}</p>
+                        <div class="course-detail-right course-txt">
+                        <h3>This Course Includes</h3>
+                        @php $vdos = DB::table('videos')->where('course_id',$row->id)->first(); @endphp
+                        <ul>
+                            <li>
+                                <img src="{{ asset('public/frontend-styles/Biz/img/lang-icon.jpg') }}">
+                                Language - @if(!empty($vdos->language)){{$vdos->language}}@else English @endif
+                            </li>
+                            <li>
+                                <img src="{{ asset('public/frontend-styles/Biz/img/lang-icon.jpg') }}">
+                                Subtitles - @if(!empty($vdos->sub_title)){{$vdos->sub_title}}@else No @endif
+                            </li>
+                            <li>
+                                <img src="{{ asset('public/frontend-styles/Biz/img/use-icon.jpg') }}">
+                                Watch On - @if(!empty($vdos->watch_on)){{$vdos->watch_on}}@else English @endif
+                            </li>
+                            <li>
+                                <img src="{{ asset('public/frontend-styles/Biz/img/full-icon.jpg') }}">
+                                Access Time - @if(!empty($vdos->access_time)){{$vdos->access_time}}@else English @endif
+                            </li>
+                            <li>
+                                <img src="{{ asset('public/frontend-styles/Biz/img/certificate-icon.jpg') }}">
+                                Certificate Of Completion
+                            </li>
+                        </ul>
+
+                    </div>
                         <a href="{{ URL::to('course/details',$row->slug) }}" class="exp-btn">Explore Now</a>
                     </div>
 
-                    <div class="course-detail-right course-txt">
-                            <h3>This Course Includes</h3>
-                            @php $vdos = DB::table('videos')->where('course_id',$row->id)->first(); @endphp
-                            <ul>
-                                <li>
-                                    <img src="{{ asset('public/frontend-styles/Biz/img/lang-icon.jpg') }}">
-                                    Language - @if(!empty($vdos->language)){{$vdos->language}}@else English @endif
-                                </li>
-                                <li>
-                                    <img src="{{ asset('public/frontend-styles/Biz/img/lang-icon.jpg') }}">
-                                    Subtitles - @if(!empty($vdos->sub_title)){{$vdos->sub_title}}@else No @endif
-                                </li>
-                                <li>
-                                    <img src="{{ asset('public/frontend-styles/Biz/img/use-icon.jpg') }}">
-                                   Watch On - @if(!empty($vdos->watch_on)){{$vdos->watch_on}}@else English @endif
-                                </li>
-                                <li>
-                                    <img src="{{ asset('public/frontend-styles/Biz/img/full-icon.jpg') }}">
-                                    Access Time - @if(!empty($vdos->access_time)){{$vdos->access_time}}@else English @endif
-                                </li>
-                                <li>
-                                    <img src="{{ asset('public/frontend-styles/Biz/img/certificate-icon.jpg') }}">
-                                    Certificate Of Completion
-                                </li>
-                            </ul>
-
-
-                        </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 b">
                     <div class="course-img-div copywrite">
                         <a href="../bundel_courses/BundleCourseDet9441.html?course=23Yy/qB87Eo=">
-                        <img src="{{ $row->thumbnail }}" height="400">
+                            <img src="{{ $row->thumbnail }}" height="400">
 
-                        <div class="slide-name">
+                            <div class="slide-name">
                                 <h2>{{ $row->title }}</h2>
                                 <!-- <h4>Anmol Duggal</h4> -->
                             </div>
                         </a>
-                        
+
                     </div>
                 </div>
             </div>
@@ -143,9 +146,9 @@ $catName = DB::table('course_categories')->where('id',$catId)->first();
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="course-img-div-left master-course">
                         <a href="../bundel_courses/BundleCourseDet7f71.html?course=pTBpk7r3C+g=">
-                        <img src="{{ $row->thumbnail }}" height="400">
+                            <img src="{{ $row->thumbnail }}" height="400">
 
-                        <div class="slide-name">
+                            <div class="slide-name">
                                 <h2>{{ $row->title }}</h2>
                                 <!-- <h4>Anmol Duggal</h4> -->
                             </div>
@@ -163,11 +166,12 @@ $catName = DB::table('course_categories')->where('id',$catId)->first();
                                 </li>
                                 <li>
                                     <img src="{{ asset('public/frontend-styles/Biz/img/use-icon.jpg') }}">
-                                   Watch On - @if(!empty($vdos->watch_on)){{$vdos->watch_on}}@else English @endif
+                                    Watch On - @if(!empty($vdos->watch_on)){{$vdos->watch_on}}@else English @endif
                                 </li>
                                 <li>
                                     <img src="{{ asset('public/frontend-styles/Biz/img/full-icon.jpg') }}">
-                                    Access Time - @if(!empty($vdos->access_time)){{$vdos->access_time}}@else English @endif
+                                    Access Time - @if(!empty($vdos->access_time)){{$vdos->access_time}}@else English
+                                    @endif
                                 </li>
                                 <li>
                                     <img src="{{ asset('public/frontend-styles/Biz/img/certificate-icon.jpg') }}">
@@ -175,13 +179,12 @@ $catName = DB::table('course_categories')->where('id',$catId)->first();
                                 </li>
                             </ul>
 
-
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="course-txt-left vs-txt">
-                    <h2 class="heading-orange">{{$row->title}}</h2>
+                        <h2 class="heading-orange">{{$row->title}}</h2>
                         <p>{{ strip_tags($row->short_desc) }}</p>
                         <a href="{{ URL::to('course/details',$row->slug) }}" class="exp-btn">Explore Now</a>
                     </div>

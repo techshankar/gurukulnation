@@ -12,22 +12,24 @@
     }
 
     input[type=radio]:checked+label>img {
-        border: 1px solid #fff;
-        box-shadow: 0 0 3px 3px #090;
+        border: 5px solid #00205d;
+        /* box-shadow: 0 0 3px 3px #090; */
     }
 
     /* Stuff after this is only to make things more pretty */
     input[type=radio]+label>img {
         /* border: 1px dashed #444; */
-        width: 400px;
-        height: 374px;
+        /* width: 400px;
+        height: 374px; */
+        width:100%;
+        height:100%;
         transition: 500ms all;
     }
 
-    input[type=radio]:checked+label>img {
+    /* input[type=radio]:checked+label>img {
         transform:
             rotateZ(-10deg) rotateX(10deg);
-    }
+    } */
 </style>
 <!-- /for bundle select  -->
 @if(Session::has('success'))<!-- flash message  -->
@@ -48,12 +50,12 @@
                     <div class="col-md-12 col-xs-12">
                         <div class="signUP__formDiv">
                             <div class="signUP__formRow">
-                                <div class="signUp__images">
+                                <!-- <div class="signUp__images">
                                     <img class="signIn__mobile" src="#" onerror="this.onerror=null;this.src='{{ asset('public/frontend-styles/Biz/img/signup-banner-mob.png') }}';">
 
                                     <img class="signIn__desktop" src="#" onerror="this.onerror=null;this.src='{{ asset('public/frontend-styles/Biz/img/signup-banner-desk.png') }}';">
 
-                                </div>
+                                </div> -->
                                 <div class="form-divMain">
                                     <form action="{{ route('user.signup.saved') }}" method="post">
                                         @csrf

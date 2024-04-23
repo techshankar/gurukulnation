@@ -104,10 +104,10 @@ section.digital_bundle {
         
     }
         .digital_bundle_left .digital_navigation a:hover, .digital_bundle_left .digital_navigation .active a {
-            box-shadow: 5px 5px #1879c2;
+            box-shadow: 5px 5px #00205d;
             background: #fff;
             /*box-shadow: 0 -2px 7px 0 rgb(22 22 22 / 1%), 0 2px 10px 0 rgb(80 80 80 / 10%);*/
-            border:1px solid #1879c2;
+            border:1px solid #00205d;
         }
 
 .embed-responsive-3by9 {
@@ -172,7 +172,7 @@ section.digital_bundle {
         }
             .digital_course_main .digital_course_left p span i {
                 margin-right: 10px;
-                color: #1879c2;
+                color: #00205d;
                 /* background: #BFDDF2; */
                 border-radius: 100%;
                 /* padding: 10px; */
@@ -184,13 +184,13 @@ section.digital_bundle {
             margin-right: 25px;
         }
             .digital_course_main .digital_course_left p.bundle-info i {
-                color: #1879c2;
+                color: #00205d;
                 font-size: 17px;
                 margin-right: 10px;
             }
     .digital_course_main .digital_course_left a {
-        background-color: #1879c2;
-        border: 2px solid #1879c2;
+        background-color: #00205d;
+        border: 2px solid #00205d;
         color: #fff;
         font-weight: 500;
         border-radius: 6px;
@@ -204,7 +204,7 @@ section.digital_bundle {
     }
         .digital_course_main .digital_course_left a:hover {
             background-color: transparent;
-            color: #1879c2;
+            color: #00205d;
         }
 
 .why_nw_box {
@@ -278,8 +278,8 @@ section.digital_bundle {
         line-height: 28px;
     }
     .biz_review_section .biz_review a {
-        background-color: #1879c2;
-        border: 2px solid #1879c2;
+        background-color: #00205d;
+        border: 2px solid #00205d;
         color: #fff;
         font-weight: 500;
         border-radius: 6px;
@@ -292,7 +292,7 @@ section.digital_bundle {
     }
         .biz_review_section .biz_review a:hover {
             background-color: transparent;
-            color: #1879c2;
+            color: #00205d;
         }
 .customer-support-box {
     display: flex;
@@ -313,7 +313,7 @@ section.digital_bundle {
     .support_sub_box h5 i {
         font-size: 26px;
         margin-right: 10px;
-        color: #1879c2;
+        color: #00205d;
         margin-bottom:10px;
     }
 

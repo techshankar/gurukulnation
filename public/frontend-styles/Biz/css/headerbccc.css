@@ -91,7 +91,7 @@ img.logo-img {
     width: 135px;
 }
 .buy-btn {
-	background-color: #1879c2;
+	background-color: #00205d;
 	color: #fff !important;
 	font-weight: 700;
 	border-radius: 50px;
@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .exp-btn {
-	background-color: #1879c2;
+	background-color: #00205d;
 	color: #fff !important;
 	font-weight: 600;
 	border-radius: 50px;
@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .buy-btn {
-	background-color: #1879c2;
+	background-color: #00205d;
 	color: #fff !important;
 	font-weight: 700;
 	border-radius: 50px;
@@ -215,10 +215,10 @@ h1, h2, h3, h4, h5, h6 {
 			padding: 13.5px 10px;
 		}
 .header__nav .nav__menu li a:hover {
-	color: #1879c2 !important;
+	color: #00205d !important;
 }
 		.header__nav .nav__menu li .prime__link span {
-			background-color: #1879c2;
+			background-color: #00205d;
 			border-radius: 4px;
 			padding: 6px 12px;
 			color: #fff;
@@ -248,10 +248,12 @@ h1, h2, h3, h4, h5, h6 {
 		border-bottom: 2px solid #000;
 		border-radius: 0px;
 	}
-.header__nav .nav__buttons li .sign-up-a:hover {
+	
+/* .header__nav .nav__buttons li .sign-up-a:hover {
 	background-color: transparent;
-	color: #1879c2;
-}
+	color: #00205d;
+} */
+
 	.header__nav .nav__buttons li .login-a {
 		color: #000;
 		/* border-radius: 5px; */
@@ -264,10 +266,10 @@ h1, h2, h3, h4, h5, h6 {
 		-webkit-transition: all 0.5s ease;
 		transition: all 0.5s ease;
 	}
-		.header__nav .nav__buttons li .login-a:hover {
-			background-color: #1879c2;
+		/* .header__nav .nav__buttons li .login-a:hover {
+			background-color: #00205d;
 			color:#fff;
-		}
+		} */
 /*.chakra_img {
 	position: absolute;
 	left: 0;
@@ -303,12 +305,12 @@ h1, h2, h3, h4, h5, h6 {
 		align-items: center;
 	}
 .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open > .dropdown-toggle.btn-primary.focus, .open > .dropdown-toggle.btn-primary:focus, .open > .dropdown-toggle.btn-primary:hover {
-	color: #1879c2 !important;
+	color: #00205d !important;
 	background-color: transparent !important;
 	border-color: transparent !important;
 }
 .header__nav .nav__menu li .header__dropdown button:hover {
-	color: #1879c2 !important;
+	color: #00205d !important;
 }
 @keyframes slideDown {
 	0% {
@@ -599,7 +601,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (max-width:767px) {
 	.header__nav .navbar-header .navbar-toggle {
-		border-color: #1879c2;
+		border-color: #00205d;
 		margin: 9px 0;
 		border: none;
 	}
@@ -612,7 +614,7 @@ h1, h2, h3, h4, h5, h6 {
 		overflow-x: hidden;
 	}
 	.header__nav .navbar-header .navbar-toggle .icon-bar {
-		background-color: #1879c2;
+		background-color: #00205d;
 	}
 	.header__nav .navbar-header .navbar-toggle:hover, focus {
 		background-color: #f8f8f8;
@@ -1077,7 +1079,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 #cart_total {
 	font-weight: 700;
-	color: #0E86D4 !important;
+	color: #00205d !important;
 }
 
 @media screen and (max-width:768px) {

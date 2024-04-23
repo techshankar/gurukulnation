@@ -74,7 +74,7 @@ section.gold-banner-section {
 }
 
     .why-num-sec h2 {
-        color: #1879c3;
+        color: #00205d;
         font-size: 40px;
         font-weight: 700;
         margin-bottom: 0;
@@ -102,6 +102,8 @@ section.coures-include-section {
 
     .course-txt h3 {
         color: #000;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
 
     .course-txt ul {
@@ -114,6 +116,8 @@ section.coures-include-section {
             color: #6f6f6f;
             font-size: 18px;
             font-weight: 500;
+            margin-bottom: 9px;
+            font-size: 12px;
         }
 
 .course-img-div {
@@ -352,16 +356,16 @@ section.buy-now-section {
     /* border: 1px solid #333; */
     z-index: 0;
     border-radius: 10px;
-    box-shadow: 0 0 10px #ccc;
-    padding: 20px;
+    /* box-shadow: 0 0 10px #ccc; */
+    padding: 0px 0 20px;
     box-sizing: border-box;
     /* display: none; */
     transition: 1s;
     position: relative;
-    left: 11%;
+    left: 0;
     right: auto;
     color: #000;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .course-txt img {
